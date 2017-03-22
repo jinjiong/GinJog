@@ -1,0 +1,26 @@
+.header-top{
+	line-height: 65px;
+	height: 65px;
+}
+.header-top .blog{
+	margin: 0;
+	line-height: 65px;
+	cursor: pointer;
+}
+.nav-list span{
+	margin-left: 20px;
+	font-size: 16px;
+}
+.banner{
+	background: #161616 url(../imgs/jl_index_bj.png) no-repeat;
+    width: 100%;
+    height: 610px;
+    background-attachment: fixed;
+    background-position: center 0;
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+}
+body{
+	height: 2000px;
+}

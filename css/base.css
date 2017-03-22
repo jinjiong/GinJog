@@ -1,0 +1,188 @@
+@CHARSET "UTF-8";
+*,p,ol,ul,label{ margin:0; padding:0; word-wrap:break-word; word-break:break-all;}
+input[type="checkbox"], input[type="radio"] {
+    line-height: normal;
+    margin: 0px 0 0;
+}
+html{
+	height: 100%;
+}
+body {
+    color:#333333;
+    font: 12px/1.5 "\5FAE\8F6F\96C5\9ED1","Microsoft Yahei","Neris",tahoma,arial,"\5B8B\4F53" !important;
+	background: #FFFFFF;
+    min-width: 1200px;
+    -ms-overflow-style: scrollbar;
+    height: 100%;
+}
+.bodyover{
+	overflow: hidden;
+}
+.songti{
+	font-family:宋体,SimSun;
+}
+.yahei{
+	font-family:微软雅黑,microsoft yahei;
+}
+.arialhs{
+    font-family:Arial, Helvetica, "sans-serif"
+}
+a { text-decoration:none; color:#333333;}
+a:hover {
+	 text-decoration:none;
+}
+a:focus{
+	 outline:0;
+}
+ul,li{
+	list-style:none;
+}
+img { border:none; }
+.clearfix:after{
+content:""; display:block; height:0; clear:both;
+visibility:hidden;
+}
+.clearOverflow{
+	overflow: hidden;
+}
+.f_l{float:left !important;}
+.f_r{float:right !important;}
+.f_c{clear: both !important;}
+.tl{ text-align:left !important;}
+.tc{ text-align:center !important;}
+.tr{ text-align:right !important;}
+.vt{
+	vertical-align: top !important;
+}
+.vc{
+	vertical-align: middle;
+}
+.vb{
+	vertical-align: bottom;
+}
+.pr{
+	position: relative;
+}
+.block{
+  width:1200px; height:auto;
+  margin: 0 auto;
+}
+.minwidth{
+	min-width: 100%;
+}
+.maxw980{
+	max-width: 980px;
+}
+.width_block1{
+	max-width: 1020px;
+	margin: 0 auto;
+	height:auto;
+}
+.dlb{
+	display: inline-block;
+}
+.cp{
+	cursor: pointer;
+}
+/*内边距和外边距通用样式*/
+.ml10{
+	margin-left: 10px;
+}
+.mlr15{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.mt5{margin-top:5px;}
+.mb3{margin-bottom:3px;}
+.mt10{
+	margin-top: 10px;
+}
+.mb30{
+	margin-bottom: 30px;
+}
+.mb10{
+	margin-bottom: 10px;
+}
+.mb10{
+	margin-bottom: 10px;
+}
+.mb15{
+	margin-bottom: 15px;
+}
+.mr5{
+	margin-right: 5px;
+}
+.mt30{
+	margin-top: 30px;
+}
+.mt20{
+	margin-top: 20px;
+}
+.mb20{
+	margin-bottom: 20px;
+}
+.ml20{
+	margin-left: 20px;
+}
+.mr20{
+	margin-right: 20px;
+}
+.pm10{
+	padding-bottom: 10px !important;
+}
+.pm30{
+	padding-bottom: 30px;
+}
+/*通用文字颜色、大小、背景色样式、高度*/
+.fw{
+	font-weight: bold;
+}
+.fs{
+	font-style: normal;
+}
+.f14{
+	font-size: 14px;
+}
+.f16{
+	font-size: 16px;
+}
+.f24{
+	font-size: 24px;
+}
+.f26{
+	font-size: 26px;
+}
+.mr10{
+	margin-right: 10px;
+}
+.mlr5{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.clearheight80{
+	height: 80px;line-height: 80px;visibility: hidden;
+}
+.clearheight20{
+	height: 20px;line-height: 20px;
+}
+.clearheight35{
+	height: 35px;line-height: 35px;visibility: hidden;
+}
+.cde403f{
+	color: #de403f;
+}
+.ce93f3f{
+	color: #e93f3f;
+}
+.c00aeef{
+	color: #00aeef;
+}
+.c00d7d9{
+	color: #00d7d9!important;
+}
+.ce7312e{
+	color: #e7312e;
+}
+
+
+/*公共头部*/
