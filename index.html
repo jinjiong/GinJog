@@ -5,6 +5,7 @@
 	<title>GinJog</title>
 	<link rel="fluid-icon icon" href="imgs/favicon.ico" title="GinJog">
 	<link rel="stylesheet" type="text/css" href='css/bootstrap.min.css'>
+    <link rel="stylesheet" type="text/css" href="css/lrtk.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body style="">
@@ -42,6 +43,29 @@
 <div>
 	<img src="imgs/jl_index_bj.png">
 </div>
-
+<!-- 代码 开始 -->
+<div class="izl-rmenu">
+    <a class="consult" target="_blank"><div class="phone" style="display:none;">152-1089-6456</div></a>    
+    <a class="cart"><div class="pic"></div></a>   
+    <a href="javascript:void(0)" class="btn_top" style="display: block;"></a>
+</div>
+<a target="_blank"  href="http://wpa.qq.com/msgrd?v=3&uin=515806064&site=qq&menu=yes" id="udesk-feedback-tab" class="udesk-feedback-tab-left" style="display: block; background-color: black;"></a>
+<!-- 代码 结束 -->
+<script type="text/javascript" src='js/jquery-1.8.3.min.js'></script>
+<script>
+   $(function() {
+        $(".btn_top").hide();
+        $(".btn_top").live("click",function(){
+            $('html, body').animate({scrollTop: 0},300);return false;
+        })
+        $(window).bind('scroll resize',function(){
+            if($(window).scrollTop()<=300){
+                $(".btn_top").hide();
+            }else{
+                $(".btn_top").show();
+            }
+        })
+   })
+</script>
 </body>
 </html>
