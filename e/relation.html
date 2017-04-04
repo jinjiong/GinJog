@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>房e融网站-联系我们</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href='css/swiper.min.css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src='js/jquery-1.12.2.min.js'></script>
+	<script type="text/javascript" src='js/bootstrap.min.js'></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nxsaAM60TgMfv1379oGlVPOu6ggmfcxM"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="header-top clearfix hidden-xs">
+			<div class="container">
+				<div class="share-box">
+					<a href="#"><img src="img/icon/icon_mic.png"></a>
+					<a href="#"><img src="img/icon/icon_weixin.png"></a>
+				</div>
+				<div class="conn-box">
+					<span><a href="mailto:rongefang@ref.com"><i class="icon-email"></i>rongefang@ref.com</a></span>
+					<span><i class="icon-call"></i>0755-2167-3882</span>
+				</div>
+			</div>
+		</div>
+		<!-- Docs master nav -->
+	    <div class="navbar navbar-static-top" id="top">
+		  	<div class="container">
+	  			<div class="navbar-header">
+			      	<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a href="index.html" class="navbar-brand"><img src="img/icon/icon_logo.png"></a>
+			    </div>
+			    <nav id="bs-navbar" class="collapse navbar-collapse">
+			        <ul class="nav navbar-nav">
+				        <li>
+				          <a href="index.html" class="active">首页</a>
+				        </li>
+				        <li class="active">
+				            <a href="pro_2.html" class="hidden-xs">服务与产品</a>
+				          	<dl class="nav-vfp">
+				          		<dd ><a href="pro_2.html" class="active">房地产基金</a></dd>
+				          		<dd><a href="pro_1.html">房e融</a></dd>
+				          		<dd><a href="pro_3.html">资产交易</a></dd>
+				          		<dd><a href="pro_5.html">资产评估</a></dd>
+				          		<dd><a href="pro_4.html">咨询</a></dd>
+				          	</dl>
+				           
+				        </li>
+				        <li>
+				          <a href="about.html">关于我们</a>
+				        </li>
+				        <li>
+				          <a href="relation.html" class="hidden-xs">联系我们</a>
+				          <dl class="nav-vfp">
+				          		<dd><a href="relation.html" class="active">联系信息</a></dd>
+				          		<dd><a href="recruit.html">诚聘英才</a></dd>
+				          	</dl>
+				        </li>
+			        </ul>
+			    </nav>
+		    </div>
+		</div>
+	</div>
+
+	
+	<div class="rel-wrap">
+		<!-- banner begin-->
+		<div class="page_banner">
+			<div class="title">
+				<div class="container">
+					<p class="big">联系我们</p>
+					<p></p>
+				</div>
+			</div>
+		</div>
+		<!-- banner end -->
+		<div class="bai-map">
+			<div class="container">
+				<div class="row">
+					<!--百度地图容器-->
+    				<div id="map"></div>
+				</div>
+			</div>
+		</div>
+		<div class="info-box">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<h4>公司总部</h4>
+						<p>公司地址：深圳市南山区德赛科技大厦19层</p>
+						<p>服务电话：0755-2167-3882</p>
+						<p>工作时间：9:00---18:00</p>
+					</div>
+					<div class="col-sm-6">
+						<h4>联系方式</h4>
+						<p>品牌推广：**@taderfh.com</p>
+						<p>渠道合作： **@taderfh.com</p>
+						<p>人力资源： **@taderfh.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+    <footer class="footer">
+    	<p><a href="index.html">首页</a><a href="pro_2.html">服务与产品</a><a href="about.html">关于我们</a><a href="relation.html">联系我们</a></p>
+    	<p>Copyright © 2017  版权所有</p>
+    </footer>
+    <!-- Swiper JS -->
+    <script type="text/javascript" src='js/scrollReveal.js'></script>
+	<script type="text/javascript">
+		// 判断是不是电脑
+	if($(window).width()>1024){
+		$('.navbar-nav li').hover(function(){
+			$(this).find('.nav-vfp').stop().slideDown();
+		},function(){
+			$(this).find('.nav-vfp').stop().slideUp();
+		});
+		// 动画加载 只能在电脑出现
+		window.sr = new scrollReveal();
+		
+	}
+
+	// ipad 点击事件
+	if($(window).width()<=1024 && $(window).width()>414){
+		$('.navbar-nav li >a').click(function(e){
+			if($(this).parent().find('.nav-vfp').length==1){
+				e.preventDefault();
+			}
+			$(this).parent().siblings().find('.nav-vfp').stop().slideUp();
+			$(this).parent().find('.nav-vfp').stop().slideDown();
+		});
+	}
+
+
+
+
+    //创建和初始化地图函数：
+    function initMap(){
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      addMapControl();//向地图添加控件
+      addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){ 
+      map = new BMap.Map("map"); 
+      map.centerAndZoom(new BMap.Point(113.961301,22.545165),19);
+    }
+    function setMapEvent(){
+      map.enableScrollWheelZoom();
+      map.enableKeyboard();
+      map.enableDragging();
+      map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+      target.addEventListener("click",function(){
+        target.openInfoWindow(window);
+      });
+    }
+    function addMapOverlay(){
+      var markers = [
+        {content:"我的备注",title:"德赛科技大厦",imageOffset: {width:0,height:3},position:{lat:22.545027,lng:113.961023}}
+      ];
+      for(var index = 0; index < markers.length; index++ ){
+        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+        })});
+        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+        var opts = {
+          width: 200,
+          title: markers[index].title,
+          enableMessage: false
+        };
+        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+        marker.setLabel(label);
+        addClickHandler(marker,infoWindow);
+        map.addOverlay(marker);
+      };
+    }
+    //向地图添加控件
+    function addMapControl(){
+      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+      map.addControl(scaleControl);
+      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+      map.addControl(navControl);
+      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+      map.addControl(overviewControl);
+    }
+    var map;
+      initMap();
+
+	</script>
+</body>
+</html>
