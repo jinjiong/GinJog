@@ -19,6 +19,13 @@ body {
     max-width: 640px;
     margin: 0 auto;
 }
+.clearfix:after{
+	content:"";
+	display:block;
+	height:0; 
+	clear:both;
+	visibility:hidden;
+}
 #map{
 	width: 100%;
 	height: 100%;
@@ -131,7 +138,7 @@ body {
  	width: 8.59375rem;
  	height: 10.46875rem;
  	background: #fff;
- 	border-radius: 10px;
+ 	border-radius: 12px;
  	left: 0;
  	right: 0;
  	margin: auto;
@@ -146,7 +153,7 @@ body {
  	background: url('../img/close.png') center center no-repeat;
  	background-size: 100% 100%;
  }
- .public-cap-bg .cap-bg .title{
+ .public-cap-bg .cap-bg .title-among {
  	position: absolute;
  	left: 0;
  	right: 0;
@@ -266,3 +273,435 @@ body {
 	background: url('../img/teamnamebg.png');
 	background-size: 100% 100%;
 }
+.public-cap-bg .public-top{
+	width: 100%;
+	height: 2.890625rem;
+}
+.public-cap-bg .record-up .public-top{
+	padding-top: 0.609375rem;
+	overflow:hidden;
+	background:url('../img/popupbg_1.png');
+	background-size: 100% 100%;
+	padding-left: 0.703125rem;
+	padding-right: 0.703125rem;
+	box-sizing: border-box;
+}
+.public-cap-bg .record-up .public-top .img-box{
+	position: relative;
+	float: left;
+	width: 1.640625rem;
+	height: 1.640625rem;
+	background:url('../upload/1.jpg') center center no-repeat;
+	background-size: 100% 100%;
+	border-radius: 50px;
+}
+.public-cap-bg .record-up .public-top .img-box .named{
+	position: absolute;
+	border-radius: 5px;
+	paddiing-left:0.0625rem;
+	padding-right: 0.0625rem;
+	right: 0;
+	top: -0.3125rem;
+	background:#ff3a3a;
+	color:#fff;
+	font-size: 0.375rem;
+
+}
+.public-cap-bg .record-up .public-top .text-box{
+	margin-top: 0.15625rem;
+	float: left;
+	margin-left: 0.46875rem;
+
+}
+.public-cap-bg .record-up .public-top .text-box .user-name{
+	font-size: 0.46875rem;
+	color: #fff;
+}
+.public-cap-bg .record-up .public-top .text-box .team-name{
+	height: 0.4375rem;
+	width: 2.359375rem;
+	background:url('../img/teamnamebg.png') center center no-repeat;
+	background-size: 100% 100%;
+	color: #fff;
+	padding-left: 0.15625rem;
+	box-sizing: border-box;
+	font-size: 0.28125rem;
+}
+.public-cap-bg .record-up .public-top .text-nub{
+	margin-top: 0.078125rem;
+	float: right;
+	font-size: 0.46875rem;
+	text-align: center;
+}
+.public-cap-bg .record-up .content-box .title{
+	position: relative;
+	box-sizing: border-box;
+	font-size: 0.46875rem;
+	color: #823a2c;
+	text-align: center;
+	height: 0.46875rem;
+	border-bottom: 1px dashed #d9d9d9;
+	margin-bottom: 0.546875rem;
+
+}
+.public-cap-bg .record-up .title span{
+	position: absolute;
+	display:block;
+	padding-left: 0.3125rem;
+	padding-right: 0.3125rem;
+	top: 0.234375rem;
+	left: 50%;
+	margin-left: -1.25rem;
+	background: #fff;
+	line-height: 1;
+}
+.public-cap-bg .record-up .items{
+	margin-left: 0.3125rem;
+	margin-right: 0.3125rem;
+}
+.public-cap-bg .record-up .items .item{
+	float: left;
+	margin-left: 0.234375rem;
+	box-sizing: border-box;
+	border:1px solid #e3e3e3;
+	height: 1.40625rem;
+	width: 1.40625rem;
+	margin-bottom: 0.3125rem;
+	background:url("../img/add.png") center center no-repeat;
+	background-size: 14px 14px;
+	padding: 0.078125rem;
+}
+.public-cap-bg .record-up .items .item:nth-child(5n+1){
+	margin-left: 0;
+}
+.public-cap-bg .record-up .items .item img{
+	width: 100%;
+	height: 100%;
+}
+
+
+/* 条件不满足 */
+.public-cap-bg .cond-up .public-top{
+	position: relative;
+	background: url('../img/popupbg_2.png') center center no-repeat;
+	background-size: 100% 100%;
+
+}
+.public-cap-bg .cond-up .public-top{
+	overflow:visible;
+}
+.public-cap-bg .cond-up .public-top .icon-top{
+	position: absolute;   /*   135 143 */
+	top: -1.109375rem;
+	margin-left: 50%;
+	left:-1.046875rem;
+	width: 2.109375rem;
+	height: 2.234375rem;
+	background: url("../img/badges_fire.png") center center no-repeat;
+	background-size: 100% 100%;
+	z-index: 999;
+
+}
+.public-cap-bg .cond-up .public-top {
+	color: #fff;
+	text-align: center;
+	padding-top: 1.015625rem;
+}
+.public-cap-bg .cond-up .public-top span{
+	font-size: 0.46875rem;
+
+}
+.public-cap-bg .cond-up .public-top p{
+	text-align: left;
+	font-size: 0.28125rem;
+	padding-left: 0.46875rem;
+	padding-right: 0.46875rem;
+	font-size:0.28125rem;
+}
+.public-cap-bg .cond-up .items .item{
+	background: url('../img/add-cond.png') center center no-repeat;
+	background-size: 40px 40px;
+}
+.public-cap-bg .cond-up .items{
+	margin-top: 0.46875rem;
+}
+.public-cap-bg .cond-up .info-line{
+	text-align: center;
+	font-size: 0.46875rem;
+	color: #d9d9d9;
+	margin-top: 0.78125rem;
+}
+
+
+
+
+
+/* 徽章 */
+.public-cap-bg .badge-up .public-top{
+	position: relative;
+	background: url('../img/popupbg_3.png') center center no-repeat;
+	background-size: 100% 100%;
+
+}
+.public-cap-bg .badge-up .content-box .title{
+	margin-bottom: 0.078125rem;
+	margin-top: -0.15625rem;
+}
+.public-cap-bg .badge-up .public-top{
+	overflow:visible;
+}
+.public-cap-bg .badge-up .public-top .icon-top{
+	position: absolute;   /*   135 143 */
+	top: -0.96875rem; 
+	margin-left: 50%;
+	left:-0.96875rem;
+	width: 1.9375rem;
+	height: 1.9375rem;
+	background: url("../img/badges_2.png") center center no-repeat;
+	background-size: 100% 100%;
+	z-index: 999;
+
+}
+.public-cap-bg .badge-up .public-top {
+	color: #fff;
+	text-align: center;
+	padding-top: 1.015625rem;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+}
+.public-cap-bg .badge-up .public-top span{
+	font-size: 0.46875rem;
+
+}
+.public-cap-bg .badge-up .public-top p{
+	text-align: left;
+	font-size: 0.28125rem;
+	padding-left: 0.46875rem;
+	padding-right: 0.46875rem;
+	font-size:0.28125rem;
+}
+.public-cap-bg .badge-up .items .item{
+	background: url('../img/add-cond.png') center center no-repeat;
+	background-size: 40px 40px;
+}
+.public-cap-bg .badge-up .items{
+	margin-top: 0.3125rem;
+}
+.public-cap-bg .badge-up .info-line{
+	text-align: center;
+	font-size: 0.46875rem;
+	color: #d9d9d9;
+	margin-top: 0.78125rem;
+}
+
+.public-cap-bg .badge-up .records-box .item{
+	border-bottom: 1px dashed #d9d9d9;
+	padding-left: 0.59375rem;
+	padding-right: 0.59375rem;
+	padding-top: 0.15625rem;
+	padding-bottom: 0.15625rem;
+	box-sizing: border-box;
+}
+.public-cap-bg .badge-up .records-box .user-info{
+	float: left;
+}
+.public-cap-bg .badge-up .records-box .user-info .img-box{
+	float: left;
+	width: 0.90625rem;
+	height: 0.90625rem;
+	margin-right: 0.3125rem;
+}
+.public-cap-bg .badge-up .records-box .text-box{
+	float: left;
+}
+.public-cap-bg .badge-up .records-box .user-info .img-box img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.public-cap-bg .badge-up .records-box .icon_rank{
+	float: right;
+}
+
+
+
+/* 获得奖章 */
+.public-cap-bg .gain-box .icon-top{
+	position: absolute;
+    top: -1.46875rem;
+    left: 50%;
+    margin-left: -2.03125rem;
+    width: 4.078125rem;
+    height: 2.9375rem;
+    background: url(../img/icon_popup.png) center center no-repeat;
+    background-size: 100% 100%;
+    z-index: 999;
+
+}
+.public-cap-bg .gain-box .public-top{
+	position: relative;
+	background:url('../img/popupbg_3.png') center center no-repeat;
+	background-size: 100% 100%;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+}
+.public-cap-bg .gain-box .user-box{
+	position: absolute;
+	bottom: 0.3125rem;
+	font-size: 0.46875rem;
+	width: 100%;
+	color: #fff;
+	text-align: center;
+}
+.public-cap-bg .gain-box .user-box p{
+	display: inline-block;
+	margin-left: 0.078125rem;
+}
+.public-cap-bg .gain-box .user-box .user-img{
+	display: inline-block;
+	width: 1.25rem;
+	height: 1.25rem;
+	vertical-align: middle;
+}
+.public-cap-bg .gain-box .user-box .user-img img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.public-cap-bg .gain-box .info-gain{
+	margin-top: 0.234375rem;
+	height: 3.125rem;
+	display: table;
+	width: 100%;
+	padding-bottom: 0.15625rem;
+	border-bottom: 1px dashed #d9d9d9;
+}
+.public-cap-bg .info-gain .info-img{
+	box-sizing: border-box;
+	display: table-cell;
+	width: 50%;
+	text-align: center;
+	vertical-align: middle;
+	height: 100%;
+	border-right: 1px dashed #d9d9d9;
+
+}
+.public-cap-bg .info-gain .info-img img{
+	width: 60%;
+	height: auto;
+}
+.public-cap-bg .info-gain .info-text{
+	display: table-cell;
+	vertical-align: middle;
+    text-align: center;
+    width: 50%;
+	height: 100%;
+	font-size: 0.46875rem;
+}
+.public-cap-bg .info-gain .info-text .nub{
+	color: #823a2c;
+	font-size: 0.5625rem;
+
+}
+.public-cap-bg .gain-box .badge-info-box{
+	padding: 0.3125rem 0.703125rem;
+	border-bottom: 1px dashed #d9d9d9;
+	color: #0b0a0a;
+	font-size: 0.375rem;
+
+}
+.public-cap-bg .gain-box .btn-box{
+	text-align: center;
+}
+.public-cap-bg .gain-box .btn-box .btn{
+	margin-top:0.34375rem;
+	display: inline-block;
+	font-size: 0.5625rem;
+	width: 3.90625rem;
+	height: 0.9375rem;
+	border-radius: 10px;
+	background: #823a2c;
+	color: #fff;
+}
+
+
+/* 获得优惠劵 */
+.public-cap-bg .acquire-box .public-top{
+	background: url('../img/popupbg_1.png') center center no-repeat;
+	background-size:100% 100%;
+}
+.public-cap-bg .acquire-box .acquire-info{
+	width: 8.125rem;
+	height: 3.28125rem;
+	background: url('../img/acquire.png') center center no-repeat;
+	background-size: 100% 100%;
+	margin:0 auto;
+}
+.public-cap-bg .acquire-box .acquire-info{
+	margin-top: 0.4375rem;
+	margin-bottom: 0.4375rem;
+	text-align: center;
+
+
+}
+
+.public-cap-bg .acquire-box .acquire-info .img-box{
+	position: relative;
+	display: inline-block;
+	width: 3.71875rem;
+	height: 2.125rem;
+	margin-top: 0.546875rem;
+	vertical-align: middle;
+
+}
+.public-cap-bg .acquire-box .icon_img{
+	position: absolute;
+	bottom: -0.15625rem;
+	right: -0.3125rem;
+	width: 1.125rem;
+	height: 0.875rem;
+	background: url('../img/acquire_1.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.public-cap-bg .acquire-box .acquire-info img{
+	width: 100%;
+	height: 100%;
+}
+.public-cap-bg .acquire-box .acquire-info .text-box{
+	margin-top: 0.46875rem;
+	vertical-align: middle;
+	display: inline-block;
+	font-size: 0.46875rem;
+	color: #000;
+
+}
+.public-cap-bg .acquire-box .acquire-info-box{
+	padding: 0.3125rem 0.625rem;
+	border-top: 1px dashed #d9d9d9;
+	border-bottom: 1px dashed #d9d9d9;
+	font-size: 0.375rem;
+	color: #0b0a0a;
+}
+.public-cap-bg .acquire-box .link-btn{
+	float: right;
+	width:  1.140625rem;
+	height: 0.671875rem;
+	background: url('../img/icon_link.png') center center no-repeat;
+	background-size: 100% 100%;
+	margin-top: 0.234375rem;
+}
+.public-cap-bg .acquire-box  .btn-box .btn{
+	margin-top: 0.3125rem;
+	display: inline-block;
+	font-size: 0.5625rem;
+	width: 3.90625rem;
+	height: 0.9375rem;
+	line-height: 0.9375rem;
+	border-radius: 10px;
+	background: #38bbb6;
+	color: #fff;
+}
+
+
+
+
