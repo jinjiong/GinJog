@@ -5,6 +5,7 @@
 	<title>ME跑</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
 	<!-- 适配手机屏幕的大小 -->
 	<script type="text/javascript" src='js/flexible.js'></script>
 	<!-- 百度地图接口 -->
@@ -30,14 +31,17 @@
 		<div class="badges-item"><img src="img/badges_5.png"></div>
 	</div>
 	<div class="instruct-box">
-		<div class="item"></div>
+		<div class="item item1"></div>
 		<div class="item"></div>
 		<div class="item"></div>
 	</div>
+  <!-- 百度地图 -->
+
 	<div id="map"></div>
-<!-- 弹框代码 begin -->
-	<div class="public-cap-bg">
-    <div class="cap-bg">
+
+<!-- 弹框代码 begin  需要该模块的直接粘贴上去就可以使用 -->
+	<div class="public-cap-bg " style="display: none;">
+    <div class="cap-bg ">
       <div class="close"></div>
       <div class="title-among">战队排行榜</div>
       <div class="info-box">
@@ -118,12 +122,43 @@
           </span>
           <span>98</span>
         </div>
+         <div class="info-item">
+          <span>6</span>
+          <span>
+            <div class="img-box">
+               <i>对长</i>
+               <img src="upload/1.jpg">
+            </div>
+            <div class="text-box">
+              <div class="name">奔跑的鸭子</div>
+              <div class="team-name">蜜桃宇宙战队</div>
+            </div>
+          </span>
+          <span>98</span>
+        </div>
+         <div class="info-item">
+          <span>7</span>
+          <span>
+            <div class="img-box">
+               <i>对长</i>
+               <img src="upload/1.jpg">
+            </div>
+            <div class="text-box">
+              <div class="name">奔跑的鸭子</div>
+              <div class="team-name">蜜桃宇宙战队</div>
+            </div>
+          </span>
+          <span>98</span>
+        </div>
         
       </div>
     </div>
   </div>
   <!-- 弹框代码 end -->
+  <script type="text/javascript" src='js/jquery-1.12.2.min.js'></script>
+  <script type="text/javascript" src='js/base.js'></script>
 	<script type="text/javascript">
+
 		//创建和初始化地图函数：
 	    function initMap(){
 	      createMap();//创建地图
