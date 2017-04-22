@@ -281,9 +281,9 @@ position: relative;
 	background: #848484;
 	color: #fff;
 }
-.evaluate-box .hint-txt{
+.present-box .hint-txt{
 	color: #656565;
-	margin-bottom: 0.9375rem;
+	margin-bottom: 0.3125rem
 }
 .evaluate-box .evaluate-item{
 	padding-right: 0.3125rem;
@@ -337,3 +337,36 @@ position: relative;
 .corr-box .corr-item .genre{
 	color: #848484;
 }
+.grade-box {
+	margin-right: 0.3125rem;
+	margin-bottom: 0.3125rem;
+	font-size: 0.3125rem;
+	color:#848484;
+}
+.grade-box p span{
+	font-size: 0.3125rem;
+	color: #ff9100;
+	background:#fff;
+	padding-right: 0.15625rem;
+}
+.grade-box p{
+	background: url('../img/line1.jpg') center  center ;
+	background-repeat: repeat-x;
+}
+.grade-box p:nth-child(1){
+	background:none;
+}
+.grade-box p:nth-child(2){
+	background: url('../img/line2.jpg') center  center ;
+	background-repeat: repeat-x;
+}
+.grade-box p i,.grade-box p em{
+	font-style: normal;
+}
+.fc838383{
+	color: #838383!important;
+}
+.fcf2f2f2{
+	color: #cfcfcf!important;
+}
+
