@@ -1,0 +1,81 @@
+@CHARSET "UTF-8";
+*,p,ol,ul,label{ margin:0; padding:0; word-wrap:break-word; word-break:break-all;}
+input[type="checkbox"], input[type="radio"] {
+    line-height: normal;
+    margin: 0px 0 0;
+}
+a:hover{
+	color: #ff80b6;
+}
+input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea{
+	padding: 0;
+	margin: 0;
+}
+ul,li{
+	list-style: none;
+}
+.bgffda00{
+	background: #ffda00;
+}
+body {
+    color:#333333;
+    font: 0.40625rem/1.6  "微软雅黑","Microsoft Yahei","Hiragino Sans GB",tahoma,arial,"\5B8B\4F53" !important;
+	background: #FFFFFF;
+}
+
+.info-top{
+	position: relative;
+	padding: 0.3125rem;
+	padding-bottom: 0.1875rem;
+	border-bottom: 1px solid #cecece;
+}
+.info-top .img-box{
+	position: absolute;
+	left: 0.3125rem;
+	top: 0.3125rem;
+	width: 3.125rem;
+	height: 3.125rem;
+	background: red;
+}
+.info-top .text-box{
+	padding-left: 3.4375rem;
+	height: 3.125rem;
+}
+.info-top .info-title{
+    display: flex;
+    margin-top: 0.3125rem;
+    box-sizing: border-box;
+    border:1px solid #848484;
+    border-radius: 5px;
+    font-size: 0.375rem;
+    height: 0.625rem;
+    line-height: 0.625rem;
+}
+.info-top .info-title .title-item{
+	flex: 1;
+    text-align: center;
+    color: #848484;
+    box-sizing: border-box;
+    border-left: 1px solid #848484;
+}
+.info-top .info-title .title-item:nth-child(1){
+	border-left: 0;
+}
+.info-top .info-title .title-item.active{
+	background: #848484;
+	color: #fff;
+}
+.swiper-slide{
+	padding-left: 0.3125rem;
+	box-sizing: border-box;
+	overflow:hidden;
+}
+.swiper-slide img{
+	width: 100%;
+	height: atuo;
+}
+.details-title{
+	margin-top:0.359375rem;
+	margin-bottom:0.3125rem; 
+	margin-left: 0.3125rem;
+}
