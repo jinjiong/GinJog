@@ -74,16 +74,16 @@
 		    			<li>
 		    				<p>热门App内购买项目 <i class="icon_arrows"></i></p>
 		    				<ul>
-		    					<li>6元=6000豆 <span class="money">￥6</span></li>
-		    					<li>12元=130000豆 <span class="money">￥12</span></li>
-		    					<li>30元=340000豆<span class="money">￥30</span></li>
-		    					<li>1元=1000豆<span class="money">￥1</span></li>
-		    					<li>60元=690000豆<span class="money">￥60</span></li>
-		    					<li>6元礼包<span class="money">￥6</span></li>
-		    					<li>128元=1590000<span class="money">￥120</span></li>
-		    					<li>低级神灯<span class="money">￥1</span></li>
-		    					<li>1元礼包 <span class="money">￥1</span></li>
-		    					<li>3元礼包<span class="money">￥3</span></li>
+		    					<li>1、6元=6000豆 <span class="money">￥6</span></li>
+		    					<li>2、12元=130000豆 <span class="money">￥12</span></li>
+		    					<li>3、30元=340000豆<span class="money">￥30</span></li>
+		    					<li>4、1元=1000豆<span class="money">￥1</span></li>
+		    					<li>5、60元=690000豆<span class="money">￥60</span></li>
+		    					<li>6、6元礼包<span class="money">￥6</span></li>
+		    					<li>7、128元=1590000<span class="money">￥120</span></li>
+		    					<li>8、低级神灯<span class="money">￥1</span></li>
+		    					<li>9、1元礼包 <span class="money">￥1</span></li>
+		    					<li>10、3元礼包<span class="money">￥3</span></li>
 		    				</ul>
 		    			</li>
 		    			<li>
@@ -207,16 +207,16 @@
 		<div class="corr-box tier-box">
 			<div class="corr-title">更多Hao Xi的作品</div>
 			<div class="corr-all">
-				<div class="corr-item">
+				<a href="https://itunes.apple.com/us/app/id1136134430?mt=8" class="corr-item">
 					<div class="img-box"><img src="img/1.png"></div>
 					<p>捕鱼传奇千炮版...</p>
 					<span class="genre">游戏</span>
-				</div>
-				<div class="corr-item">
+				</a>
+				<a href="https://itunes.apple.com/us/app/id1136134430?mt=8" class="corr-item">
 					<div class="img-box"><img src="img/2.png"></div>
 					<p>街机捕鱼猎手...</p>
 					<span class="genre">游戏</span>
-				</div>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -230,7 +230,10 @@
         spaceBetween: 0
     });
     $('.list-box>ul>li p').on('touchend',function(){
-    	if(!$(this).find('.icon_arrows').is(':hidden')){
+    	if($(this).find('.icon_arrows').is(':hidden')){
+    		$(this).parent('li').find('ul').slideUp();
+    		$(this).find('.icon_arrows').show();
+    	}else{
     		$(this).parent('li').find('ul').slideDown();
     		$(this).find('.icon_arrows').hide();
     	}

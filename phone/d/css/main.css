@@ -215,8 +215,8 @@ position: relative;
 }
 .list-box ul li>ul>li{
 	border-top: 1px solid #cecece;
-	font-size: 0.375rem;
-	color: #000;
+	font-size: 0.34375rem;
+	color: #a3a3a3;
 	margin-right: -0.3125rem;
 }
 .list-box ul li>ul>li:nth-child(1){
@@ -325,6 +325,8 @@ position: relative;
 	display: inline-block;
 	width: 1.5625rem;
 	margin-right: 0.15625rem;
+	text-decoration: none;
+	color: #333;
 }
 .corr-box .corr-item  .img-box{
 	width: 1.5625rem;
