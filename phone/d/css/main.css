@@ -19,15 +19,19 @@ ul,li{
 }
 body {
     color:#333333;
-    font: 0.40625rem/1.6  "微软雅黑","Microsoft Yahei","Hiragino Sans GB",tahoma,arial,"\5B8B\4F53" !important;
+    font: 0.375rem/1.6  "微软雅黑","Microsoft Yahei","Hiragino Sans GB",tahoma,arial,"\5B8B\4F53" !important;
 	background: #FFFFFF;
+	padding-top: 4.609375rem;
 }
 
 .info-top{
-	position: relative;
+	position: fixed;
+	z-index: 999;
+	top: 0;
 	padding: 0.3125rem;
 	padding-bottom: 0.1875rem;
 	border-bottom: 1px solid #cecece;
+	background: #fff;
 }
 .info-top .img-box{
 	position: absolute;
@@ -35,12 +39,54 @@ body {
 	top: 0.3125rem;
 	width: 3.125rem;
 	height: 3.125rem;
-	background: red;
+}
+.info-top .img-box img{
+	height: 100%;
+	width: 100%;
 }
 .info-top .text-box{
+	position: relative;
 	padding-left: 3.4375rem;
 	height: 3.125rem;
 }
+.info-top .text-box .title{
+	position: relative;
+	font-size: 0.4375rem;
+	color: #000;
+	padding-right: 0.9375rem;
+}
+.info-top .text-box .title i{
+	position: absolute;
+	border:1px solid #666666;
+	color: #666666;
+	padding-left: 0.078125rem;
+	padding-right: 0.078125rem;
+	font-size: 0.21875rem;
+	font-style: normal;
+	right: 0;
+	top: 0.125rem;
+}
+.info-top .text-box .reminder{
+	color: #848484;
+}
+.info-top .text-box .down{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: url('../img/add.jpg') 0.09375rem 0.09375rem no-repeat;
+	background-size: 0.1875rem 0.1875rem;
+	color: #0080ff;
+	border:1px solid #0080ff;
+	padding: 0.15625rem 0.3125rem;
+	border-radius: 4px;
+	line-height: 1;
+}
+
+
+
+
+
+
 .info-top .info-title{
     display: flex;
     margin-top: 0.3125rem;
@@ -78,4 +124,23 @@ body {
 	margin-top:0.359375rem;
 	margin-bottom:0.3125rem; 
 	margin-left: 0.3125rem;
+	font-size: 0.46875rem;
+	color: #000;
+}
+.details-box .abstract-box{
+	padding-left: 0.3125rem;
+	padding-right: 0.46875rem;
+	margin-top: 0.3125rem;
+	padding-top: 0.3125rem;
+	padding-bottom: 0.3125rem;
+	border-top: 1px solid #cecece;
+	border-bottom: 1px solid #cecece;
+}
+.details-box .abstract-box .title{
+	font-size: 0.46875rem;
+	color:#000;
+	margin-bottom: 0.3125rem;
+}
+.details-box .abstract-box p{
+	color: #676767;
 }
