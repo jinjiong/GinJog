@@ -12,6 +12,9 @@ input[type=color], input[type=date], input[type=datetime-local], input[type=date
 	padding: 0;
 	margin: 0;
 }
+html{
+	font-size: 36px;
+}
 ul,li{
 	list-style: none;
 }
@@ -67,8 +70,6 @@ body {
 .quick-entry-link .quick-box{
 	display: inline-block;
 	width: 25%;
-	padding-left: 0.373333rem;
-	padding-right: 0.373333rem;
 	box-sizing: border-box;
 	text-align: center;
 	overflow:hidden;
