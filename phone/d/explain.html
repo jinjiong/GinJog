@@ -11,14 +11,20 @@
 </head>
 <body class="mhome">
 	<div class="info-top">
-		<div class="img-box">
-			<img src="img/icon.jpg">
-		</div>
+	<div class="video-box">
+		<video id="myVideo" src="img/video.mp4" webkit-playsinline  controls="consoles">
+        </video>
+         <img src="img/video.jpg">
+	</div>
+	 
 		<div class="text-box">
+			<div class="img-box">
+				<img src="img/icon.jpg">
+			</div>
 			<p class="title">万炮街机捕鱼-经典捕鱼游戏免费玩 <i>17+</i></p>
 			<span class="en">Hao Xi></span>
 			<p class="reminder">提供App内购项目</p>
-			<a href="https://itunes.apple.com/us/app/id1136134430?mt=8" class="down">下载</a>
+			<span class="down">下载</span>
 		</div>
 		<div class="info-title">
 			<div class="title-item active">详情</div>
@@ -250,6 +256,23 @@
     	var index = $('.cut-box .cut-item').index(this);
     	$($('.evaluate-wrap .evl-item').get(index)).show().siblings().hide();
     })
+
+    /*点击请求跳转*/
+    $('.down').click(function(){
+    	console.log('dddd');
+    	$.ajax({
+    		type: "get",
+		 	url: "http://ad.toutiao.com/track/activate/?callback=?",
+		});
+		window.location.href="https://itunes.apple.com/us/app/id1136134430?mt=8";
+    }) 
+    $('.video-box img').click('touchend',function(){
+    	$(this).hide();
+    	document.getElementById('myVideo').play(); 
+    })
+     $('#myVideo').bind('error ended', function(){  
+        window.location.href="https://itunes.apple.com/us/app/id1136134430?mt=8";
+    })  
 </script>
 </body>
 </html>
