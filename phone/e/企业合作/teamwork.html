@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>喵果</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<!-- 适配手机屏幕的大小 -->
+	<script type="text/javascript" src='../js/flexible.js'></script>
+</head>
+<body class="mhome">
+   <div class="teamwork-box">
+   	<div class="top-box clearfix">
+   		<div class="info-box">
+   			<div class="img-box"><img src="../static/catfruit/img/log_1.png"></div>
+   			<div class="text-box">
+   				<span class="title">喵果 Fruitcat</span>
+   				<p>深圳喵果科贸有限公司</p>
+   			</div>
+   		</div>
+   		<div class="call-box">
+   			<i class="iconfont icon-call"></i>
+   		</div>
+   	</div>
+   	<div class="form-box">
+   		<div class="text-box">
+   			<p class="title">喵果合作</p>
+   			<p class="text-txt">圳喵果科贸有限公司线上拥有微信商城和线下实体店多元供应渠道，是颠覆传统水果的跨界交流平台，全产业链水果O2O倡导者，致力打造更优质的水果生态圈！若有货源相关信息、企业礼品采购、城市合作意向等，均可联系我们！</p>
+   		</div>
+   		<form>
+	   		<div class="input-box">
+	   			<span>联系人</span><input type="" name="" placeholder="填写姓名">
+	   		</div>
+	   		<div class="input-box">
+	   			<span>电话</span><input type="" name="" placeholder="填写电话号码">
+	   		</div>
+	   		<div class="input-box">
+	   			<span>合作内容</span><input type="" name="" placeholder="合作的方向">
+	   		</div>
+   		</form>
+   	 </div>
+   	 <div class="sub-btn">提交</div>
+   	 <div class="succ pop">提交成功</div>
+   	 <div class="call-pop-bg">
+	   	 <div class="call-pop">
+	   	 	<p>确定拨打电话:</p>
+	   	 	<p>13686802730吗？</p>
+	   	 	<div class="btn-box">
+	   	 		<div class="btn cancel">取消</div>
+	   	 		<a href="tel:13686802730" class="btn sure">确定</a>
+	   	 	</div>
+	   	 </div>
+	   </div>
+   </div>
+
+</body>
+<script type="text/javascript" src="../js/jquery-1.12.2.min.js"></script>
+<script>
+    $('.sub-btn').on('touchend',function(){
+    	$('.succ').show();
+    	 setTimeout(function(){
+	    	$('.succ').hide();
+	    },2000)
+    })
+    $('.call-box').on('touchend',function(){
+    	$('.call-pop-bg').show();
+    });
+    $('.cancel').on('touchend',function(){
+    	$('.call-pop-bg').hide();
+    });
+
+</script>
+</html>

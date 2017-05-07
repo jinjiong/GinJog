@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>喵果</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<!-- 适配手机屏幕的大小 -->
+	<script type="text/javascript" src='../js/flexible.js'></script>
+</head>
+<body class="nhome">
+    <div class="inte-wrap">
+        <div class="inte-top">玩法介绍<i class="iconfont icon-gantanhao"></i></div>
+        <div class="share-box">
+            <textarea class="textarea" placeholder="谈谈你分享的商品把~" style="resize:none"></textarea>
+            <div class="camera-box">
+                <i class="iconfont icon-ai-camera"></i>
+            </div>
+        </div>
+        <div class="location-box">
+            <div class="btn">提交</div>
+            <div class="site-txt"><i class="iconfont icon-zuobiao1"></i>告诉我们商品的具体地址吧！深圳市南山区22号</div>
+        </div>
+        <div class="pro-box">
+            <div class="user-info clearfix">
+                <div class="img-box"><img src="../upload/user1.jpg"></div>
+                <p class="user-name">XL哈哈哈<span>分享商品:</span></p>
+            </div>
+            <div class="pro-content">
+                <p class="pro-txt">荔枝的形状象鸡心，大小如乒乓球一般。拿起一串荔枝，一股清香扑鼻而来那香甜味迎面扑来，使人陶醉。</p>
+                <div class="pro-img">
+                    <img src="../upload/po19.jpg" >
+                    <img src="../upload/po20.jpg">
+                    <img src="../upload/po21.jpg">
+                </div>
+                <div class="site-box"><i class="iconfont icon-zuobiao1"></i>商品地址：深圳市南山区交通大道725号</div>
+                <div class="evaluate-box">
+                    <span class="time">2个小时</span>
+                    <div class="eval-txt">
+                        <i class="iconfont icon-down-copy"></i>
+                        <p><span class="fcf47596">小喵王：</span>这个地址离我很近啊！</p>
+                        <p><span class="fcf47596">XL的猫咪</span>回复<span class="fcf47596">小喵王：</span>哈哈哈啊哈哈</p>
+                        <p><span class="fcf47596">喵果：</span>已经买回来尝尝了</p>
+                        <p><span class="fcf47596">XL的猫咪</span>回复<span class="fcf47596">喵果：</span>很好吃哦</p>
+                        <p class="fcf47596">商家回复：谢谢您对喵果的支持！我们会做的更好。期待您的下次下单。</p>
+                    </div>
+                </div>
+                <div class="pro-bottom clearfix">
+                    <div class="btn">谈判中</div>
+                    <div class="sow-box">
+                         <span><i class="iconfont icon-xinxi"></i></span>
+                        <span><i class="xin iconfont icon-heart"></i><em>3</em></span>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.12.2.min.js"></script>
+<script>
+   $('.xin').click(function(){
+
+    if ($(this).hasClass('icon-heart')) {
+        $(this).removeClass('icon-heart').addClass('icon-xin-1');
+        $(this).siblings('em').text(parseInt($(this).siblings('em').text())+1);
+    }else{
+        $(this).removeClass('icon-xin-1').addClass('icon-heart');
+        $(this).siblings('em').text(parseInt($(this).siblings('em').text())-1);
+    }
+   })
+</script>
+</html>

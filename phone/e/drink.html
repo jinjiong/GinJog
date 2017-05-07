@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>喵果</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_81j2ekhrkevfs9k9.css">
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- 适配手机屏幕的大小 -->
 	<script type="text/javascript" src='js/flexible.js'></script>
@@ -330,6 +330,9 @@
 <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
 <script type="text/javascript" src='js/fly.js'></script>
 <script>
+ $('.go-box').on('touchend',function(){
+    	window.location.href='订单确认等/订单确认.html'
+    })
 	$('.public-sild-title .item').on('touchend',function(){
 		$(this).addClass('active').siblings().removeClass('active');
     	var index = $('.public-sild-title .item').index(this);

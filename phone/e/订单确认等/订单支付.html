@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>喵果</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<!-- 适配手机屏幕的大小 -->
+	<script type="text/javascript" src='../js/flexible.js'></script>
+</head>
+<body class="mhome bgf2f0f0">
+   <h2 class="pay-title">订单提交成功，请立即支付！</h2>
+   <div class="pay-wrap">
+       <ul>
+           <li>订单编号：145279526</li>
+           <li>商品数量：4</li>
+           <li>订单金额：￥150</li>
+           <li>支付方式</li>
+           <li><i class="iconfont icon-weixin-copy"></i>微信支付<span><i class="iconfont icon-duihao1 pay-select"></i></span></li>
+           <li><i class="iconfont icon-zhifubao"></i>支付宝支付<span><i class="iconfont icon-weibiaoti2 pay-select"></i></span></li>
+           <li><i class="iconfont icon-msg6"></i>货到付款<span><i class="iconfont icon-weibiaoti2 pay-select"></i></span></li>
+       </ul>
+       <div class="pay-btn">立即支付</div>
+   </div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.12.2.min.js"></script>
+<script type="text/javascript">
+ $('.pay-btn').on('touchend',function(){
+        window.location.href='../订单确认等/支付提示.html'
+    })
+   $('.pay-select').on('touchend',function(){
+        if($(this).hasClass('icon-duihao1')){
+        }else{
+            $('.pay-select').removeClass('icon-duihao1').addClass('icon-weibiaoti2');
+            $(this).addClass('icon-duihao1');
+        }
+   })
+</script>
+</html>

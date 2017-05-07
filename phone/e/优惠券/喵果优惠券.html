@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>喵果</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<!-- 适配手机屏幕的大小 -->
+	<script type="text/javascript" src='../js/flexible.js'></script>
+</head>
+<body class="nhome bgf2f0f0">
+   <div class="coupon-wrap">
+   	<div class="coupon-top clearfix">
+   		<div class="title active"><span>可用<i>(4)</i></span></div>
+   		<div class="title"><span>失效<i>(3)</i></span></div>
+   	</div>
+   	<div class="all-coupon">
+   		<div class="item-box coupon-red">
+   			<div class="money">
+   			   <div class="title">
+   			   		<p>coupons</p>
+   			   		<p>现金红包</p>
+   			   </div>
+   			   <h1>￥3</h1>
+   			   <div class="explain fr">满20元使用</div>
+   			</div>
+   			<div class="use">
+   			    <span class="fr btn">立即使用</span>
+   				<p>有效期：2017/3/24-2017/3/29</p>
+   			</div>
+   		</div>
+   		<div class="item-box coupon-red">
+   			<div class="money">
+   			   <div class="title">
+   			   		<p>coupons</p>
+   			   		<p>现金红包</p>
+   			   </div>
+   			   <h1>￥3</h1>
+   			   <div class="explain fr">满20元使用</div>
+   			</div>
+   			<div class="use">
+   			    <span class="fr btn">立即使用</span>
+   				<p>有效期：2017/3/24-2017/3/29</p>
+   			</div>
+   		</div>
+   		<div class="item-box coupon-blue">
+   			<div class="money">
+   			   <div class="title">
+   			   		<p>coupons</p>
+   			   		<p>现金红包</p>
+   			   </div>
+   			   <h1>￥3</h1>
+   			   <div class="explain fr">满20元使用</div>
+   			</div>
+   			<div class="use">
+   			    <span class="fr btn">立即使用</span>
+   				<p>有效期：2017/3/24-2017/3/29</p>
+   			</div>
+   		</div>
+   		<div class="item-box coupon-green">
+   			<div class="money">
+   			   <div class="title">
+   			   		<p>coupons</p>
+   			   		<p>现金红包</p>
+   			   </div>
+   			   <h1>￥3</h1>
+   			   <div class="explain fr">满20元使用</div>
+   			</div>
+   			<div class="use">
+   			    <span class="fr btn">立即使用</span>
+   				<p>有效期：2017/3/24-2017/3/29</p>
+   			</div>
+   		</div>
+   	</div>
+   	<div class="all-coupon all-coupon-no">
+   		<div class="item-box coupon-no">
+   			<div class="money">
+   			   <div class="title">
+   			   		<p>coupons</p>
+   			   		<p>现金红包</p>
+   			   </div>
+   			   <h1>￥3</h1>
+   			   <div class="explain fr">满20元使用</div>
+   			</div>
+   			<div class="use">
+   			    <span class="fr btn">立即使用</span>
+   				<p>有效期：2017/3/24-2017/3/29</p>
+   			</div>
+   		</div>
+   		<div class="item-box coupon-no">
+   			<div class="money">
+   			   <div class="title">
+   			   		<p>coupons</p>
+   			   		<p>现金红包</p>
+   			   </div>
+   			   <h1>￥3</h1>
+   			   <div class="explain fr">满20元使用</div>
+   			</div>
+   			<div class="use">
+   			    <span class="fr btn">立即使用</span>
+   				<p>有效期：2017/3/24-2017/3/29</p>
+   			</div>
+   		</div>
+   		<div class="item-box coupon-no">
+   			<div class="money">
+   			   <div class="title">
+   			   		<p>coupons</p>
+   			   		<p>现金红包</p>
+   			   </div>
+   			   <h1>￥3</h1>
+   			   <div class="explain fr">满20元使用</div>
+   			</div>
+   			<div class="use">
+   			    <span class="fr btn">立即使用</span>
+   				<p>有效期：2017/3/24-2017/3/29</p>
+   			</div>
+   		</div>
+   	</div>
+   	<div class="pop-bg">
+   		<div class="pop-sure">
+	   		 <p>您将使用喵果优惠券</p>
+	   		 <div class="sure btn">确定</div>
+	   		 <div class="abrogate btn">取消</div>
+   		</div>
+   	</div>
+   </div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.12.2.min.js"></script>
+<script>
+    $('.coupon-top .title').on('touchend',function(){
+    	$(this).addClass('active').siblings().removeClass('active');
+    	console.log($('.coupon-top .title').index(this));
+    	if ($('.coupon-top .title').index(this)==0) {
+    		$('.all-coupon').show();
+    		$('.all-coupon-no').hide();
+    	}else{
+    		$('.all-coupon').hide();
+    		$('.all-coupon-no').show();
+    	}
+    })
+    $('.item-box .btn').on('touchend',function(){
+    	if ($(this).parents('.all-coupon-no').length==0) {
+    		$('.pop-bg').show();
+    	}
+    })
+    $('.pop-sure .btn').on('touchend',function(){
+    	if ($(this).hasClass('sure')) {
+    		window.location.href='../订单确认等/订单确认.html'
+    	}else{
+    		$('.pop-bg').hide();
+    	}
+
+    })
+</script>
+</html>

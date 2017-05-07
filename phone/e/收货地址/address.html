@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>喵果</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<!-- 适配手机屏幕的大小 -->
+	<script type="text/javascript" src='../js/flexible.js'></script>
+</head>
+<body class="nhome bgf2f0f0 pb100">
+    <div class="address-wrap">
+        <div class="add-nav clearfix">
+            <div class="item active"><span>快递配送</span></div>
+            <div class="item"><span>上门自提</span></div>
+        </div>
+        <div class="add-box">
+            <div class="add-item-box">
+                <div class="add-item">
+                    <p class="clearfix"><span class="f_l">大猫（女士）</span><span  class="f_r">13207109537</span></p>
+                    <p class="address">收货地址：湖北省武汉市武昌区南湖社区198号304</p>
+                    <div class="add-bottom clearfix">
+                        <div class="default active"><i class="iconfont icon-duihao1"></i>默认地址</div>
+                        <div class="compile">
+                            <span class="edit-btn"><i class="iconfont icon-bianji"></i>编辑</span>
+                            <span class="del-btn"><i class="iconfont icon-iconfontshanchu"></i>删除</span>
+                        </div>
+                    </div>
+                    <div class="del"><span>删除</span></div>
+                </div>
+            </div>
+            <div class="add-item-box">
+                <div class="add-item">
+                    <p class="clearfix"><span class="f_l">大猫（女士）</span><span  class="f_r">13207109537</span></p>
+                    <p class="address">收货地址：湖北省武汉市武昌区南湖社区198号304</p>
+                    <div class="add-bottom clearfix">
+                        <div class="default"><i class="iconfont icon-weibiaoti2"></i>默认地址</div>
+                        <div class="compile">
+                            <span class="edit-btn"><i class="iconfont icon-bianji"></i>编辑</span>
+                            <span class="del-btn"><i class="iconfont icon-iconfontshanchu"></i>删除</span>
+                        </div>
+                    </div>
+                    <div class="del"><span>删除</span></div>
+                </div>
+            </div>
+            <div class="add-item-box">
+                <div class="add-item">
+                    <p class="clearfix"><span class="f_l">大猫（女士）</span><span  class="f_r">13207109537</span></p>
+                    <p class="address">收货地址：湖北省武汉市武昌区南湖社区198号304</p>
+                    <div class="add-bottom clearfix">
+                        <div class="default"><i class="iconfont icon-weibiaoti2"></i>默认地址</div>
+                        <div class="compile">
+                            <span class="edit-btn"><i class="iconfont icon-bianji"></i>编辑</span>
+                            <span class="del-btn"><i class="iconfont icon-iconfontshanchu"></i>删除</span>
+                        </div>
+                    </div>
+                    <div class="del"><span>删除</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="add-box">
+            <div class="add-item">
+                <p class="zij"><i class="iconfont icon-zuobiao1"></i>自提点：深圳市喵果科贸有限公司</p>
+            </div>
+        </div>
+        <div class="new-add">新建收货地址</div>
+    </div>
+    <div class="info-txt-bg">
+        <div class="hint-del">
+            <div class="text-body">
+                <p>确认删除所填写好的</p>
+                <p>地址吗？</p>
+            </div>
+            <div class="btn-box">
+                <span class="cancel btn">取消</span>
+                <span class="confirm btn">确定</span>
+            </div>
+        </div>
+    </div>
+    <div class="add-site-box">
+        <div class="input-box">
+            <input type="" name="" placeholder="收货人姓名">
+            <i class="iconfont icon-user iconfont-r"></i>
+            <div class="sex-box sex-wrap">
+                <span><i class="iconfont icon-duihao1"></i>女士</span>
+                <span><i class="iconfont icon-weibiaoti2"></i>先生</span>
+            </div>
+        </div>
+         <div class="input-box">
+            <input type="" name="" placeholder="手机号码">
+            <i class="iconfont icon-phone-line iconfont-r"></i>
+        </div>
+        <div class="input-box">
+            <input type="" name="" placeholder="收货人姓名">
+            <i class="iconfont icon-zuobiao1 iconfont-r"></i>
+        </div>
+        <div class="input-box">
+            <input type="" name="" placeholder="楼号门牌号">
+            <i class="iconfont icon-zuobiao1 iconfont-r"></i>
+        </div>
+        <div class="input-box">
+            <input type="" class="remark" name="" placeholder="填写备注消息（如方便收货的时间）">
+            <i class="iconfont icon-signin iconfont-r"></i>
+        </div>
+         <div class="input-box">
+            <span class="tacitly-title">设为默认地址</span>
+             <div class="sex-box">
+                <span><i class="iconfont icon-weibiaoti2 default-btn"></i></span>
+            </div>
+        </div>
+        <div class="save-btn">保存</div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.12.2.min.js"></script>
+<script type="text/javascript" src='../js/jquery.touchSwipe.min.js'></script>
+<script>
+    $('.add-nav .item').click(function(){
+        if (!$(this).hasClass('active')) {
+            var nub =$(this).addClass('active').index()
+            $(this).addClass('active').siblings().removeClass('active');
+            $($('.add-box').eq(nub)).show();
+            $($('.add-box').eq(nub-1)).hide();
+        }
+    })
+    $('.default').click(function(){
+        if (!$(this).hasClass('active')) {
+            $('.default').removeClass('active').find('.iconfont').removeClass('icon-duihao1').addClass('icon-weibiaoti2');
+            $(this).addClass('active').find('.iconfont').removeClass('icon-weibiaoti2').addClass('icon-duihao1');
+        }
+    });
+   // 增加跟保存
+    $('.sex-wrap span').click(function(){
+        if (!$(this).find('.iconfont').hasClass('icon-duihao1')) {
+            $(this).find('.iconfont').addClass('icon-duihao1');
+            $(this).siblings('span').find('.iconfont').removeClass('icon-duihao1').addClass('icon-weibiaoti2')
+        }
+    });
+
+    $('.new-add,.edit-btn').click(function(){
+        $('.add-site-box').show();
+    })
+    $('.default-btn').click(function(){
+        if ($(this).hasClass('icon-duihao1')) {
+            $(this).removeClass('icon-duihao1').addClass('icon-weibiaoti2');
+        }else{
+             $(this).removeClass('icon-weibiaoti2').addClass('icon-duihao1');
+        }
+    })
+    //手机滑动删除
+        $(".add-item").swipe({
+            swipeLeft: function (event, direction, distance, duration, fingerCount) {
+                    $(this).animate({
+                        right: 1.333333 + 'rem'
+                    }, 90)
+            },
+     
+            swipeRight : function (event, direction, distance, duration, fingerCount) {
+                    $(this).animate({
+                        right: 0 + 'px'
+                    }, 90)
+            }
+        });
+    /*删除产品*/
+    var del_this ={};
+    $('.add-item .del,.del-btn').on('touchend',function(){
+        $('.info-txt-bg').show();
+        del_this= this;
+    });
+    $('.info-txt-bg .btn').on('touchend',function(){
+        if($(this).hasClass('confirm')){
+            $(del_this).parents('.add-item').detach();
+        }else{
+            $(del_this).parents('.add-item').animate({right:'0'},90);
+        }
+        $('.info-txt-bg').hide()
+    });
+</script>
+</html>
