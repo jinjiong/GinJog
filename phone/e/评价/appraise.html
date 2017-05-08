@@ -34,6 +34,7 @@
                        <span class="nub">25</span>
                    </div>
                    <div class="pin-box">
+                  <input type="text" x-webkit-speech x-webkit-grammar="bUIltin:search" />
                         <i class="iconfont icon-cnhuatong"></i>
                         <p>按住说话</p>
                    </div>
@@ -41,7 +42,10 @@
             </div>
             <div class="upload-box">
                 <span class="title">上传图片</span>
-                <div class="camera-box">
+                <div class="imgs">
+                </div>
+                <div class="file-box">
+                  <input class="camera-box" type="file" id="file" accept="image/*" capture=camera">
                     <i class="iconfont icon-ai-camera"></i>
                 </div>
             </div>
@@ -50,6 +54,19 @@
 </body>
 <script type="text/javascript" src="../js/jquery-1.12.2.min.js"></script>
 <script>
+$('#file').on('change',function(){
+    var fileObj=document.getElementById("file");
+    var src = window.URL.createObjectURL(fileObj.files[0]);
+    console.log(src);
+    var html = '<div class="img-box">'+
+                   '<img src="'+src+'">'+
+                    '<div class="iconfont-close"></div>'+
+                '</div>';
+    $('.imgs').prepend(html);
+})
+$('.imgs').on('click','.iconfont-close',function(){
+    $(this).parent('.img-box').remove();
 
+});
 </script>
 </html>
