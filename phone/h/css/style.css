@@ -1,0 +1,164 @@
+@CHARSET "UTF-8";
+*,p,ol,ul,label{ margin:0; padding:0; word-wrap:break-word; word-break:break-all;}
+input[type="checkbox"], input[type="radio"] {
+    line-height: normal;
+    margin: 0px 0 0;
+}
+a:hover{
+    color: #ff80b6;
+    text-decoration:none;
+}
+input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea{
+    padding: 0;
+    margin: 0;
+}
+ul,li{
+    list-style: none;
+}
+i,em{
+    font-style: normal;
+}
+html{
+    font-size: 36px;
+}
+body {
+    font-size: 0.346667rem;
+    font-family: "Microsoft Yahei","微软雅黑", "Hiragino Sans GB",tahoma,arial,"\5B8B\4F53" !important;
+    background: #f1f1f1;
+    line-height: 1.6 ;
+    color:#333;
+}
+.ranking-wrap .tabs{
+    height: 1.2rem;
+    font-size: 0;
+    background: #fff;
+}
+.ranking-wrap .tabs a{
+    display: inline-block;
+    width: 50%;
+     line-height: 1.2rem;
+    font-size: 0.426667rem;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+}
+.ranking-wrap .tabs a em{
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+}
+.ranking-wrap .tabs a.active{
+    color: #1e73f4;
+}
+.ranking-wrap .tabs a.active em{
+    border-bottom: 2px solid #1e73f4;
+}
+.ranking-wrap .title-box{
+    height:0.866667rem;
+    line-height: 0.866667rem; 
+    font-size: 0;
+    padding-left: 0.266667rem;
+    padding-right: 0.266667rem;
+}
+.ranking-wrap .title-box span{
+    display: inline-block;
+    font-size: 0.346667rem;
+    color: #979797;
+}
+.ranking-wrap .title-box span:nth-child(1){
+    width: 18%;
+}
+.ranking-wrap .title-box span:nth-child(2){
+    width: 58%;
+}
+.ranking-wrap .title-box span:nth-child(3){
+    width: 24%;
+}
+.ranking-wrap .ranking-list{
+    background: #fff;
+}
+.ranking-wrap .ranking-list .list-title{
+    font-size: 0.4rem;
+    line-height: 0.933333rem;
+    height: 0.933333rem;
+    border-bottom: 1px solid #c9c9c9;
+    padding-left: 0.266667rem;
+    padding-right: 0.266667rem;
+}
+.ranking-wrap .ranking-list li{
+    font-size: 0;
+    padding-left: 0.266667rem;
+    padding-right: 0.266667rem;
+    line-height: 1.066667rem;
+    border-bottom: 1px solid #eee9e9;
+}
+.ranking-list li a span{
+    display: inline-block;
+    height: 100%;
+    line-height: 1.066667rem;
+    vertical-align: middle;
+    color: #333;
+}
+.ranking-list li span:nth-child(1){
+    width: 18%;
+    font-size: 0.346667rem;
+}
+.ranking-list li span:nth-child(2){
+    width: 58%;
+    font-size: 0.426667rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    padding-right: 0.666667rem;
+}
+.ranking-list li span:nth-child(3){
+    width: 24%;
+    font-size: 0.346667rem;
+}
+.ranking-list li span .icon{
+    position: relative;
+    top: -0.04rem;
+    display: inline-block;
+    vertical-align: middle;
+    width: 0.213333rem;
+    height: 0.36rem;
+    background: url('../img/icon/icon_arrows_top.png') center center no-repeat;
+    background-size: 100% 100%;
+    margin-left:0.266667rem; 
+}
+.ranking-list li span .icon_down{
+    background: url('../img/icon/icon_arrows_down.png') center center no-repeat;
+    background-size: 100% 100%;
+}
+.ranking-list li:nth-child(1) span em{
+    display: inline-block;
+    width: 0.533333rem;
+    height: 0.533333rem;
+    border-radius: 4px;
+    background:#1e73f4;
+    color: #fff;
+    text-align: center;
+    line-height: 0.533333rem;
+}
+.ranking-list li span em{
+  display: inline-block;
+    width: 0.533333rem;
+    height: 0.533333rem;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 0.533333rem;
+}
+.ranking-list li:nth-child(2) span em{
+    background:#2484d5;
+    color: #fff;
+}
+.ranking-list li:nth-child(3) span em{
+    background:#15b5dd;
+    color: #fff;
+}
+.mt10{
+    margin-top: 0.133333rem;
+}
