@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>视频鉴赏</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link href="http://vjs.zencdn.net/5.6.0/video-js.css" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src='js/flexible.js'></script>
+   
+</head>
+<body>
+    <div class="case-wrap">
+        <div class="video-box">
+            <video id="example_video_1" class="video-js  vjs-big-play-centered" controls preload="auto" width="100%" height="100%"  
+                  poster="upload/1494298046608.jpg" data-setup="{}">
+                <source src="upload/video.mp4" type='video/mp4' />
+                <p class="vjs-no-js">播放失败请联系我们....</p>
+            </video>
+
+        </div>
+        <div class="movie-box">
+            <div class="movie-top">
+            <span class="title">丰田巧妙产品植入</span>
+                <i class="icon-share"></i>
+            </div>
+            <p class="movie-info">新书把不好的三国杀大是的都是阿斯顿阿斯顿阿四的撒给 v 过程中工作 在u刚刚在，持续给祖国发是的发弗格，森的复古 是的风格舒服的是犯嘀咕公司的，高富帅地方故事的公司的史。</p>
+        </div>
+    </div>
+
+    <script src="http://vjs.zencdn.net/5.18.4/video.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript">
+        videojs('example_video_1',{
+              
+            },function(){
+                console.log(this)
+            });
+    </script>
+</body>
+</html>
