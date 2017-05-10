@@ -27,16 +27,34 @@
             </div>
             <p class="movie-info">新书把不好的三国杀大是的都是阿斯顿阿斯顿阿四的撒给 v 过程中工作 在u刚刚在，持续给祖国发是的发弗格，森的复古 是的风格舒服的是犯嘀咕公司的，高富帅地方故事的公司的史。</p>
         </div>
+        <div class="pop-show">
+            <img src="img/share.png">
+        </div>
     </div>
-
-    <script src="js/video.min.js"></script>
+   
+    <script src="js/video.js"></script>
     <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
     <script type="text/javascript">
-        videojs('example_video_1',{
-              
-            },function(){
-                console.log(this)
-            });
+       var frst_btn =0;
+       var myPlayer = videojs('example_video_1');
+       $('.icon-share').click(function(){
+            myPlayer.pause();
+            $('.pop-show').show();
+            $('video').width('1');
+            if ($('.vjs-big-play-button').css('display')=='none') {
+                frst_btn =1;
+                console.log(frst_btn );
+                $('.vjs-has-started .vjs-poster,.vjs-big-play-button').show();
+            }
+       });
+       $('.pop-show').click(function(){
+            $(this).hide();
+            $('video').width("100%");
+            if (frst_btn==1) {
+                $('.vjs-has-started .vjs-poster,.vjs-big-play-button').hide();
+            }
+            
+       })
     </script>
 </body>
 </html>

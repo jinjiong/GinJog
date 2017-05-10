@@ -164,6 +164,7 @@ body {
     margin-top: 0.133333rem;
 }
 .case-wrap .video-box{
+    position: relative;
     width: 100%;
     height: 5.64rem;
     width: 100%;
@@ -206,4 +207,32 @@ body {
     color: #666;
     margin-top: 0.8rem;
     font-size: 0.32rem;
+}
+
+.case-wrap .pop-show{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 999999999;
+}
+.case-wrap .pop-show img{
+    position: absolute;
+    top: 0.4rem;
+    right:0.8rem;
+    width: 7.693333rem;
+    height: 6.746667rem;
+}
+.libraries-box .title-box{
+    background: #fff;
+    font-size: 0;
+}
+.libraries-box .title-box span{
+    display: inline-block;
+    width: 25%;
+    font-size: 0.426667rem;
+    text-align: center;
 }
