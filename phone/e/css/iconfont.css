@@ -19,7 +19,7 @@
 
 .icon-youhuiquan:before { content: "\e620"; }
 
-.icon-shopping-cart:before { content: "\e626"; }
+/* .icon-shopping-cart:before { content: "\e626"; } */
 
 .icon-iconfontshanchu:before { content: "\e614"; }
 
@@ -31,19 +31,19 @@
 
 .icon-jinlingyingcaiwangtubiao34:before { content: "\e745"; }
 
-.icon-user:before { content: "\e623"; }
+/* .icon-user:before { content: "\e623"; } */
 
 .icon-tianpinyinliao:before { content: "\e63d"; }
 
-.icon-search:before { content: "\e640"; }
+/* .icon-search:before { content: "\e640"; } */
 
-.icon-home:before { content: "\ec21"; }
+/*  .icon-home:before { content: "\ec21"; } */
 
 .icon-heart:before { content: "\e649"; }
 
 .icon-cnhuatong:before { content: "\e654"; }
-
-.icon-renminbi12:before { content: "\e622"; }
+/* 
+.icon-renminbi12:before { content: "\e622"; } */
 
 .icon-jia:before { content: "\e606"; }
 
@@ -77,7 +77,7 @@
 
 .icon-shoppingcartactive:before { content: "\e674"; }
 
-.icon-jiantou-copy-copy-copy:before { content: "\e61f"; }
+/* .icon-jiantou-copy-copy-copy:before { content: "\e61f"; } */
 
 .icon-ai-camera:before { content: "\e66c"; }
 
@@ -143,5 +143,5 @@
 
 .icon-icon-copy:before { content: "\ec23"; }
 
-.icon-renminbi1:before { content: "\ec25"; }
+/* .icon-renminbi1:before { content: "\ec25"; } */
 

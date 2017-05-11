@@ -4,6 +4,10 @@ input[type="checkbox"], input[type="radio"] {
     line-height: normal;
     margin: 0px 0 0;
 }
+a{
+	-webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+}
 a:hover{
 	color: #ff80b6;
 	text-decoration:none;
@@ -27,6 +31,9 @@ body {
 	background: #FFFFFF;
 	line-height: 1.6 ;
     color:#4d4d4d;
+}
+:focus, a, a:active, a:focus, a:hover, button, button:focus {
+    outline: 0;
 }
 .mhome{
     padding: 0;
@@ -155,11 +162,19 @@ body {
 	font-size: 0.32rem;
 	color: #575757;
 	vertical-align: top;
-	margin-top: 0.466667rem;
+	margin-top: 0.666667rem;
 }
 .quick-entry-link .quick-box img{
 	width: 1.253333rem;
 	height: 1.253333rem;
+	vertical-align: middle;
+}
+.index-nav-view{
+	margin-top: -0.2rem;
+}
+.quick-entry-link .quick-box p{
+	margin-top: 0.266667rem;
+	line-height: 1;
 }
 .index-search-form{
 	position: relative;
@@ -168,24 +183,29 @@ body {
 	height: 0.88rem;
 	border:1px solid #e0e0e0;
 	border-radius: 15px;
-	padding-left: 1.146667rem;
+	padding-left: 0.933333rem;
 	margin-top: 0.466667rem;
 	margin-bottom: 0.466667rem;
 }
 .index-search-form .icon-search{
 	position: absolute;
-	top:0.013333rem;
+	top:0.24rem;
 	left: 0.4rem;
-	font-size: 0.6rem;
-	color: #a3a3a3;
+	width: 0.44rem;
+	height: 0.44rem;
+	background: url('../static/catfruit/img/icon/icon_search.png');
+	background-size: 100% 100%;
 }
 .index-search-form  input{
+	position: absolute;
+	top: 0;
 	width: 90%;
-	height: 0.853333rem;
+	height: 0.88rem;
 	line-height: 0.853333rem;
 	border:none;
 	font-size: 0.373333rem;
 	outline: none;
+	border-radius: 15px;
 }
 .pref-wrap .all-pre-title{
 	padding-left:0.106667rem;
@@ -200,6 +220,10 @@ body {
 	font-size: 0.4rem;
 	margin: 0.466667rem 0.266667rem;
 }
+.pref-item .pref-top .title{
+	font-size: 0.426667rem;
+	color: #333333;
+}
 .pref-item .pref-top .more-pref{
 	float: right;
 	color: #999999;
@@ -207,10 +231,15 @@ body {
 	font-size: 0.373333rem;
 }
 .pref-item .pref-top .more-pref i{
-	font-size: 0.6rem;
-	color: #f47596;
+	position: relative;
+	top: -0.013333rem;
+	display: inline-block;
 	vertical-align: middle;
 	margin-left: 0.133333rem;
+	height: 0.4rem;
+	width: 0.4rem;
+	background: url('../static/catfruit/img/icon/icon_arrows.png');
+	background-size: 100% 100%;
 }
 .pref-item .swiper-container2 .swiper-slide{
 	box-sizing: border-box;
@@ -263,7 +292,8 @@ body {
 	bottom: 0;
 	left: 0;
 	right:0;
-	padding-top: 0.266667rem;
+	padding-top: 0.24rem;
+	padding-bottom: 0.08rem;
 	border-top: 1px solid #f0f0f0;
 	background: #fff;
 }
@@ -272,27 +302,72 @@ body {
 	width: 25%;
 	text-align: center;
 }
-.nav-footer ul li:nth-child(2) i{
-	position: relative;
-	top: 0.04rem;
-}
 .nav-footer ul li a{
 	display: block;
 	text-decoration: none;
 	color: #666666;
 	font-size: 0.32rem;
-	vertical-align: bottom
+	vertical-align: bottom;
+	font-family: "-apple-system","Helvetica Neue",Roboto,"Segoe UI",sans-serif;
 }
 .nav-footer ul li a .iconfont{
-	font-size: 0.64rem;
-	line-height: 1;
+	vertical-align: middle;
 }
-.nav-footer ul li.active a{
+.nav-footer ul li a .icon-home{
+	display: inline-block;
+	width: 0.586667rem;
+	height: 0.56rem;
+	background: url('../static/catfruit/img/icon/icon_home.png');
+	background-size: 100% 100%;
+}
+.nav-footer ul li.active a .icon-home{
+	background: url('../static/catfruit/img/icon/icon_home_1.png');
+	background-size: 100% 100%;
+
+}
+.nav-footer ul li a  .icon-renminbi1{
+	display: inline-block;
+	width: 0.56rem;
+	height: 0.56rem;
+	background: url('../static/catfruit/img/icon/icon_odds.png');
+	background-size: 100% 100%; 
+}
+.nav-footer ul li.active a .icon-renminbi1{
+	background: url('../static/catfruit/img/icon/icon_odds_1.png');
+	background-size: 100% 100%;
+
+}
+.nav-footer ul li a  .icon-shopping-cart{
+	display: inline-block;
+	width: 0.573333rem;
+	height: 0.56rem;
+	background: url('../static/catfruit/img/icon/icon_car.png');
+	background-size: 100% 100%;
+}
+.nav-footer ul li.active a .icon-shopping-cart{
+	background: url('../static/catfruit/img/icon/icon_car_1.png');
+	background-size: 100% 100%;
+}
+.nav-footer ul li a  .icon-user{
+	display: inline-block;
+	width: 0.48rem;
+	height: 0.56rem;
+	background: url('../static/catfruit/img/icon/icon_user.png');
+	background-size: 100% 100%;
+}
+.nav-footer ul li.active a .icon-user{
+	background: url('../static/catfruit/img/icon/icon_user_1.png');
+	background-size: 100% 100%;
+}
+.nav-footer ul li.active a p{
 	color: #f47596
 
 }
 .nav-footer ul li p{
-	margin-top: 0.066667rem;
+	margin-top: 0.173333rem;
+	line-height: 1;
+	color: #666;
+	font-size:0.266667rem;
 }
 
 /* ¶þ¼¶ÄÚÒ³¹«¹²²¿·Ö */
