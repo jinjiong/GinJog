@@ -30,11 +30,11 @@
             <div class="grade-voice">
                <span class="title">语言</span>
                <div class="clearfix line">
-                   <div class="voico-nub">
+                   <div class="voico-nub voice-box">
+                       <span class="play-btn"></span>
                        <span class="nub">25</span>
                    </div>
                    <div class="pin-box">
-                  <input type="text" x-webkit-speech x-webkit-grammar="bUIltin:search" />
                         <i class="iconfont icon-cnhuatong"></i>
                         <p>按住说话</p>
                    </div>
@@ -68,5 +68,14 @@ $('.imgs').on('click','.iconfont-close',function(){
     $(this).parent('.img-box').remove();
 
 });
+$('.voice-box').click(function(){
+    if ($(this).hasClass('active')) {
+
+        $(this).removeClass('active');
+    }else{
+        $('.voice-box').removeClass('active');
+        $(this).addClass('active');
+    }
+})
 </script>
 </html>

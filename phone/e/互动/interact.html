@@ -18,9 +18,9 @@
                 <i class="iconfont icon-ai-camera"></i>
             </div>
         </div>
-        <div class="location-box">
+        <div class="location-box clearfix">
             <div class="btn">提交</div>
-            <div class="site-txt"><i class="iconfont icon-zuobiao1"></i>告诉我们商品的具体地址吧！深圳市南山区22号</div>
+            <div class="site-txt"><i class="iconfont icon-zuobiao1"></i>告诉我们商品的具体地址吧！</div>
         </div>
         <div class="pro-box">
             <div class="user-info clearfix">
@@ -55,6 +55,18 @@
                 </div> 
             </div>
         </div>
+        <div class="inte-pop">
+            <div class="inte-info">
+                <p>喵友们，将社区内的好东西分享到喵友平台来，果喵将与店家合作为喵友们提供最好的服务哦！</p>
+                <span>游戏规则：</span>
+                <p>1.将推荐的商家产品，通过拍摄图片等，分享出来。</p>
+                <p>2.提供商家的地址给果喵。</p>
+                <p>3.集齐果喵平台三个喵友的赞后，立即启动谈判过程！</p>
+                <p>4.本活动最终解释权由本公司所有。</p>
+                <p>经过喵友推荐成功入住的商家将免费为喵友提供一份店内镇店之宝，让我们行动起来吧！</p>
+                <span class="close"></span>
+            </div>
+        </div>
     </div>
 </body>
 <script type="text/javascript" src="../js/jquery-1.12.2.min.js"></script>
@@ -68,6 +80,13 @@
         $(this).removeClass('icon-xin-1').addClass('icon-heart');
         $(this).siblings('em').text(parseInt($(this).siblings('em').text())-1);
     }
+   })
+
+   $('.inte-info .close').click(function(){
+        $('.inte-pop').hide();
+   });
+   $('.inte-top').click(function(){
+       $('.inte-pop').show();
    })
 </script>
 </html>

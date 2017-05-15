@@ -194,6 +194,7 @@
 				</div>
 				<div class="eva-item-body">
 					<div class="voice-box">
+						<span class="play-btn"></span>
 						<span class="nub">24”</span>
 					</div>
 					<p class="text-box">啊哈哈哈，喵果好好吃啊，现在睡觉还想着喵果。先下单不然明天没货了！</p>
@@ -225,6 +226,7 @@
 				</div>
 				<div class="eva-item-body">
 					<div class="voice-box">
+						<span class="play-btn"></span>
 						<span class="nub">24”</span>
 					</div>
 					<p class="text-box">啊哈哈哈，喵果好好吃啊，现在睡觉还想着喵果。先下单不然明天没货了！</p>
@@ -256,6 +258,7 @@
 				</div>
 				<div class="eva-item-body">
 					<div class="voice-box">
+						<span class="play-btn"></span>
 						<span class="nub">24”</span>
 					</div>
 					<p class="text-box">啊哈哈哈，喵果好好吃啊，现在睡觉还想着喵果。先下单不然明天没货了！</p>
@@ -288,6 +291,7 @@
 				</div>
 				<div class="eva-item-body">
 					<div class="voice-box">
+						<span class="play-btn"></span>
 						<span class="nub">24”</span>
 					</div>
 					<p class="text-box">啊哈哈哈，喵果好好吃啊，现在睡觉还想着喵果。先下单不然明天没货了！</p>
@@ -401,6 +405,15 @@
 	          width: 0,height:0
 	        }
 	     });
-  }
+	}
+    $('.voice-box').click(function(){
+    	if ($(this).hasClass('active')) {
+
+    		$(this).removeClass('active');
+    	}else{
+    		$('.voice-box').removeClass('active');
+    		$(this).addClass('active');
+    	}
+    })
 </script>
 </html>

@@ -13,7 +13,7 @@
     <div class="address-wrap">
         <div class="add-nav clearfix">
             <div class="item active"><span>快递配送</span></div>
-            <div class="item"><span>上门自提</span></div>
+            <div class="item zit"><span>上门自提</span></div>
         </div>
         <div class="add-box">
             <div class="add-item-box">
@@ -61,6 +61,7 @@
         </div>
         <div class="add-box">
             <div class="add-item">
+                <div class="default active"><i class="iconfont icon-duihao1"></i>默认地址</div>
                 <p class="zij"><i class="iconfont icon-zuobiao1"></i>自提点：深圳市喵果科贸有限公司</p>
             </div>
         </div>
@@ -121,6 +122,11 @@
             $(this).addClass('active').siblings().removeClass('active');
             $($('.add-box').eq(nub)).show();
             $($('.add-box').eq(nub-1)).hide();
+            if ($(this).hasClass('zit')) {
+                $('.new-add').hide();
+            }else{
+                $('.new-add').show();
+            }
         }
     })
     $('.default').click(function(){
