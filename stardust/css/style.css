@@ -59,7 +59,6 @@ h2{
     margin-left: 20px;
     padding: 0 24px;
     color: #fff;
-    border-radius: 2px;
 
  }
 .nav-wrap .navbar-collapse li:last-child>a:hover{
@@ -189,7 +188,7 @@ h2{
 }
 .banner-wrap .banner-text .btn-up{
     position: relative;
-    transition: 0.4s ease;
+    // transition: 0.4s ease;
     display: inline-block;
     width: 210px;
     height: 60px;
@@ -264,6 +263,7 @@ h2{
 .serve-wrap{
     padding-top: 60px;
     padding-bottom: 80px;
+    overflow: hidden;
 }
 .serve-wrap-title{
     margin-top: 16px;
@@ -368,6 +368,7 @@ h2{
     position: relative;
     height: 650px;
     color: #fff;
+    overflow: hidden;
 }
 .excuse-wrap h2{
     text-align: center;
@@ -407,6 +408,7 @@ h2{
 .flow-wrap{
     padding-top: 80px;
     padding-bottom: 80px;
+    overflow: hidden;
 }
 .flow-wrap h2{
     text-align: center;
@@ -441,6 +443,7 @@ h2{
     padding-bottom: 80px;
     background: #f1f1f5;
     text-align: center;
+    overflow: hidden;
 }
 .about-wrap  h2{
     margin: 0;
@@ -527,6 +530,7 @@ h2{
     padding-bottom: 80px;
     text-align: center;
     color: #fff;
+    overflow: hidden;
 }
 .apply-wrap h2{
     margin-bottom: 40px;
