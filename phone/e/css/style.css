@@ -2250,11 +2250,11 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0.333333rem;
-	width: 1.106667rem;
-	height: 1.266667rem;
+	width: 0.8rem;
+	height: 0.933333rem;
 	background: url('../static/catfruit/img/tehui.png') center center no-repeat;
 	background-size: 100% 100%;
-	font-size: 0.4rem;
+	font-size: 0.293333rem;
 	text-align: center;
 	color: #fff;
 	line-height: 1.2;
@@ -2263,25 +2263,28 @@ body {
 	background: #f47596;
 	width: auto;
 	height: auto;
-	padding:0.133333rem 0.4rem;
-	border-radius: 5px;
+	padding:0.133333rem 0.266667rem;
+	line-height: 1;
 }
 .vouchsafe-item .img-box{
 	text-align: center;
-	margin-bottom: 0.266667rem;
+	margin-bottom: 0.533333rem;
+	padding-top: 0.266667rem;
+	vertical-align: middle;
 }
 .vouchsafe-item .img-box img{
-	max-height: 4.666667rem;
+	max-height: 3.2rem;
+	vertical-align: middle;
 }
 .vouchsafe-item .text-box{
 	padding-left: 0.333333rem;
 	padding-right: 0.066667rem;
 }
 .vouchsafe-item .text-box .title{
-	font-size: 0.426667rem;
+	font-size:0.373333rem;
 }
 .vouchsafe-item .text-box .info-box{
-	font-size: 0.373333rem;
+	font-size: 0.32rem;
 	color: #666666;
 }
 .vouchsafe-item-bottom{
@@ -2292,18 +2295,20 @@ body {
 }
 .vouchsafe-item-bottom .btn{
 	float: right;
-	width: 3.466667rem;
-	line-height: 0.933333rem;
-	height: 0.933333rem;
+	width: 2.133333rem;
+	line-height: 0.666667rem;
+	height: 0.666667rem;
 	border-radius: 15px;
 	background:#f47596;
 	text-align: center;
-	font-size: 0.4rem;
+	font-size: 0.346667rem;
 	color: #fff;
 	text-decoration: none;
 }
 .vouchsafe-item-bottom  h2{
 	color: #f47596;
+	font-weight: normal;
+	font-size: 0.4rem;
 }
 
 /* 支付 */
