@@ -2259,6 +2259,16 @@ body {
 	color: #fff;
 	line-height: 1.2;
 }
+.vouchsafe-item .share-box{
+	position: absolute;
+	top: 0;
+	right: 0.333333rem;
+	width: 1.066667rem;
+	height: 1.2rem;
+	background: url('../static/catfruit/img/share.png') center center no-repeat;
+	background-size: 100% 100%;
+
+}
 .vouchsafe-item .j-y{
 	background: #f47596;
 	width: auto;
