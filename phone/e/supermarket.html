@@ -42,7 +42,7 @@
 		   	<div class="pulic-entry por-wrap clearfix">
 		   		<div class="classify-box active">
 		   			<div class="item clearfix">
-			   			<a href="#">
+			   			<a href="pro_detail.html">
 			   			    <span class="icon-details"></span>
 			   				<div class="img-box">
 				   				<img src="upload/po8.jpg">
@@ -62,7 +62,7 @@
 		   				</div>
 			   		</div>
 			   		<div class="item clearfix">
-			   			<a href="#">
+			   			<a href="pro_detail.html">
 			   				<div class="img-box">
 				   				<img src="upload/po8.jpg">
 				   			</div>
@@ -81,7 +81,7 @@
 		   				</div>
 			   		</div>
 			   		<div class="item clearfix">
-			   			<a href="#">
+			   			<a href="pro_detail.html">
 			   				<div class="img-box">
 				   				<img src="upload/po8.jpg">
 				   			</div>
@@ -100,7 +100,7 @@
 		   				</div>
 			   		</div>
 			   		<div class="item clearfix">
-			   			<a href="#">
+			   			<a href="pro_detail.html">
 			   				<div class="img-box">
 				   				<img src="upload/po8.jpg">
 				   			</div>
@@ -121,7 +121,7 @@
 		   		</div>
 		   		<div class="classify-box">
 					<div class="item clearfix">
-			   			<a href="#">
+			   			<a href="pro_detail.html">
 			   				<div class="img-box">
 				   				<img src="upload/po8.jpg">
 				   			</div>
@@ -246,6 +246,10 @@
 						<span><i class="iconfont icon-xinxi"></i>1</span>
 						<span><i class="iconfont icon-heart"></i>1</span>
 					</div>
+					<div class="board-box clearfix">
+						<textarea class="g_textarea"  rows="3"  placeholder="回复："></textarea>
+						<span class="btn">提交</span>
+					</div>
 				</div>
 			</div>
 			<div class="eva-item">
@@ -367,6 +371,15 @@
 <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
 <script type="text/javascript" src="js/fly.js"></script>
 <script>
+
+/*点击评价*/
+$('.eva-item-bottom .icon-xinxi').on('touchend',function(){
+	var board = $('.eva-item-body').find('.board-box');
+	if(board.is(":hidden")){
+		board.show();
+	}
+
+});
  $('.go-box').on('touchend',function(){
     	window.location.href='订单确认等/订单确认.html'
     })

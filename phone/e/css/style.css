@@ -802,6 +802,24 @@ body {
 	color: #999999;
 	margin-top: 0.266667rem;
 }
+.board-box{
+	display: none;
+}
+.board-box .g_textarea{
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.board-box  .btn{
+    float: right;
+    width: 40px;
+    height: 25px;
+    background: #f47596;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+}
 .eva-item  .eva-item-bottom span{
 	margin-left: 0.2rem;
 }
