@@ -41,7 +41,7 @@
 		   	</div>
 		   	<div class="pulic-entry por-wrap clearfix">
 		   		<div class="classify-box active">
-		   			<div class="item clearfix">
+		   			<div class="item clearfix no-pro">
 			   			<a href="pro_detail.html">
 			   			    <span class="icon-details"></span>
 			   				<div class="img-box">
@@ -50,6 +50,7 @@
 				   			<div class="text-box">
 				   				<span class="title">新奇士美国美人柑</span>
 				   				<p class="nub"><span>销量:145</span><span>好评:54</span></p>
+					   			<p class="nub"><span>剩余：0</span></p>
 				   			</div>
 			   			</a>
 			   			<div class="other clearfix">
@@ -69,6 +70,7 @@
 				   			<div class="text-box">
 				   				<span class="title">新奇士美国美人柑</span>
 				   				<p class="nub"><span>销量:145</span><span>好评:54</span></p>
+				   				<p class="nub"><span>剩余：25</span></p>
 				   			</div>
 			   			</a>
 			   			<div class="other clearfix">
@@ -88,6 +90,7 @@
 				   			<div class="text-box">
 				   				<span class="title">新奇士美国美人柑</span>
 				   				<p class="nub"><span>销量:145</span><span>好评:54</span></p>
+				   				<p class="nub"><span>剩余：25</span></p>
 				   			</div>
 			   			</a>
 			   			<div class="other clearfix">
@@ -107,6 +110,7 @@
 				   			<div class="text-box">
 				   				<span class="title">新奇士美国美人柑</span>
 				   				<p class="nub"><span>销量:145</span><span>好评:54</span></p>
+				   				<p class="nub"><span>剩余：25</span></p>
 				   			</div>
 			   			</a>
 			   			<div class="other clearfix">
@@ -128,6 +132,7 @@
 				   			<div class="text-box">
 				   				<span class="title">新奇士美国美人柑</span>
 				   				<p class="nub"><span>销量:145</span><span>好评:54</span></p>
+				   				<p class="nub"><span>剩余：25</span></p>
 				   			</div>
 			   			</a>
 			   			<div class="other clearfix">
@@ -147,6 +152,7 @@
 				   			<div class="text-box">
 				   				<span class="title">新奇士美国美人柑</span>
 				   				<p class="nub"><span>销量:145</span><span>好评:54</span></p>
+				   				<p class="nub"><span>剩余：25</span></p>
 				   			</div>
 			   			</a>
 			   			<div class="other clearfix">
@@ -168,6 +174,7 @@
 				   			<div class="text-box">
 				   				<span class="title">新奇士美国美人柑</span>
 				   				<p class="nub"><span>销量:145</span><span>好评:54</span></p>
+				   				<p class="nub"><span>剩余：25</span></p>
 				   			</div>
 			   			</a>
 			   			<div class="other clearfix">
@@ -187,6 +194,7 @@
 				   			<div class="text-box">
 				   				<span class="title">新奇士美国美人柑</span>
 				   				<p class="nub"><span>销量:145</span><span>好评:54</span></p>
+				   				<p class="nub"><span>剩余：25</span></p>
 				   			</div>
 			   			</a>
 			   			<div class="other clearfix">
@@ -367,13 +375,42 @@
    			</div>
    		</div>
    	</div>
+
+
+   	<div class="pop">
+   		<div class="region-box">
+   			<div class="region-top clearfix">
+   				<div class="top-left">
+   					<div class="img-box">
+   						<img src="upload/po22.jpg">
+   					</div>
+   					<p class="title">3元饮料区</p>
+   					<span class="money">￥3</span>
+   				</div>
+   				<div class="list-pro">
+   					<span>雪碧</span><span>百事可乐</span><span class="active">康师傅茉莉花茶</span><span>百事可乐</span><span>百事可乐</span><span>百事可乐</span><span>百事可乐</span>
+   				</div>
+   				<div class="buy-nub">
+   					<div class="clearfix">
+   						<p class="nub f_l">购买数量：</p>
+	   					<div class="count-box f_r">
+		   					<span class="jian" style="display: inline;"><i class="iconfont icon-jian-copy"></i></span>
+			   				<span class="number" style="display: inline;">1</span>
+			   				<span class="add"><i class="iconfont icon-jia1"></i></span>
+		   				</div>
+   					</div>
+   				</div>
+   				<div class="btn-buy">加入购物车</div>
+   			</div>
+   		</div>
+   	</div>
 </body>
 <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
 <script type="text/javascript" src="js/fly.js"></script>
 <script>
 
 /*点击评价*/
-$('.eva-item-bottom .icon-xinxi').on('touchend',function(){
+$('.eva-item-bottom .icon-xinxi,.eva-item-body p').on('touchend',function(){
 	var board = $('.eva-item-body').find('.board-box');
 	if(board.is(":hidden")){
 		board.show();
@@ -406,18 +443,20 @@ $('.eva-item-bottom .icon-xinxi').on('touchend',function(){
 
     /*加入购物车的js*/
      $('.count-box .add').on('click',function(event){
-     	var Nub = $(this).siblings('.number');
-     	var Jian = $(this).siblings('.jian');
-     	if (Nub.is(':hidden')) {
-     		Nub.show();
-     		Jian.show();
-     	}
-     	Nub.html(parseInt(Nub.html())+1);
-     	addProduct(event);
-
-     	/*购物车的个数的计算*/
-     	$('.public-account .nub').html(parseInt($('.public-account .nub').html())+1);
-     	$('.public-account').addClass('active');
+     	/*判断该产品是否存在*/
+     	if (!$(this).parents('.no-pro').length >0) {
+	     	var Nub = $(this).siblings('.number');
+	     	var Jian = $(this).siblings('.jian');
+	     	if (Nub.is(':hidden')) {
+	     		Nub.show();
+	     		Jian.show();
+	     	}
+	     	Nub.html(parseInt(Nub.html())+1);
+	     	addProduct(event);
+	     		/*购物车的个数的计算*/
+	     	$('.public-account .nub').html(parseInt($('.public-account .nub').html())+1);
+	     	$('.public-account').addClass('active');
+	     }
      });
 
       $('.count-box .jian').on('touchend',function(){
