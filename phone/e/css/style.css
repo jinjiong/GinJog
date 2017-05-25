@@ -776,6 +776,7 @@ body {
 }
 .eva-item .eva-item-body .img-box{
 	margin-top: 0.266667rem;
+	margin-bottom: 0.266667rem;
 }
 .fcf47596{
 	color: #f47596!important;
@@ -829,6 +830,9 @@ body {
 .eva-item  .eva-item-bottom .active .iconfont{
 	color: #f47596;
 	font-size: 0.6rem;
+}
+.eva-item  .eva-item-bottom .icon-xin-1{
+	color: #f47596;
 }
 .eva-item  .eva-item-bottom .icon-xinxi{
 	vertical-align: middle;
