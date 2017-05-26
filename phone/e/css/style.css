@@ -25,6 +25,9 @@ i,em{
 html{
 	font-size: 36px;
 }
+.pswp__button--share,.pswp__button--fs{
+	display: none!important;
+}
 body {
     font-size: 0.346667rem;
     font-family: "inherit","Microsoft Yahei","微软雅黑", "Hiragino Sans GB",tahoma,arial,"\5B8B\4F53" !important;
