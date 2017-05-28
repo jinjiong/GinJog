@@ -201,8 +201,13 @@
   			$('.cart-sort .icon-weibiaoti2').removeClass('icon-weibiaoti2').addClass('icon-duihao1');
       		/*去除没有货的产品*/
       		$('.no-cart-item .icon-duihao1').removeClass('icon-duihao1').addClass('icon-weibiaoti2');
-      	}
-        all_number();
+            all_number();
+      	}else{
+            $(this).find('.iconfont').removeClass('icon-duihao').addClass('1icon-weibiaoti2');
+            $('.icon-duihao1').addClass('icon-weibiaoti2').removeClass('icon-duihao1');
+             $('.all-money em').text('0');
+        }
+      
 		
 	})
   /*加入购物车的js*/

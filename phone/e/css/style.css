@@ -1765,7 +1765,6 @@ body {
 .indent-details-payment .clear-list li:last-child{
 	text-align: right;
 	color: #f47596;
-	font-size: 0.4rem;
 }
 .sure-wrap .delivery-box{
 	padding-left:0.266667rem;
@@ -1887,6 +1886,30 @@ body {
 	margin-left: 0.133333rem;
 	width: 75%;
 	outline: none;
+}
+.coupon-rule .rule-info{
+	border-top:0.266667rem solid #f2f0f0;
+}
+.coupon-rule .rule-info div{
+	padding-left: 0.266667rem;
+	padding-right: 0.266667rem;
+	height:1.6rem;
+	line-height: 1.6rem;
+	border-bottom: 1px solid #f2f0f0;
+	font-size: 0.426667rem;
+	color: #7c7c7c;
+	text-indent: 1em;
+
+
+}
+.coupon-rule .rule-info .title{
+	text-indent: 0;
+	color: #333;
+}
+.coupon-rule .rule-info div:last-child{
+	line-height: 1.6;
+	padding-top: 0.133333rem;
+	box-sizing: border-box;
 }
 .sure-wrap .pay-box ul{
 	margin-top: 0.4rem;
@@ -2572,7 +2595,7 @@ body {
 	background: url('../static/catfruit/img/promise.png') center center no-repeat;
 	background-size: 100% 100%;
 	box-sizing: border-box;
-	padding-top: 2.666667rem;
+	padding-top: 2.266667rem;
 	padding-left: 1.6rem;
 	padding-right: 1.6rem;
 }
@@ -2657,6 +2680,10 @@ body {
 	font-size: 0.373333rem;
 	color: #999999;
 	box-sizing: border-box;
+}
+.inte-wrap .location-box .site-txt input{
+	height: 0.666667rem;
+	border: none;
 }
 .inte-wrap .location-box .site-txt .iconfont{
 	position: absolute;
@@ -3184,7 +3211,6 @@ body {
 	line-height:0.866667rem;
 }
 .pop{
-	display: none;
 	position: fixed;
 	top: 0;
 	left:0;
