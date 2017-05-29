@@ -151,6 +151,24 @@
 				</div>
 			</div>
 		</div>
+		<div class="pop yes-pop">
+            <div class="public-center lottery-box">
+                <div class="yes-lottery">
+                    <img src="static/catfruit/img/yes-lottery.png">
+                    <p class="title">恭喜您获得家和富贵碗一件</p>
+                    <div class="input-box">
+                        <span>姓名</span><input type="text" name="" placeholder="请输入姓名">
+                    </div>
+                    <div class="input-box">
+                        <span>姓名</span><input type="text" name="" placeholder="请输入电话">
+                    </div>
+                            <div class="input-box">
+                                <span>姓名</span><input type="text" name="" placeholder="请输入详细地址">
+                            </div>
+                    <span class="btn">再摇一次</span>
+                </div>
+            </div>
+        </div>
 	</div>
 </body>
 <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
@@ -159,9 +177,7 @@ $('.no-lottery .btn').click(function(){
 	$('.no-pop').hide();
 })
 
-
-
-
+    
 
 
 
@@ -174,7 +190,7 @@ $('.no-lottery .btn').click(function(){
     }
     var initAudio = function(){
     audio_shake =  document.createElement("audio");
-    audio_shake.src='static/catfruit/audio/shakes.mp3';
+    $(audio_shake).append('<source src="static/catfruit/audio/shakes.mp3">');
     }
     
     var SHAKE_THRESHOLD = 1800;
@@ -187,9 +203,8 @@ $('.no-lottery .btn').click(function(){
         alert('抱歉，你的手机配置实在有些过不去，考虑换个新的再来试试吧');
     }
    var times=0;
-   
     function deviceMotionHandler(eventData) {
-    	if ($('.pop').is(':hidden')) {
+    	if ($('.pop:hidden').length>1) {
 	        var acceleration = eventData.accelerationIncludingGravity;
 	        var curTime = new Date().getTime();
 	        
@@ -228,7 +243,7 @@ $('.no-lottery .btn').click(function(){
      function autoPlayed(){
        var audio = document.createElement("audio");  
        var index = 0;
-       audio.src = "static/catfruit/audio/skresult.mp3";  
+       $(audio).append('<source src="static/catfruit/audio/skresult.mp3">')
        audio.addEventListener('ended', function () {  
        // Wait 500 milliseconds before next loop  
        setTimeout(function () {if(index<0){ audio.play(); index++}},0);  

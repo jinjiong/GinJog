@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小尾巴</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/mui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src='js/flexible.js'></script>
+</head>
+<body class="mhome">
+	<div class="centre-box">
+		<div class="centre-top">
+			<div class="img-box">
+			   <div class="nub">
+			   		<span>No. 158000001</span>
+			   		<p>有效期：永久有效</p>
+			   </div>
+				<img src="imgs/member1.png">
+			</div>
+			<div class="erwei-box">
+				<i class="icon_erwei"></i>点击查看我的我会员码
+			</div>
+		</div>
+		<div class="info-box">
+			<div class="item">
+				<span>会员等级</span>
+				<p>普通会员</p>
+			</div>
+			<div class="item">
+				<span>储值</span>
+				<p>0.00</p>
+			</div>
+			<div class="item">
+				<span>积分</span>
+				<p>0.00</p>
+			</div>
+		</div>
+		<div class="account-box clearfix member-nav">
+			<div class="left">
+				<i class="ye_member"></i>充值开卡
+			</div>
+			<div class="pulic-triangle"></div>
+		</div>
+		<div class="clearfix register-box">
+			<div class="left"><span class="storename">小尾巴专业爱宠管家</span>（登记门店）</div>
+			<div class="more">
+				更多门面<div class="pulic-triangle"></div>
+			</div>
+		</div>
+		<div class="account-box location-box clearfix">
+			<div class="left">
+				<i class="ye_site"></i><span class="information">暂无详细地址</span>
+			</div>
+			<div class="pulic-triangle"></div>
+		</div>
+		<a href="tel:0755-2144 3550" class="account-box phone-box clearfix">
+			<div class="left">
+				<i class="ye_phone"></i><span class="call">0755-2144 3550</span>
+			</div>
+			<div class="pulic-triangle"></div>
+		</a>
+	</div>
+	<script type="text/javascript" src='js/jquery-1.12.2.min.js'></script>
+	<script type="text/javascript" src='js/json.js'></script>
+	<script type="text/javascript">
+	$(function(){
+	    callback(member);
+			function callback(member){
+				$('.info-box .item:eq(0) p').html(member.Meno);
+				$('.info-box .item:eq(1) p').html(member.TotalValue);
+				$('.info-box .item:eq(2) p').html(member.TotalPoint);
+				/*  userid*/
+				$('.centre-box').attr('data-account',member.UserAccount);
+				$('.register-box .storename').html(member.StoreName);
+				$('.information').html(member.Address);
+				$('.phone-box').attr('href','tel:'+member.Mobile)
+				$('.phone-box .call').html(member.Mobile);
+			}
+			$('.member-nav').click(function(){
+				window.location.href='recharge.html?account='+$('.centre-box').data('account');
+			})
+		})
+		
+	</script>
+</body>
+</html>

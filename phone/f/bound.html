@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小尾巴</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/mui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/layer.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src='js/flexible.js'></script>
+</head>
+<body class="mhome bgffda00">
+	<div class="bound-box">
+		<form class="bound-form" id="boundForm">
+			<div class="bound-input-box">
+				<input type="number" name="phone" placeholder="请输入手机号码">
+				<i class="icon_phone"></i>
+			</div>
+			<div class="bound-input-box">
+				<input type="text" name="code" placeholder="请输入验证码">
+				<i class="icon_lock"></i>
+				<span class="gain-btn">获得验证码</span>
+			</div>
+		</form>
+		<div class="btn-box">
+			<span class="public-btn submit-btn">提交</span>
+			<div class="info-box">
+				<p>如办卡时未留手机号码且忘记密码</p>
+				<p>请联系客服：400-155-2158</p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/layer.js"></script>
+	<script type="text/javascript">
+	 /* 增加手机验证插件*/
+        $.validator.addMethod("isMobile", function(value, element) { 
+			  var length = value.length; 
+			  var mobile = /^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/; 
+			  return this.optional(element) || (length == 11 && mobile.test(value)); 
+		}, "请正确填写您的手机号码"); 
+
+		$('#boundForm').validate({
+			rules:{
+				phone:{
+					required:true,
+					isMobile:true
+				}
+            },
+            messages:{
+		   		phone:{
+					required:'手机号为空',
+					isMobile:'输入手机号有误',
+				}
+			},
+
+			/*错误提示框*/
+			showErrors : function(errorMap, errorList) { 
+				if(errorList.length>0){
+					layer.open({
+					    content: errorList[0].message
+					    ,skin: 'msg'
+					    ,time: 5 //5秒后自动关闭
+					 })
+				}
+		    },
+		   onfocusout : false,
+		   onkeyup:false, 
+		});
+		var gain_nub = 0;
+		$('.gain-btn').on('touchend',function(){
+			if ($("#boundForm").valid()) {
+				if (gain_nub == 0) {
+					times($(this));
+					gain_nub = 1;
+					
+				}
+        	 }
+		});
+        $('.submit-btn').on('touchend',function(){
+        	 if ($("#boundForm").valid()) {
+        	 	console.log('dddddddddddd');
+                  if($('input[name="code"]').val()==''){
+                  	layer.open({
+					    content: '验证码不能为空'
+					    ,skin: 'msg'
+					    ,time: 5 //5秒后自动关闭
+					 })
+                  }else{
+                  	/*验证成功后获得值 ajax提交*/
+                    var phone= $('input[name="phone"]').val();
+                    var code=  $('input[name="code"]').val();
+                    console.log('phone:'+phone+'code:'+code);
+                    window.location.href='succeed.html'
+                   
+                  }
+        	 }
+        	 
+        })
+        /*  验证码时间定时*/
+            var wait=30;  
+            function times(o) {    
+		        if (wait == 0) {  
+		            o.html('获的验证码');
+		            wait = 30; 
+		            gain_nub= 0;
+
+		        } else {
+		            o.html("重新发送(" + wait + ")");  
+		            wait--;  
+		            setTimeout(function() {  
+		                times(o)  
+		            },  
+		            1000)  
+		        }  
+		    }  
+	</script>
+</body>
+</html>

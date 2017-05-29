@@ -808,19 +808,26 @@ body {
 	display: none;
 }
 .board-box .g_textarea{
-	width: 100%;
-	padding: 10px;
+	width: 75%;
 	box-sizing: border-box;
+	height: 0.8rem;
+	line-height: 0.8rem;
+	padding-left: 0.2rem;
+	padding-right:0.2rem;
+	border-radius: 15px;
+	outline: none;
+	border:1px solid #bfbfbf;
 }
 .board-box  .btn{
     float: right;
-    width: 40px;
-    height: 25px;
+    width: 1.6rem;
+    height: 0.8rem;
     background: #f47596;
-    line-height: 25px;
+    line-height: 0.8rem;
     text-align: center;
     color: #fff;
     border-radius: 2px;
+    border-radius: 15px;
 }
 .eva-item  .eva-item-bottom span{
 	margin-left: 0.2rem;
@@ -3353,6 +3360,57 @@ body {
 	font-size: 0.48rem;
 	background: #f47596;
 	border-radius: 15px;
+}
+.yes-pop{
+	display: none;
+}
+.lottery-box .yes-lottery{
+	position: relative;
+	padding: 0.8rem 0.533333rem 1.333333rem  0.533333rem;
+}
+.lottery-box .yes-lottery img{
+	position: absolute;
+	top: -1.24rem;
+	left: 50%;
+	margin-left: -1.053333rem;
+	width: 2.48rem;
+}
+.lottery-box .yes-lottery .title{
+	color: #f47596;
+	font-size: 0.4rem;
+	margin-top: 0.8rem;
+	margin-bottom: 0.8rem;
+}
+.lottery-box .yes-lottery .btn{
+	display: inline-block;
+	width: 100%;
+	height: 1.133333rem;
+	line-height: 1.133333rem;
+	text-align: center;
+	color: #fff;
+	font-size: 0.48rem;
+	background: #f47596;
+	border-radius: 15px;
+	margin-top: 0.266667rem;
+
+}
+.lottery-box .yes-lottery .input-box{
+	font-size: 0.373333rem;
+	margin-top: 0.2rem;
+	margin-bottom: 0.2rem;
+}
+.lottery-box .yes-lottery .input-box input{
+	padding-top: 0.133333rem;
+	padding-bottom: 0.133333rem;
+	margin-left: 0.266667rem;
+	background: none;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #f47596;
+	padding-left: 0.133333rem;
+}
+.lottery-box .yes-lottery .input-box input::-webkit-input-placeholder{
+	color: #f47596
 }
 /* 抽奖 */
 .hand{

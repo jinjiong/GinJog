@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小尾巴</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/mui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- 适配手机屏幕的大小 -->
+	<script type="text/javascript" src='js/flexible.js'></script>
+</head>
+<body class="mhome bgf0f0f0">
+	<div class="pay-box">
+		<div class="pay-img">
+			<img src="imgs/pay_title1.png">
+		</div>
+		<div class="pay-nub clearfix">
+			<div class="title">
+				<span>小尾巴男爵</span>
+				<p class="time">有效期：永久有效</p>
+			</div>
+			<div class="money">￥ 0.01</div>
+		</div>
+		<div class="pay-info">
+			<span>会员权益</span>
+			<p>1.卡内含1000元储值金额，可用于小尾巴门店和小尾巴APP线上消费时使用</p>
+			<p>2.赠送1000元帮帮券或者赠送智能宠物管家硬件一个</p>
+		</div>
+		<div class="pay-way">
+			<span class="title">选择支付方式</span>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media bgfff">
+					<div class="mui-input-row mui-radio mui-right">
+						<label></label>
+						<input name="radio1" type="radio" checked="">
+					</div>
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="imgs/weixin.png">
+						<div class="mui-media-body ">
+							微信
+							<p class="mui-ellipsis">推荐已安装微信的用户使用</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="btn-box">
+			<span class="public-btn">确认支付</span>
+		</div>
+	</div>
+	<script type="text/javascript" src='js/jquery-1.12.2.min.js'></script>
+	<script type="text/javascript">
+		$('.public-btn').click(function(){
+	       window.location.href="pay_succ.html"
+	    })
+	</script>
+</body>
+</html>
