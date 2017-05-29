@@ -2973,6 +2973,22 @@ body {
 	color: #cccccc;
 	font-size:0.8rem;
 }
+.appraise-wrap  .appraise-btn{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 1.333333rem;
+	line-height: 1.333333rem;
+	text-align: center;
+	font-size: 0.426667rem;
+	background: #e4e4e4;
+	color: #999999;
+}
+.appraise-wrap  .appraise-btn.active{
+	background: #f47596;
+	color: #fff;
+}
 .address-wrap .add-nav{
 	border-bottom:1px solid #e0e0e0;
 }
@@ -3266,6 +3282,9 @@ body {
 	margin-bottom: 0.266667rem;
 	border-radius: 10px;
 }
+.no-pop{
+	display: none;
+}
 .pop .region-box .list-pro span.active{
 	background: #f47596;
 	color: #fff;
@@ -3297,3 +3316,60 @@ body {
 	font-size: 0.4rem;
 	letter-spacing: 2px;
 }
+.public-center{
+    position: fixed;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 100%;
+    text-align: center;
+}
+.lottery-box{
+	width: 80%;
+	background: #fff2f2;
+	left: 10%;
+	border-radius: 15px;
+}
+.lottery-box .no-lottery{
+	padding: 0.8rem 0.533333rem 1.333333rem  0.533333rem;
+}
+.lottery-box .no-lottery img{
+	width: 2.493333rem;
+	height: auto;
+
+}
+.lottery-box .no-lottery p{
+	color: #f47596;
+	font-size: 0.4rem;
+	margin-top: 0.8rem;
+	margin-bottom: 0.8rem;
+}
+.lottery-box .no-lottery .btn{
+	display: inline-block;
+	width: 100%;
+	height: 1.133333rem;
+	line-height: 1.133333rem;
+	text-align: center;
+	color: #fff;
+	font-size: 0.48rem;
+	background: #f47596;
+	border-radius: 15px;
+}
+/* 抽奖 */
+.hand{
+	position: absolute;
+	width: 5.133333rem;
+	height: 5.133333rem;
+	top:5.84rem;
+	left:2.666667rem;
+	overflow: hidden;
+	border-radius: 100%;
+	text-align: center;
+
+}
+.hand img{ 
+   margin-top: 1.333333rem;
+	width: 60%;
+}
+.hand-animate{-webkit-animation:hand_move infinite 0.6s;}
+.loading-show{opacity:1;}
+@-webkit-keyframes hand_move{0%{-webkit-transform:rotate(0);-moz-transform:rotate(0);-ms-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0);}50%{-webkit-transform:rotate(15deg);-moz-transform:rotate(15deg);-ms-transform:rotate(15deg);-o-transform:rotate(15deg);transform:rotate(15deg);}100%{-webkit-transform:rotate(0);-moz-transform:rotate(0);-ms-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0);}}@-webkit-keyframes loading{0%{-webkit-transform:rotate(0);-moz-transform:rotate(0);-ms-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0);}100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg);}}

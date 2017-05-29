@@ -13,6 +13,7 @@
 	<div class="award-wrap">
 		<div class="award-top">
 			<img src="static/catfruit/img/draw_top.png">
+			<div id="hand" class="hand"><img src="static/catfruit/img/mobile.png"/></div>
 		</div>
 		<div class="award-list">
 			<div class="title">奖品展示</div>
@@ -141,10 +142,117 @@
 				</li>
 			</ul>
 		</div>
+		<div class="pop no-pop">
+			<div class="public-center lottery-box">
+				<div class="no-lottery">
+					<img src="static/catfruit/img/no-lottery.png">
+					<p>您与奖品擦肩而过！</p>
+					<span class="btn">再摇一次</span>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
 <script>
+$('.no-lottery .btn').click(function(){
+	$('.no-pop').hide();
+})
+
+
+
+
+
+
+
+
+
+
+    var audio_shake;
+    window.onload = function(){
+    initAudio();
+    }
+    var initAudio = function(){
+    audio_shake =  document.createElement("audio");
+    audio_shake.src='static/catfruit/audio/shakes.mp3';
+    }
     
+    var SHAKE_THRESHOLD = 1800;
+    var last_update = 0;
+    var x = y = z = last_x = last_y = last_z = 0;
+
+    if (window.DeviceMotionEvent) {
+        window.addEventListener('devicemotion', deviceMotionHandler, false);
+    } else {
+        alert('抱歉，你的手机配置实在有些过不去，考虑换个新的再来试试吧');
+    }
+   var times=0;
+   
+    function deviceMotionHandler(eventData) {
+    	if ($('.pop').is(':hidden')) {
+	        var acceleration = eventData.accelerationIncludingGravity;
+	        var curTime = new Date().getTime();
+	        
+	        
+	        if ((curTime - last_update) > 100) {
+	            var diffTime = curTime - last_update;
+	            last_update = curTime;
+	            x = acceleration.x;
+	            y = acceleration.y;
+	            z = acceleration.z;
+	            var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
+	            var status = document.getElementById("status");
+
+	            if (speed > SHAKE_THRESHOLD) {
+	                
+	                
+	                doResult();
+	                times++;
+	                
+	            }
+	            last_x = x;
+	            last_y = y;
+	            last_z = z;
+	        }
+	     }
+    }
+    //播放控制
+     function autoPlay(){
+       var index = 0;
+       audio_shake.addEventListener('ended', function () {  
+       // Wait 500 milliseconds before next loop  
+       setTimeout(function () {if(index<1){ audio_shake.play(); index++}},500);  
+       }, false);  
+       audio_shake.play();  
+     }
+     function autoPlayed(){
+       var audio = document.createElement("audio");  
+       var index = 0;
+       audio.src = "static/catfruit/audio/skresult.mp3";  
+       audio.addEventListener('ended', function () {  
+       // Wait 500 milliseconds before next loop  
+       setTimeout(function () {if(index<0){ audio.play(); index++}},0);  
+       }, false);  
+       audio.play();  
+     }
+     
+     
+    function doResult() {
+        if(times>0){
+            return false;
+            }
+        autoPlay();
+        document.getElementById("hand").className = "hand hand-animate";
+         setTimeout(function(){
+            autoPlayed();
+         }, 2500);
+        
+         setTimeout(function(){
+            times=0;
+            document.getElementById("hand").className = "hand";
+            $('.no-pop').show();
+
+        }, 3000);
+    }
 </script>
 </html>

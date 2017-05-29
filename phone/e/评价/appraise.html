@@ -50,10 +50,19 @@
                 </div>
             </div>
         </div>
+        <div class="appraise-btn">提交评价</div>
     </div>
 </body>
 <script type="text/javascript" src="../js/jquery-1.12.2.min.js"></script>
 <script>
+
+$('.textarea').change(function(){
+    if($(this).val() == ''){
+        $('.appraise-btn').removeClass('active')
+    }else{
+         $('.appraise-btn').addClass('active');
+    }
+});
 $('#file').on('change',function(){
     var fileObj=document.getElementById("file");
     var src = window.URL.createObjectURL(fileObj.files[0]);
