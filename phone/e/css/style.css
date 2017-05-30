@@ -1017,6 +1017,17 @@ body {
 .detail-wrap  .pro-item{
 	float: left;
 	width: 50%;
+	box-sizing: border-box;
+}
+.detail-wrap .pro-item:nth-child(1){
+	border-right:2px solid #fdeaf4;
+	border-bottom: 2px solid #fdeaf4;
+}
+.detail-wrap .pro-item:nth-child(2){
+	border-bottom: 2px solid #fdeaf4;
+}
+.detail-wrap .pro-item:nth-child(3){
+	border-right: 2px solid #fdeaf4;
 }
 .detail-wrap .pro-introduce{
 	position: relative;
