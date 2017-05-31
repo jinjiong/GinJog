@@ -62,7 +62,7 @@ var iScrollRefresh = function(tab_id,bd_id,parames){
 		var tabWidth = 0,tagName;
 		for(var i = 0; i<tabElements.length;i++){
 			tabWidth += tabElements[i].offsetWidth;
-			tabElements[i].style.width = '20%';
+			tabElements[i].style.width = tabElements[i].offsetWidth+'px';
 			tagName = tabElements[i].tagName;
 		}
 		tabWidth+=1;
@@ -126,8 +126,10 @@ var iScrollRefresh = function(tab_id,bd_id,parames){
 				var target = event.target || event.srcElement;
 				var index = _this.index(target,tabElements);
 				bdScroll.goToPage(parseInt(index),0,500);
+
 			},false)
 		}
+		
 		
 	}
 
@@ -675,7 +677,7 @@ function IR(ary,len){
 	var tabsHtml = '';
 	var tabsStyle = '';
 	var bdHtml = '';
-	var loadHtml = '<div class="loader"><div class="line-scale"><div></div><div></div><div></div><div></div><div></div></div><div style="margin-top:10px">加载中...</div></div>';
+	var loadHtml = '<div class="loader"><div class="line-scale"><div></div><div></div><div></div><div></div><div></div></div><div style="margin-top:15px">加载中...</div></div>';
 	if(typeof(len) != 'undefined'){
 		tabsStyle = 'style="width:'+(100/len)+'%"';
 	}

@@ -30,13 +30,17 @@ html{
 }
 body {
     font-size: 0.346667rem;
-    font-family: "inherit","Microsoft Yahei","微软雅黑", "Hiragino Sans GB",tahoma,arial,"\5B8B\4F53" !important;
+    // font-family: "inherit","Microsoft Yahei","微软雅黑", "Hiragino Sans GB",tahoma,arial,"\5B8B\4F53" !important;
+    font-family: PingFangSC-Regular,Helvetica,"Droid Sans",Arial,sans-serif;
 	background: #FFFFFF;
 	line-height: 1.6 ;
     color:#4d4d4d;
 }
 :focus, a, a:active, a:focus, a:hover, button, button:focus {
     outline: 0;
+}
+.pm100{
+	padding-bottom: 1.6rem!important;;
 }
 .mhome{
     padding: 0;
@@ -441,6 +445,12 @@ body {
 .pulic-entry .classify-box.active{
 	display: block;
 }
+.adver-info{
+	font-size: 0.373333rem;
+    padding-left: 0.333333rem;
+    line-height: 0.8rem;
+    background: #f9f9f9;
+}
 .pulic-entry .item{
 	padding-top: 0.266667rem;
 	padding-bottom: 0.266667rem;
@@ -552,7 +562,6 @@ body {
 	width: 100%;
 	background: rgba(255,255,255,0.9);
 	height: 1.333333rem;
-	line-height: 1.333333rem;
 	border-top: 1px solid #e0e0e0;
     box-sizing: border-box;
 }
@@ -815,6 +824,7 @@ body {
 	padding-left: 0.2rem;
 	padding-right:0.2rem;
 	border-radius: 15px;
+	font-size: 14px;
 	outline: none;
 	border:1px solid #bfbfbf;
 }
@@ -828,6 +838,7 @@ body {
     color: #fff;
     border-radius: 2px;
     border-radius: 15px;
+    font-size: 14px;
 }
 .eva-item  .eva-item-bottom span{
 	margin-left: 0.2rem;
@@ -975,7 +986,7 @@ body {
 	top: -0.026667rem;
 }
 .detail-wrap .detail-top .other  .count-box .iconfont{
-	font-size:0.533333rem
+	font-size:0.6rem;
 }
 .detail-wrap .detail-top .other  .count-box .icon-jia1{
 	color: #f47596;
@@ -1071,9 +1082,9 @@ body {
 }
 .detail-evaluate-cart .cart-box{
 	display: inline-block;
-	float: none;
 	border:none;
 	line-height: 1;
+	width: 1.066667rem
 }
 .detail-evaluate-cart .cart-box .nub{
 	top: -0.133333rem;
@@ -1095,7 +1106,7 @@ body {
 	margin-top: 0.133333rem;
 }
 .detail-evaluate-cart .collect-box .icon-wujiaoxing{
-	font-size: 0.733333rem;
+	font-size: 0.64rem;
 	color: #999999;
 	line-height: 1;
 
@@ -1349,7 +1360,7 @@ body {
 	padding-bottom: 2.666667rem
 }
 .cart-wrap-account .all-select{
-	padding-top: 0.36rem;
+	padding-top: 0.266667rem;
 	padding-left: 0.333333rem;
 	line-height: 1;
 }
@@ -1360,6 +1371,14 @@ body {
 }
 .cart-wrap-account .all-select{
 	font-size: 0.4rem;
+}
+.cart-wrap-account .info-money{
+	margin-left: 0.133333rem;
+}
+.cart-wrap-account .info-money p{
+	margin-top: 0.133333rem;
+	font-size: 0.293333rem;
+	color: #989898;
 }
 .cart-wrap-account .all-select .icon-duihao1{
 	color: #f47596;
@@ -1664,6 +1683,36 @@ body {
     color: #f47596;
     margin-top: 0.133333rem;
 }
+.no-order-info{
+	margin-top: 40%;
+	text-align: center;
+}
+.no-order-info .no-icon{
+	display: inline-block;
+	width: 2.4rem;
+	height: 2.4rem;
+	background: url('../static/catfruit/img/no-order.png');
+	background-size: 100% 100%;
+}
+.no-order-info .info{
+	font-size: 0.373333rem;
+	color: #7f7f7f;
+}
+.no-order-info .button{
+	display: inline-block;
+	line-height: 27px;
+    min-height: 27px;
+    min-width: 97px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #444;
+}
+
+
+
+
+
 .details-list li{
 	font-size: 0.373333rem;
 	border-bottom: 1px solid #f0f0f0;
@@ -2653,24 +2702,66 @@ body {
 	box-sizing: border-box;
 	border:0;
 }
-.inte-wrap .share-box .camera-box{
-	border:1px solid #e4e4e4;
-	height: 1.333333rem;
-	width: 1.333333rem;
-	text-align: center;
-	line-height: 1.333333rem;
-	margin-left: 0.266667rem;
-	border-radius: 8px;
 
+
+.padd-box{
+	padding: 0.266667rem;
 }
-.inte-wrap .share-box .camera-box i{
+.inte-wrap .share-box .file-box {
+	margin-top: 0.2rem;
+	float: left;
+    position: relative;
+   	height: 2.0rem;
+	width: 2.0rem;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+}
+.inte-wrap .share-box .camera-box{
 	position: relative;
-	top: 0.053333rem;
-	font-size: 0.8rem;
-	color: #cccccc;
-	vertical-align: middle;
-	margin-right: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    width: 2.0rem;
+    height: 2.0rem;
+    text-align: center;
+    z-index: 999;
 }
+.inte-wrap .share-box .file-box i{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #cccccc;
+    font-size: 0.8rem;
+}
+.inte-wrap  .img-box{
+	margin-top: 0.2rem;
+	position: relative;
+    float: left;
+    margin-right: 0.266667rem;
+    height: 2.0rem;
+    width: 2.0rem;
+}
+.inte-wrap .img-box img {
+    height: 2.0rem;
+    width: 2.0rem;
+}
+.inte-wrap .img-box .iconfont-close {
+    position: absolute;
+    display: inline;
+    right: -0.133333rem;
+    top: -0.133333rem;
+    width: 0.48rem;
+    height: 0.48rem;
+    background: url(../static/catfruit/img/close.png);
+    background-size: 100% 100%;
+}
+
+
+
+
+
+
 .inte-wrap .location-box{
 	margin-top: 0.4rem;
 	margin-bottom: 0.266667rem;
@@ -2847,6 +2938,7 @@ body {
 	padding:0.266667rem;
 }
 .appraise-top .img-box{
+	margin-top: 0.2rem;
 	position: relative;
 	float: left;
 	margin-right: 0.266667rem;
@@ -2965,6 +3057,7 @@ body {
 	margin-bottom: 0.4rem;
 }
 .appraise-wrap .upload-box .file-box{
+	margin-top: 0.2rem;
 	float: left;
 	position: relative;
 	width: 2.0rem;
@@ -2996,8 +3089,8 @@ body {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	height: 1.333333rem;
-	line-height: 1.333333rem;
+	height: 1.2rem;
+	line-height: 1.2rem;
 	text-align: center;
 	font-size: 0.426667rem;
 	background: #e4e4e4;
@@ -3433,7 +3526,6 @@ body {
 	overflow: hidden;
 	border-radius: 100%;
 	text-align: center;
-
 }
 .hand img{ 
    margin-top: 1.333333rem;
@@ -3442,3 +3534,7 @@ body {
 .hand-animate{-webkit-animation:hand_move infinite 0.6s;}
 .loading-show{opacity:1;}
 @-webkit-keyframes hand_move{0%{-webkit-transform:rotate(0);-moz-transform:rotate(0);-ms-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0);}50%{-webkit-transform:rotate(15deg);-moz-transform:rotate(15deg);-ms-transform:rotate(15deg);-o-transform:rotate(15deg);transform:rotate(15deg);}100%{-webkit-transform:rotate(0);-moz-transform:rotate(0);-ms-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0);}}@-webkit-keyframes loading{0%{-webkit-transform:rotate(0);-moz-transform:rotate(0);-ms-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0);}100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg);}}
+
+
+
+

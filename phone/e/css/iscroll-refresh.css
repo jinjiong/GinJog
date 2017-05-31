@@ -17,8 +17,10 @@ body,ul,li {
 body {
 	overflow: hidden; /* this is important to prevent the whole page to bounce */
 }
-
-#ir-bd-wrapper{position:absolute; width: 100%;overflow: hidden;top: 40px;left: 0px;bottom: 0px;background: #f0f0f0}
+.ir-tabs-scroller a:hover{
+    color: #333;
+}
+#ir-bd-wrapper{position:absolute; width: 100%;overflow: hidden;top: 40px;left: 0px;bottom: 0px;}
 .ir-bd-scroller{position: absolute;top: 0px; bottom: 0px;left: 0px;z-index: 1;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	-webkit-transform: translateZ(0);
@@ -40,7 +42,7 @@ body {
 }
 
 .ir-wrapper {position: relative;float: left;overflow: hidden;}
-.ir-scroller {position: absolute;z-index: 1;width: 100%;
+.ir-scroller {position: absolute;z-index: 1;width: 100%;background-color: #fff;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	-webkit-transform: translateZ(0);
 	-moz-transform: translateZ(0);
@@ -60,123 +62,23 @@ body {
 }
 
 /*  选项卡CSS*/
-#ir-tabs-wrapper {
-    height: 1.25rem;
-    overflow: hidden;
-}
+#ir-tabs-wrapper{height: 45px; overflow: hidden; z-index: 10000}
+.ir-tabs-scroller{position: absolute; top: 0px; left: 0px; height: 45px; z-index: 10000; min-width: 100%; background-color: #fff;border-bottom: 1px solid #e0e0e0;}
+.ir-tabs-scroller a{display: inline-block;  height: 45px; line-height: 45px; font-size: 0.373333rem; overflow: hidden; color: #333; float: left; text-align: center;}
+.ir-tabs-scroller a.active{border-bottom: 2px solid #f47596;}
 
-.ir-tabs-scroller {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 1.25rem;
-    z-index: 10000;
-    min-width: 100%;
-    background-color: #ffffff;
-    border-bottom: 1px solid #dedede;
-}
+.ir-down-tip{height: 60px; padding: 10px 0px; position: absolute; top: 0px;  width: 100%;  text-align:center; display: none }
 
-.ir-tabs-scroller a {
-    position: relative;
-    display: inline-block;
-    height: 1.25rem;
-    line-height: 1.25rem;
-    overflow: hidden;
-    color: #666666;
-    float: left;
-    text-align: center;
-}
-.ir-tabs-scroller a.active{
-    font-weight: bold;
-}
-.ir-tabs-scroller a.active em{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform:translate(-50%,0);
-    height: 4px;
-    width: 60%;
-    background: #ffda00;
-}
-.ir-down-tip {
-    height: 60px;
-    padding: 10px 0px;
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    text-align: center;
-    display: none
-}
+.ir-down-tip span.ico{display: inline-block; width: 35px; height: 35px; background-image: url('../static/catfruit/img/ico2.png'); background-size: 35px 35px;-webkit-background-size: 35px 35px; }
+.ir-down-tip span.tip{ padding-left: 15px; line-height: 20px; font-size: 14px; display: inline-block; height: 40px;  text-align: left;}
+.ir-down-tip span.tip b{display: block;}
+.ir-down-tip span.tip i{display: block; font-size: 12px; color: #999; font-style: normal;}
 
-.ir-down-tip span.ico {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    background-image: url('../imgs/ico2.png');
-    background-size: 35px 35px;
-    -webkit-background-size: 35px 35px;
-}
-
-.ir-down-tip span.tip {
-    padding-left: 15px;
-    line-height: 20px;
-    font-size: 14px;
-    display: inline-block;
-    height: 40px;
-    text-align: left;
-}
-
-.ir-down-tip span.tip b {
-    display: block;
-}
-
-.ir-down-tip span.tip i {
-    display: block;
-    font-size: 12px;
-    color: #999;
-    font-style: normal;
-}
-
-.ir-up-tip {
-    height: 45px;
-    padding: 10px 0px;
-    padding-bottom: 5px;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    text-align: center;
-    display: none
-}
-
-.ir-up-tip span.ico {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-image: url('../imgs/pull-icon@2x.png');
-    -webkit-background-size: 30px;
-    background-size: 30px;
-    transform: rotate(180deg);
-    transition-duration: 1s;
-}
-
-.ir-up-tip span.ico.loading {
-    background-position: 0 -30px;
-    transition-duration: 0s;
-    -webkit-animation: IRLoadingFrame 2s linear infinite;
-    animation: loadingFrame 2s linear infinite;
-}
-
-.ir-up-tip span.tip {
-    display: inline-block;
-    vertical-align: top;
-    padding-left: 10px;
-    line-height: 30px;
-    font-size: 14px;
-    height: 30px;
-    text-align: left;
-}
-
+.ir-up-tip{height: 45px; padding: 10px 0px; padding-bottom: 5px; position: absolute; bottom: 0px; left: 0px;  width: 100%;  text-align:center; display: none}
+.ir-up-tip span.ico{display:inline-block; width: 30px; height: 30px; background-image: url('../static/catfruit/img/pull-icon@2x.png'); -webkit-background-size: 30px;
+background-size: 30px; transform:rotate(180deg); transition-duration:1s;}
+.ir-up-tip span.ico.loading{background-position: 0 -30px; transition-duration:0s;  -webkit-animation:IRLoadingFrame 2s linear infinite;animation:loadingFrame 2s linear infinite;}
+.ir-up-tip span.tip{ display: inline-block; vertical-align: top; padding-left: 10px;  line-height: 30px; font-size: 14px;  height: 30px;  text-align: left;}
 
 @-webkit-keyframes IRLoadingFrame {
     0%{
@@ -195,11 +97,8 @@ keyframes IRLoadingFrame{
     }
 }
 
-div.loader { font-size:0.40625rem; height: 200px; padding-top: 100px; text-align: center; border-bottom: 0px;}
-div.loader div:nth-child(2){
-    margin-top: 5px!important;
-
-}	
+div.loader { height: 200px; padding-top: 100px; text-align: center; border-bottom: 0px; background-color: #fff;}
+	
 @-webkit-keyframes line-scale {
   0% {-webkit-transform: scaley(1);transform: scaley(1); }
   50% {-webkit-transform: scaley(0.4);transform: scaley(0.4); }
@@ -216,7 +115,7 @@ div.loader div:nth-child(2){
 .line-scale > div:nth-child(3) {-webkit-animation: line-scale 1s 0.3s infinite cubic-bezier(.2, .68, .18, 1.08);animation: line-scale 1s 0.3s infinite cubic-bezier(.2, .68, .18, 1.08); }
 .line-scale > div:nth-child(4) {-webkit-animation: line-scale 1s 0.4s infinite cubic-bezier(.2, .68, .18, 1.08);animation: line-scale 1s 0.4s infinite cubic-bezier(.2, .68, .18, 1.08); }
 .line-scale > div:nth-child(5) {-webkit-animation: line-scale 1s 0.5s infinite cubic-bezier(.2, .68, .18, 1.08);animation: line-scale 1s 0.5s infinite cubic-bezier(.2, .68, .18, 1.08); }
-.line-scale > div {background-color: #ffda00;width: 4px;height: 35px;border-radius: 2px;margin: 2px;-webkit-animation-fill-mode: both;animation-fill-mode: both;display: inline-block; }
+.line-scale > div {background-color: #f47596;width: 4px;height: 35px;border-radius: 2px;margin: 2px;-webkit-animation-fill-mode: both;animation-fill-mode: both;display: inline-block; }
 
 
 

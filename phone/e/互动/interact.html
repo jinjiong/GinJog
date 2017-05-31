@@ -14,9 +14,17 @@
         <div class="inte-top">玩法介绍<i class="iconfont icon-gantanhao"></i></div>
         <div class="share-box">
             <textarea class="textarea" placeholder="谈谈你分享的商品把~" style="resize:none"></textarea>
-            <div class="camera-box">
-                <i class="iconfont icon-ai-camera"></i>
+            <div class="padd-box clearfix">
+                <div class="imgs">
+                </div>
+                <div class="file-box">
+                    <input class="camera-box" type="file" id="file" accept="image/*" capture="camera&quot;">
+                    <i class="iconfont icon-ai-camera"></i>
+                </div>
             </div>
+           
+           
+
         </div>
         <div class="location-box clearfix">
             <div class="btn">提交</div>
@@ -70,7 +78,34 @@
     </div>
 </body>
 <script type="text/javascript" src="../js/jquery-1.12.2.min.js"></script>
+<script type="text/javascript" src='../js/layer.js'></script>
 <script>
+
+    $('#file').on('change',function(){
+        if($('.img-box').length<5){
+            console.log($('.img-box').length);
+            var fileObj=document.getElementById("file");
+            var src = window.URL.createObjectURL(fileObj.files[0]);
+            var html = '<div class="img-box">'+
+                           '<img src="'+src+'">'+
+                            '<div class="iconfont-close"></div>'+
+                        '</div>';
+            $('.imgs').prepend(html);
+        }else{
+            layer.msg('最多上传四张图片');
+        }
+    }) 
+
+
+
+
+$('.imgs').on('click','.iconfont-close',function(){
+    console.log('dddddddddd');
+    $(this).parent('.img-box').remove();
+});
+
+
+
    $('.xin').click(function(){
 
     if ($(this).hasClass('icon-heart')) {

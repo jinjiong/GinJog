@@ -47,6 +47,7 @@
 		   		</ul>
 		   	</div>
 		   	<div class="pulic-entry por-wrap clearfix">
+		   		<p class="adver-info">每个商家上面可以添加简易广告语</p>
 		   		<div class="classify-box active">
 		   			<div class="item clearfix no-pro">
 			   			<a href="pro_detail.html">
@@ -233,11 +234,11 @@
 					</div>
 				</div>
 				<div class="eva-item-body">
+					<p class="text-box">啊哈哈哈，喵果好好吃啊，现在睡觉还想着喵果。先下单不然明天没货了！</p>
 					<div class="voice-box">
 						<span class="play-btn"></span>
 						<span class="nub">24”</span>
 					</div>
-					<p class="text-box">啊哈哈哈，喵果好好吃啊，现在睡觉还想着喵果。先下单不然明天没货了！</p>
 					<div class="img-box clearfix">
 						<div class="my-gallery" data-pswp-uid="1">
 						    <figure class="img-item">
@@ -262,6 +263,10 @@
 						    </figure>
 						</div>
 					</div>
+					<div class="eva-item-bottom">
+						<span><i class="iconfont icon-xinxi"></i><span class="reply-nub">1</span></span>
+						<span><i class="iconfont icon-heart"></i><span class="nub">1</span></span>
+					</div>
 					<div class="reply-box">
 						<div class="user-reply">
 							<p><span class="fcf47596 user">喵喵喵</span>：喵果水果怎么样？甜不甜?</p>
@@ -272,10 +277,7 @@
 						<p class="fcf47596">商家回复：谢谢您对喵果的支持！我们会做的更好。期待您的下次下单。</p>
 					</div>
 					
-					<div class="eva-item-bottom">
-						<span><i class="iconfont icon-xinxi"></i><span class="reply-nub">1</span></span>
-						<span><i class="iconfont icon-heart"></i><span class="nub">1</span></span>
-					</div>
+					
 					<div class="board-box clearfix">
 						<input class="g_textarea"   placeholder="回复："></input>
 						<span class="btn">提交</span>
@@ -329,6 +331,7 @@
 <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
 <script type="text/javascript" src="js/fly.js"></script>
 <script type="text/javascript" src='js/demo.js'></script>
+<script type="text/javascript" src='js/layer.js'></script>
 <script>
 /*回复*/
 
@@ -356,6 +359,8 @@ $('.btn').click(function(){
 		   $(p_html).after(html)
 	    }
 	    $('.reply-nub').text(Number($('.reply-nub').text())+1)
+	    $('.board-box').hide();
+	    layer.msg('评论成功');
    }
 });
 

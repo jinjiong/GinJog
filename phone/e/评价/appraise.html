@@ -9,7 +9,7 @@
 	<!-- 适配手机屏幕的大小 -->
 	<script type="text/javascript" src='../js/flexible.js'></script>
 </head>
-<body class="nhome">
+<body class="nhome pm100">
     <div class="appraise-wrap">
         <div class="appraise-top">
             <div class="img-box">
@@ -40,7 +40,7 @@
                    </div>
                </div>
             </div>
-            <div class="upload-box">
+            <div class="upload-box clearfix">
                 <span class="title">上传图片</span>
                 <div class="imgs">
                 </div>
@@ -54,6 +54,7 @@
     </div>
 </body>
 <script type="text/javascript" src="../js/jquery-1.12.2.min.js"></script>
+<script type="text/javascript" src='../js/layer.js'></script>
 <script>
 
 $('.textarea').change(function(){
@@ -64,14 +65,18 @@ $('.textarea').change(function(){
     }
 });
 $('#file').on('change',function(){
-    var fileObj=document.getElementById("file");
-    var src = window.URL.createObjectURL(fileObj.files[0]);
-    console.log(src);
-    var html = '<div class="img-box">'+
-                   '<img src="'+src+'">'+
-                    '<div class="iconfont-close"></div>'+
-                '</div>';
-    $('.imgs').prepend(html);
+    if($('.img-box').length<5){
+            console.log($('.img-box').length);
+            var fileObj=document.getElementById("file");
+            var src = window.URL.createObjectURL(fileObj.files[0]);
+            var html = '<div class="img-box">'+
+                           '<img src="'+src+'">'+
+                            '<div class="iconfont-close"></div>'+
+                        '</div>';
+            $('.imgs').prepend(html);
+        }else{
+            layer.msg('最多上传四张图片');
+        }
 })
 $('.imgs').on('click','.iconfont-close',function(){
     $(this).parent('.img-box').remove();

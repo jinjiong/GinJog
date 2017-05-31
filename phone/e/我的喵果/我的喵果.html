@@ -22,29 +22,29 @@
             </div>
         </div>
         <div class="user-nav clearfix">
-            <div class="item">
+            <div class="item" data-index='1'>
                 <i class="iconfont icon-dingdandaifukuan"></i>
                 <p>待付款</p>
             </div>
-            <div class="item">
+            <div class="item" data-index='2'>
                 <i class="iconfont icon-hangcheng"></i>
                 <p>待发货</p>
             </div>
-            <div class="item">
+            <div class="item" data-index='3'>
                 <i class="iconfont icon-daishouhuo"></i>
                 <p>待收货</p>
             </div>
-            <div class="item">
+            <div class="item" data-index='4'>
                 <i class="iconfont icon-daipingjia"></i>
                 <p>待评价</p>
             </div>
-            <div class="item">
+            <div class="item" data-index='5'>
                 <i class="iconfont icon-dingdanyichenggong"></i>
                 <p>已完成</p>
             </div>
         </div>
         <ul class="user-list">
-            <li><i class="iconfont icon-dingdanjihe fcff5b6b"></i>全部订单<i class="fr iconfont icon-sanjiao"></i></li>
+            <li class="all-item"  data-index='0'><i class="iconfont icon-dingdanjihe fcff5b6b"></i>全部订单<i class="fr iconfont icon-sanjiao"></i></li>
             <li><i class="iconfont icon-qiandao fcfe800f"></i>会员签到<i class="fr iconfont icon-sanjiao"></i></li>
             <li><i class="iconfont icon-youhuiquan1 fca5acff"></i>我的优惠券<i class="fr iconfont icon-sanjiao"></i></li>
             <li><i class="iconfont icon-zuobiao1 fc32c8af"></i>收货地址<i class="fr iconfont icon-sanjiao"></i></li>
@@ -94,7 +94,12 @@
 </body>
 <script type="text/javascript" src="../js/jquery-1.12.2.min.js"></script>
 <script type="text/javascript">
+    $('.user-nav .item').click(function(){
+          /*订单存储*/
+         localStorage.setItem("_index",$(this).data('index'))
+    })
 	$('.user-nav .item,.user-list li:first').click(function(){
+        localStorage.setItem("_index",$(this).data('index'))
         window.location.href='/喵果订单/订单.html';
     })
     $('.user-list li:eq(3)').click(function(){
