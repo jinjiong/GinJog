@@ -750,7 +750,7 @@ body {
 	margin-right: 0.133333rem;
 }
 .eva-item .eva-item-body{
-	padding-left: 1.466667rem
+	// padding-left: 1.466667rem
 }
 .eva-item .eva-item-body .text-box{
 	margin-top: 0.266667rem;
@@ -815,9 +815,10 @@ body {
 }
 .board-box{
 	display: none;
+	margin-top: 0.133333rem;
 }
 .board-box .g_textarea{
-	width: 75%;
+	width: 80%;
 	box-sizing: border-box;
 	height: 0.8rem;
 	line-height: 0.8rem;
@@ -1020,7 +1021,7 @@ body {
 }
 .detail-wrap  .detail-evaluate-bottom .btn{
 	display: inline-block;
-	padding:0.133333rem 0.266667rem;
+	padding:0.066667rem 0.266667rem;
 	border:1px solid #999999;
 	color: #999999;
 	border-radius: 10px;
@@ -3319,13 +3320,13 @@ body {
 	padding-left: 1.066667rem;
 	padding-right: 15px;
 	width: 70%;
-	margin-left: 10%;
+	margin-left: 13%;
 	box-sizing: border-box;
 }
 .search-box .icon-search {
     position: absolute;
-    top:0.6rem;
-    left:14%;
+    top:0.55rem;
+    left:17%;
     width: 0.44rem;
     height: 0.44rem;
     background: url(../static/catfruit/img/icon/icon_search.png);
@@ -3336,6 +3337,15 @@ body {
 	margin-left: 0.266667rem;
 	vertical-align: middle;
 	line-height:0.866667rem;
+}
+.back-btn{
+	position: absolute;
+	top: 0.4rem;
+    left: 0.266667rem;
+	height: 0.693333rem;
+	width: 0.373333rem;
+	background: url('../static/catfruit/img/back.png');
+	background-size: 100% 100%;
 }
 .pop{
 	position: fixed;
