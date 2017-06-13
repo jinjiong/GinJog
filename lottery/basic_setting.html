@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>基础设置</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div class="header-top">
+	<div class="header-topbar">
+		<div class="block">
+			<div class="topbar-sort f_l">
+				<span class="active" data-nub='0'>北京赛车</span>
+				<span data-nub='1'>广东快乐十分</span>
+				<span data-nub='2'>幸运飞艇</span>
+				<span data-nub='3'>重庆时时彩</span>
+				<em>在线：84</em>
+			</div>
+			<div class="f_r topbar-info">
+				<div class="topbar-user">
+					<i class="icon-user"></i>账号：<em id="user-name"></em>，后台
+				</div>
+				<span class="quit-btn">退出</span>
+			</div>
+			<div class="topbar-switch">
+				<span class="active">快速开盘</span>
+				<span>快速关盘</span>
+			</div>
+		</div>
+	</div>
+	<div class="header">
+		<div class="block">
+			<div class="header-logo"><a href=""><img src="img/logo.png"></a></div>
+			<div class="header-nav">
+				<ul class="nav-list clearfix">
+					<li><a href="">账号管理</a></li>
+					<li><a href="">现场监督</a></li>
+					<li><a href="">收付统计</a></li>
+					<li><a href="">操盘记录</a></li>
+					<li><a href="">报表</a></li>
+					<li><a href="">期数管理</a></li>
+					<li><a href="">开奖结果</a></li>
+					<li><a href="" class="active">系统设置</a></li>
+					<li><a href="">个人中心</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="block container">
+	<div class="public-sida">
+		<dl class="nav-list">
+			<dt>系统设置</dt>
+			<dd><a href="basic_setting.html" class="active">基本设置</a></dd>
+			<dd><a href="notice_setting.html" >公告设置</a></dd>
+			<dd><a href="water_setting.html">水位设置</a></dd>
+			<dd><a href="">自动跳水设定</a></dd>
+			<dd><a href="Betting_seting.html">投注限制</a></dd>
+			<dd><a href="">自降赔率</a></dd>
+			<dd><a href="">公司间补货</a></dd>
+		</dl>
+	</div>
+	<form class="basic-wrap" id="baiseForm" method="post">
+		<table  class="basic-table">
+			<thead>
+				<tr>
+					<th colspan="2">报表</th>
+				</tr>
+			</thead>
+			<tr>
+				<td>信用额度恢复模式</td>
+				<td>
+					<input type="radio" name="mold" id="mo" data-nub='0' checked><label for="mo" class="checked">按输赢宝时增减“可用额度”（凌晨六点以后恢复）</label>
+					<input type="radio" name="mold" id="mo1"  class="mr10" data-nub='1'><label for="mo1"  class="ml10">投注扣除信用额度【不论输赢】（凌晨六点以后恢复）</label>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>封盘时间提前</td>
+				<td>
+					<input type="text" name="sealSecond" placeholder="40"> 秒（建议不低于90秒）
+				</td>
+			</tr>
+			<tr>
+				<td>中间商删除下级号码</td>
+				<td>
+					<input type="radio" name="allow" id="mo3" data-nub='0' ><label for="mo3">允许</label>
+					<input type="radio" name="allow" id="mo4" data-nub='1' checked><label for="mo4" class="ml10 checked">不允许</label>
+
+				</td>
+			</tr>
+			<tr>
+				<td>中间商可查看报表天数</td>
+				<td>
+					<input type="text" name="reportDay" placeholder="30">
+				</td>
+			</tr>
+		</table>
+		<div class="btn-box">
+			<span class="btn base-box">保存设置</span>
+		</div>
+	</form>
+</div>
+<div class="footer">
+	<p>©2013-2017 聚福彩票平台   All Rights Reserved.</p>
+</div>
+<script type="text/javascript" src='js/jquery-1.10.2.min.js'></script>
+<script type="text/javascript" src='js/jquery.validate.min.js'></script>
+<script type="text/javascript" src='js/layer.js'></script>
+<script type="text/javascript" src='js/json2.js'></script>
+<script type="text/javascript" src='js/js.cookie.js'></script>
+<script type="text/javascript" src='js/common.js'></script>
+<script type="text/javascript" src='js/Pinit.js'> </script>
+<script type="text/javascript">
+	$(document).ready(function() { 
+		GJ.basicInit();
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>聚福彩登陆页面</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div class="log-top">
+	<div class="block">
+		<span class="service-btn">在线客服</span>
+		<p class="time"><span id="time"></span> 营业时间：白天07：30-凌晨04：00 / 全年无休</p>
+	</div>
+</div>
+<div class="log-container">
+	<div class="log-bg">
+		<div class="block">
+			<form class="log-wrap" id="logForm" method="post" novalidate="novalidate">
+				<div class="input-box">
+				    <p class="user-error"></p>
+					<input type="text" name="account" placeholder="邮箱/会员名/手机号">
+					<i class="icon-user"></i>
+				</div>
+				<div class="input-box">
+					<input type="password" name="password" placeholder="输入密码">
+					<i class="icon-lock"></i>
+				</div>
+				<div class="log-btn">登录</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<p>©2013-2017 聚福彩票平台   All Rights Reserved.</p>
+</div>
+<script type="text/javascript" src='js/jquery-1.10.2.min.js'></script>
+<script type="text/javascript" src='js/jquery.validate.min.js'></script>
+<script type="text/javascript" src='js/layer.js'></script>
+<script type="text/javascript" src='js/json2.js'></script>
+<script type="text/javascript" src='js/js.cookie.js'></script>
+<script type="text/javascript" src='js/common.js'></script>
+<script type="text/javascript" src='js/Pinit.js'> </script>
+<script type="text/javascript">
+	$(document).ready(function() { 
+		GJ.logInit();
+		
+		// 设置时间
+	    function time(){
+		   var now=new Date();
+		   $('#time').text(
+		   	 now.getFullYear()+"年"+(now.getMonth()+1)+"月"+now.getDate()+"日"+now.getHours()+"时"+now.getMinutes()+"分"+now.getSeconds()+"秒"
+		   );
+		  setTimeout(time,1000);
+	   }
+	   time();
+	})
+</script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

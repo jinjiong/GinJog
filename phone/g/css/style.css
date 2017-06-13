@@ -57,7 +57,7 @@ body {
     padding-right: 0.769231rem;
     font-size:0.703125rem;
     color: #288ce9;
-    line-height: 1.015625rem;
+    line-height: 0.984375rem;
     font-family: 'pala';
     letter-spacing: -2px;
     font-weight: bold;
@@ -72,11 +72,12 @@ body {
 .index-box .txt-box p{
     background:url('../img/line.png')  center -0.125rem no-repeat;
     background-repeat: repeat-y;
-    background-size:100% 1.015625rem;
-    min-height: 4.0625rem;
+    background-size:100% 0.9375rem;
+    min-height: 3.75rem;
 }
 .index-box .txt-box .title{
     position: relative;
+    float: right;
     top: -0.125rem;
     text-align: right;
     vertical-align: middle;
