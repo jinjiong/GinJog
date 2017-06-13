@@ -150,6 +150,16 @@
 <script type="text/javascript" src="js/swiper.min.js"></script>
 <script type="text/javascript" src="js/fly.js"></script>
 <script>
+    $('.share').on('touchend',function(){
+         $('.public-share').show();
+    })
+
+    $('.public-share').on('touchend',function(e){
+        console.log($(e.target).attr('class'));
+        if($(e.target).hasClass('public-share')){
+            $(e.target).hide();
+        }
+    });
     $('.icon-xinxi').on('touchend',function(){
         window.location.href='评价/appraise.html'
     });
@@ -225,11 +235,6 @@
             }
          });
   }
-  $('.share').on('touchend',function(){
-     $('.public-share').show();
-  })
-  $('.public-share .item').on('touchend',function(){
-     $('.public-share').hide();
-  })
+
 </script>
 </html>

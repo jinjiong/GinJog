@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src='js/jquery-1.12.2.min.js'></script>
+</head>
+<body>
+    <script type="text/javascript">
+    var good= {name:'庄园大喵果12盒/箱',money:'12.0',nub:'1',id:'00002'};
+     // addShoppingCart(good);
+    function addShoppingCart(good){
+         if ( localStorage.getItem('goods')==null ) {
+              localStorage.setItem('goods',JSON.stringify([]));
+         }
+          var goods =JSON.parse(localStorage.getItem('goods'));
+          var  isSave=false;
+          for (var i = 0; i < goods.length; i++) {
+              if (goods[i].id ==good.id) {
+                console.log('ddddd');
+                goods[i].nub= Number(goods[i].nub)+1;
+                console.log(goods[i].nub);
+                isSave=true;
+              }
+          }
+          if (!isSave) {
+            goods.push(good);
+          }
+          localStorage.setItem('goods',JSON.stringify(goods));
+    };
+
+
+
+    // removeShoppingCart(good);
+    function removeShoppingCart(good){
+          var goods =JSON.parse(localStorage.getItem('goods'));
+          var  isSave=false;
+          for (var i = 0; i < goods.length; i++) {
+              if (goods[i].id ==good.id) {
+                console.log('ddddd');
+                if (Number(goods[i].nub)>1) {
+                   goods[i].nub = Number(goods[i].nub)-1;
+                }else{
+                    goods.splice(i, 1)
+                }
+                isSave=true;
+              }
+          }
+          localStorage.setItem('goods',JSON.stringify(goods));
+    };
+      var googs =JSON.parse(localStorage.getItem('goods'));
+      console.log(googs);
+
+    </script>
+</body>
+</html>

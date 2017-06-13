@@ -70,6 +70,7 @@
 		   				</div>
 			   		</div>
 			   		<div class="item clearfix">
+						<input class="goodsid" type="hidden" name="id" value="871015725538635800">
 			   			<a href="pro_detail.html">
 			   				<div class="img-box">
 				   				<img src="upload/po8.jpg">
@@ -85,7 +86,7 @@
 				   				<span class="number">0</span>
 				   				<span class="add"><i class="iconfont icon-jia1"></i></span>
 			   				</div>
-		   					<span class="money">￥12.0</span>
+		   					<span class="money">￥<em class="moneynum">8</em></span>
 		   				</div>
 			   		</div>
 			   		<div class="item clearfix">
@@ -393,10 +394,10 @@ $('.eva-item-bottom .icon-heart').click(function(){
 
 
 
-
  $('.go-box').on('touchend',function(){
     	window.location.href='订单确认等/订单确认.html'
     })
+
 	$('.public-sild-title .item').on('touchend',function(){
 		$(this).addClass('active').siblings().removeClass('active');
     	var index = $('.public-sild-title .item').index(this);
@@ -409,6 +410,7 @@ $('.eva-item-bottom .icon-heart').click(function(){
     		$('body').css('padding-bottom','1.6rem');
     	}
 	});
+	
     $('.public-side-box li').on('touchend',function(){
     	$(this).addClass('active').siblings().removeClass('active');
     	var index = $('.public-side-box ul li').index(this);
@@ -417,10 +419,18 @@ $('.eva-item-bottom .icon-heart').click(function(){
 
 
 
-
+     function getGood(item,storage){
+     	var good={};
+     	good.money= $(item).find('.moneynum').text();
+     	good.id =$(item).find('.goodsid').val();
+     	good.name = $(item).find('.title').text();
+     	good.nub=1;
+     	storage(good);
+     }
     /*加入购物车的js*/
-     $('.count-box .add').on('click',function(event){
+     $('.pro-evaluate-box').on('click','.count-box .add',function(event){
      	/*判断该产品是否存在*/
+        console.log('ddddddddddd');
      	if (!$(this).parents('.no-pro').length >0) {
 	     	var Nub = $(this).siblings('.number');
 	     	var Jian = $(this).siblings('.jian');
@@ -429,6 +439,7 @@ $('.eva-item-bottom .icon-heart').click(function(){
 	     		Jian.show();
 	     	}
 	     	Nub.html(parseInt(Nub.html())+1);
+	     	getGood($(this).parents('.item'),addShoppingCart);
 	     	addProduct(event);
 	     		/*购物车的个数的计算*/
 	     	$('.public-account .nub').html(parseInt($('.public-account .nub').html())+1);
@@ -444,7 +455,7 @@ $('.eva-item-bottom .icon-heart').click(function(){
 			}else{
 				Nub.html(parseInt(Nub.html())-1);
 			}
-
+            getGood($(this).parents('.item'),removeShoppingCart);
 			/*购物车的个数的计算*/
 			if ($('.public-account .nub').html()>1) {
 				$('.public-account .nub').html(parseInt($('.public-account .nub').html())-1);
@@ -479,5 +490,45 @@ $('.eva-item-bottom .icon-heart').click(function(){
     		$(this).addClass('active');
     	}
     })
+    /*购物车的操作*/
+     var good= {name:'庄园大喵果12盒/箱',money:'12.0',nub:'1',id:'00002'};
+     // addShoppingCart(good);
+    function addShoppingCart(good){
+         if ( localStorage.getItem('goods')==null ) {
+              localStorage.setItem('goods',JSON.stringify([]));
+         }
+          var goods =JSON.parse(localStorage.getItem('goods'));
+          var  isSave=false;
+          for (var i = 0; i < goods.length; i++) {
+              if (goods[i].id ==good.id) {
+                goods[i].nub= Number(goods[i].nub)+1;
+                console.log(goods[i].nub);
+                isSave=true;
+              }
+          }
+          if (!isSave) {
+            goods.push(good);
+          }
+          localStorage.setItem('goods',JSON.stringify(goods));
+    };
+    // removeShoppingCart(good);
+    function removeShoppingCart(good){
+          var goods =JSON.parse(localStorage.getItem('goods'));
+          var  isSave=false;
+          for (var i = 0; i < goods.length; i++) {
+              if (goods[i].id ==good.id) {
+                console.log('ddddd');
+                if (Number(goods[i].nub)>1) {
+                   goods[i].nub = Number(goods[i].nub)-1;
+                }else{
+                    goods.splice(i, 1)
+                }
+                isSave=true;
+              }
+          }
+          localStorage.setItem('goods',JSON.stringify(goods));
+    };
+    var googs =JSON.parse(localStorage.getItem('goods'));
+    console.log(googs);
 </script>
 </html>

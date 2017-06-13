@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>html2image</title>
+    <script src="../js/jquery.min1.8.js"></script>
+    <script src="../js/html2canvas.js"></script>
+    <script src="../js/canvas2image.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#saveAsImage").click(function (e) {
+                saveHtml2Image("div1", 3);
+            });
+        });
+ 
+        function saveHtml2Image(objId, scale) {
+            document.body.scrollTop = 0;
+            var obj = $("#" + objId);
+            var width = obj.width();
+            var height = obj.height();
+            html2canvas(obj, {
+                width: width,
+                height: height,
+                background: "rgba(255,255,255,1)",
+                onrendered: function (canvas) {
+                    var dataUrl = Canvas2Image.saveAsJPEG(canvas, parseInt(width * scale), parseInt(height * scale));
+                    var totalSize = dataUrl.length / 1024 / 1024;
+                    if (totalSize > 1.3) {
+                        dataUrl = null;
+                        scale = scale - 0.1;
+                        saveHtml2Image(objId, scale);
+                    }
+                    else {
+                        $('#downloadImage').attr('href', dataUrl);
+                        $('#downloadImage').attr('download', 'test.jpg');
+                        $('#downloadImage')[0].click();
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="div1" style="color:red;padding:10px 10px;">
+        <div>
+            <span>
+                hello,my english name is is leation.
+            </span>
+        </div>
+        <div>
+            <img style="width:500px;float:left;" src="../img/01.jpg" />
+            <img style="width:500px;float:left;" src="../img/01.jpg" />
+        </div>
+        <div style="clear:both;"></div>
+        <div>
+            <span>
+                hello,my english name is is leation.
+            </span>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    <div style="position:fixed;bottom:30px;right:30px;">
+        <input type="button" value="saveHtmlAsImage" id="saveAsImage" />
+        <a href="" id="downloadImage" style="display:none;">downloadImage</a>
+    </div>
+</body>
+</html>

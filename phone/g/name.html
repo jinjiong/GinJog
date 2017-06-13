@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>父亲节</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/cform.style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="index-box">
+    <div class="txt-box">
+        <span><img src="img/colon.png" width="20"></span>
+         <p class="ucontent">
+        </p>
+        <div class="title"><span class="uname"></span></div>
+    </div>
+    <div class="wall-box-plr">
+        <div class="wall-box-bg">
+          <div class="input-box">
+              <label>输入你的姓名</label>
+               <form id="inputForm">
+                    <input class="name" type="" name="input" placeholder="姓名">
+                </form>
+          </div>
+          <div class="input-box">
+              <label>选择你的性别</label>
+              <div class="gender-box">
+                  <div class="radio-box">
+                      <input class="man" type="radio" name="sex" id="male" value="0" checked>
+                      <label>男生</label>
+                  </div>
+                  <div class="radio-box">
+                      <input type="radio" name="sex" id="female" value="1">
+                      <label>女生</label>
+                  </div>
+                  
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="btn-box clearfix b-btn-box">
+        <a href="javascript:;" class="btn">自定义文案</a>
+        <a href="javascript:;" class="random">随机生成文案</a>
+    </div>
+    <div class="erwei-box">
+        <img src="img/pingping.png" class="ping">
+        <span>最受中国卖家好评的跨境收款机构</span>
+        <img src="img/erwei.png" class="erwei">
+    </div>
+    <script type="text/javascript" src='js/jquery-1.12.2.min.js'></script>
+    <script type="text/javascript" src='js/jquery.cform.min.js'></script>
+     <script type="text/javascript" src='js/jquery.validate.min.js'></script>
+    <script type="text/javascript">
+        $(function(){
+             $('.gender-box').cForm();
+             $('.name').val('');
+
+            /* 解析url*/
+                String.prototype.getQuery = function(name) {
+                    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                    var r = this.substr(this.indexOf("\?") + 1).match(reg);
+                       if (r != null) return unescape(r[2]); return null;
+                }
+            var strHref = this.location.href;
+             var id = strHref.getQuery("id");
+            $.ajax({
+                    url: "http://webc.wxshipin.net/index.php/Home/Index/chaxun/",
+                    type:"get",
+                    dataType:'json', 
+                    data:{id:id},
+                    success: function(msg){
+                        console.log(msg);
+                       $('.ucontent').html(msg[0].ucontent);
+                       $('.uname').html(msg[0].uname);
+                    },
+                    error:function(msg){
+                        console.log(msg);
+                    }
+                });
+
+            /*字体个数的验证*/
+              $('#inputForm').validate({
+                    rules:{
+                        input: {
+                            required:true,
+                            maxlength:3 
+                        }
+                    },
+                    messages :{
+                        input: {
+                            required:'*不能为空',
+                            maxlength:'姓名最多为三位'
+                        }
+                    }
+            })
+            var all =[];
+            all.push('有一次，XX对爸爸说<br>我现在好胖<br>爸爸安慰他<br>没关系，以后会更胖的');
+            all.push('小时候，XX爸爸告诉他<br>不努力长大就去工地搬砖<br>后来他毕业成了电商狗<br>觉得还不如去工地搬砖');
+            all.push('小时候，XX上课偷打游戏<br>老师把他爸爸请来学校<br>他爸一看手机大骂他一顿<br>怎么玩了10盘没一盘赢的');
+            all.push('小时候，XX爸爸对他说<br>好好学习，长大了去城市<br>现在他想对爸爸说<br>城市套路深，我想回农村');
+            all.push('小时候，XX爸爸对他说<br>看电视离太近会变近视眼<br>  后来他没看电视，<br>也变成了近视眼。');
+            all.push('小时候，<br>XX爸爸总是让他多吃点，<br>后来他就吃成了一个胖子');
+            all.push('小时候，XX爸爸说<br>一个人不需要让所有人都喜欢<br>后来他发现太难了<br>可爱如他 简直人见人爱');
+            all.push('小时候，XX爸爸告诉他<br>开心最重要<br>他记在心里<br>后来找了一个叫开心的对象');
+            all.push('小时候，XX爸爸常说他<br>你能不能长点心<br>他每次都很疑惑<br>点心？什么点心？！');
+            all.push('小时候，XX爸爸安慰他<br>考试怕什么<br>后来他发现<br>怕什么考什么');
+            all.push('小时候，xx老爸说<br>晚上不早睡会被鬼抓走<br>后来他一直不敢关灯睡觉<br>并因此被3个对象甩了');
+            $('.btn').click(function(){
+                if ($("#inputForm").valid()) {
+                    var name = $('.name').val();
+                    var sex = $("input[name='sex']:checked").val();
+                     localStorage.setItem('name',name);
+                     localStorage.setItem('sex',sex);
+                     window.location.href='input.html?id='+id;
+                }
+               
+            });
+            $('.random').click(function(){
+                if ($("#inputForm").valid()) {
+                     var name = $('.name').val();
+                     var sex = $("input[name='sex']:checked").val();
+                     localStorage.setItem('name',name);
+                     localStorage.setItem('sex',sex);
+                    var name = localStorage.getItem('name');
+                    if (localStorage.getItem('sex') == '0') {
+                        var input =all[Math.floor(Math.random()*11)].replace('XX',name);
+                        localStorage.setItem('input',input);
+                        window.location.href='mshow.html?id='+id;
+                    }else{
+                        var input =all[Math.floor(Math.random()*11)].replace('XX',name).replace(/[他]/ig,'她');
+                         localStorage.setItem('input',input);
+                          window.location.href='wshow.html?id='+id;
+                    }
+                    console.log(input);
+                }
+               
+            });
+
+        });
+    </script>
+</div>
+</body>
+</html>

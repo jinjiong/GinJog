@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>父亲节</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="index-box">
+    <div class="txt-box">
+        <span><img src="img/colon.png" width="20"></span>
+         <p class="ucontent">
+        </p>
+        <div class="title"><span class="uname"></span></div>
+    </div>
+    <div class="wall-box-plr">
+        <div class="wall-box-bg">
+            <div class="field-box">
+                <p>输入你的与父亲的故事(限定45字)</p>
+                <form id="inputForm">
+                    <textarea name="input"></textarea>
+                </form>
+            </div>
+        </div>
+    </div>
+     <div class="btn-box clearfix">
+       <a href="javascript:;" class="again-btn againb-btn">生成</a>
+    </div>
+    <div class="erwei-box">
+        <img src="img/pingping.png" class="ping">
+        <span>最受中国卖家好评的跨境收款机构</span>
+        <img src="img/erwei.png" class="erwei">
+    </div>
+    <script type="text/javascript" src='js/jquery-1.12.2.min.js'></script>
+    <script type="text/javascript" src='js/jquery.validate.min.js'></script>
+    <script type="text/javascript">
+        $(function(){
+            /* 解析url*/
+            String.prototype.getQuery = function(name) {
+                    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                    var r = this.substr(this.indexOf("\?") + 1).match(reg);
+                       if (r != null) return unescape(r[2]); return null;
+                }
+            var strHref = this.location.href;
+             var id = strHref.getQuery("id");
+            $.ajax({
+                    url: "http://webc.wxshipin.net/index.php/Home/Index/chaxun/",
+                    type:"get",
+                    dataType:'json', 
+                    data:{id:id},
+                    success: function(msg){
+                        console.log(msg);
+                       $('.ucontent').html(msg[0].ucontent);
+                       $('.uname').html(msg[0].uname);
+                    },
+                    error:function(msg){
+                        console.log(msg);
+                    }
+            });
+
+
+         /*字体个数的验证*/
+            // 验证表单
+            $('#inputForm').validate({
+                    rules:{
+                        input: {
+                            required:true,
+                            maxlength:48  
+                        }
+                    },
+                    messages :{
+                        input: {
+                            required:'*不能为空',
+                            maxlength:'最多只能输入45个字'
+                        }
+                        
+                    }
+            })
+            $('.againb-btn').click(function(){
+                if ($("#inputForm").valid()) {
+                   var content = $('textarea').val().replace(/[\n]/ig,"<br>");
+                    localStorage.setItem('input',content);
+                    if (localStorage.getItem('sex') == '0') {
+                        window.location.href='mshow.html?id='+id;
+                    }else{
+                         window.location.href='wshow.html?id='+id;
+                    }
+
+                }
+               
+            })
+
+           
+        });
+    </script>
+</div>
+</body>
+</html>
