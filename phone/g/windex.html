@@ -48,8 +48,9 @@
     }
     var strHref = this.location.href;
     var id = strHref.getQuery("id");
+    console.log(id);
     $.ajax({
-            url: "http://webc.wxshipin.net/index.php/Home/Index/chaxun/",
+            url: "https://webc.wxshipin.net/index.php/Home/Index/chaxun/",
             type:"get",
             dataType:'json', 
             data:{id:id},
