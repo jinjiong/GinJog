@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>喵果</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- 适配手机屏幕的大小 -->
+    <script type="text/javascript" src='js/flexible.js'></script>
+</head>
+<body class="nhome">
+    <div class="sign-wrap">
+        <div class="top-box">
+            <div class="all-integral">
+                <p>254积分</p>
+            </div>
+            <div class="power-txt"><img src="static/catfruit/img/wen.png">签到攻略</div>
+            <div class="img-box">
+                <img src="static/catfruit/img/sign_in.png">
+            </div>
+            <p class="info">连续签到7天，可领运费券一张</p>
+        </div>
+        <div class="sign-b">
+            <img src="static/catfruit/img/sign-w.png">
+            <span class="btn">去抽奖</span>
+        </div>
+        <div class="li-box clearfix">
+            <div class="item">
+                <div class="img-box">
+                    <img src="static/catfruit/img/li_1.png">
+                </div>
+                <span class="nub">3天</span>
+            </div>
+            <div class="item">
+                <div class="img-box">
+                    <img src="static/catfruit/img/li_2.png">
+                </div>
+                <span class="nub">5天</span>
+            </div>
+            <div class="item">
+                <div class="img-box">
+                    <img src="static/catfruit/img/li_3.png">
+                </div>
+                <span class="nub">7天</span>
+            </div>
+            <div class="item">
+                <div class="img-box">
+                    <img src="static/catfruit/img/li_4.png">
+                </div>
+                <span class="nub">10天</span>
+            </div>
+        </div>
+
+
+        <!-- 时间 -->
+        <div id="calendar"></div>
+    </div>
+    <div class="pop no-pop">
+        <div class="gl-box">
+            <span>签到规则：</span>
+            <p>1.喵友们连续签到五天后，可以获得一次抽奖机会。</p>
+            <p>2.每天登录，喵喵会送五个积分。积分达到50可获得一次抽奖机会。</p>
+            <p>3.消费1元获得1个积分。消费越多，积分越多！</p>
+            <p>4.本活动最终解释权由本公司所有。</p>
+            <p>喵友们赶快来签到吧！本公司送出的奖品多多，有现金红包，优惠券，运费券等，还有家和富贵碗，公交卡套，大口牛奶杯。中奖率很高哦。感谢您对喵果的支持！</p>
+            <i class="close"></i>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+<script type="text/javascript" src='js/calenda.js'></script>
+<script>
+   $('.power-txt').click(function(){
+        if ($('.pop').hasClass('no-pop')) {
+           $('.pop').removeClass('no-pop')
+        }else{
+             $('.pop').addClass('no-pop')
+        }
+   })
+   $('.pop .close').click(function(){
+        $('.pop').addClass('no-pop');
+   });
+
+
+   $(function(){
+  //ajax获取日历json数据
+  var signList=[{"signDay":"10"},{"signDay":"11"},{"signDay":"12"},{"signDay":"13"}];
+   calUtil.init(signList);
+});
+</script>
+</html>

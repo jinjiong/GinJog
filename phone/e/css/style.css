@@ -3541,10 +3541,186 @@ body {
    margin-top: 1.333333rem;
 	width: 60%;
 }
+
 .hand-animate{-webkit-animation:hand_move infinite 0.6s;}
 .loading-show{opacity:1;}
 @-webkit-keyframes hand_move{0%{-webkit-transform:rotate(0);-moz-transform:rotate(0);-ms-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0);}50%{-webkit-transform:rotate(15deg);-moz-transform:rotate(15deg);-ms-transform:rotate(15deg);-o-transform:rotate(15deg);transform:rotate(15deg);}100%{-webkit-transform:rotate(0);-moz-transform:rotate(0);-ms-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0);}}@-webkit-keyframes loading{0%{-webkit-transform:rotate(0);-moz-transform:rotate(0);-ms-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0);}100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg);}}
 
+/* 签到 */
+.sign-wrap .top-box{
+	padding-top: 0.466667rem;
+	height: 5.266667rem;
+	width: 100%;
+	background: #f47596;
+	box-sizing: border-box;
+}
+.sign-wrap .top-box .all-integral{
+	float: left;
+	margin-left: 0.306667rem;
+}
+.sign-wrap .top-box .all-integral p{
+	font-size: 0.48rem;
+	color: #fff;
+	line-height: 1;
+
+}
+.sign-wrap .top-box .all-integral a{
+	color: #fff;
+	font-size: 0.373333rem;
+	line-height: 1.2;
+	text-decoration: none;
+}
+.sign-wrap .top-box .power-txt{
+	margin-right: 0.306667rem;
+	float: right;
+	color: #fff;
+	font-size: 0.373333rem;
+}
+.sign-wrap .top-box .power-txt img{
+	width: 0.4rem;
+	height: 0.4rem;
+	vertical-align: middle;
+	margin-right: 0.066667rem;
+}
+.sign-wrap .top-box .img-box{
+	margin-top: 0.2rem;
+	text-align: center;
+}
+.sign-wrap .top-box .img-box img{
+	width: 3.106667rem;
+	height: 3.106667rem;
+	vertical-align: middle;
+}
+.sign-wrap .top-box .info{
+	margin-top: 0.466667rem;
+	text-align: center;
+	color: #fff;
+	font-size: 0.373333rem;
+}
+.sign-wrap .sign-b{
+	text-align: center;
+	margin-top: 0.333333rem;
+}
+.sign-wrap .sign-b img{
+	width: 5.613333rem;
+	height: 1.213333rem;
+	vertical-align: middle;
+}
+.sign-wrap .sign-b .btn{
+	display: inline-block;
+	font-size: 0.48rem;
+	color: #f47596;
+	line-height: 1;
+	padding-top: 0.266667rem;
+	padding-bottom: 0.266667rem;
+	padding-left: 0.533333rem;
+	padding-right: 0.533333rem;
+	border: 2px solid #f47596;
+	border-radius:30px;
+	vertical-align: middle;
+	margin-left: 0.666667rem;
+}
+.sign-wrap .li-box{
+	margin-top: 0.333333rem;
+}
+.sign-wrap .li-box .item {
+	margin-left:0.226667rem;
+	float: left;
+	position: relative;
+	width: 2.2rem;
+	height: 2.2rem;
+}
+.sign-wrap .li-box .item .img-box{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	overflow: hidden;
+	text-align: center;
+	border: 2px solid #f47596;
+}
+.sign-wrap .li-box .item img{
+	width: 2.5rem;
+	height: auto;
+}
+.sign-wrap .li-box .item .nub{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 0.666667rem;
+	width: 0.666667rem;
+	background: #f47596;
+	line-height: 0.666667rem;
+	text-align: center;
+	font-size: 0.32rem;
+	color: #fff;
+	border-radius: 50%;
+
+}
+.gl-box{
+	position: relative;
+	margin: 0 auto;
+	margin-top: 2.666667rem;
+	width: 85%;
+	padding: 0.266667rem;
+	background: #fff;
+	border-radius: 15px;
+	font-size: 0.373333rem;
+	color: #333333;
+	line-height: 1.6;
+	text-indent: 2em;
+}
+.close{
+	position: absolute;
+	bottom: -1.333333rem;
+	left: 50%;
+	margin-left: -0.36rem;
+	width: 0.72rem;
+	height: 0.72rem;
+	background: url('../static/catfruit/img/close.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+
+/* 时间
+ */
+.singer_r_img{display:block;width:114px;height:52px;line-height:45px;background:url(images/sing_week.gif) right 2px no-repeat;vertical-align:middle;*margin-bottom:-10px;text-decoration:none;}
+.singer_r_img:hover{background-position:right -53px;text-decoration:none;}
+.singer_r_img span{margin-left:14px;font-size:16px;font-family:'Hiragino Sans GB','Microsoft YaHei',sans-serif !important;font-weight:700;color:#165379;}
+.singer_r_img.current{background:url(images/sing_sing.gif) no-repeat 0 2px;border:0;text-decoration:none;}
+.sign table{border-collapse: collapse;border-spacing: 0;width:100%; line-height: 0.666667rem}
+.sign th,.sign td {text-align: center;}
+.sign th {font-size: 16px; font-weight: normal;}
+.sign td {color: #404040;vertical-align: middle;line-height: 1.066667rem; font-size: 0.373333rem;}   
+.sign .on {
+	background: url('../static/catfruit/img/yes.png') center right no-repeat;
+	background-size: 0.426667rem 0.306667rem;
+}
+.calendar_month_next {float: right;background-position:-42px -6px;}
+.calendar_month_span {display: inline;font-size: 16px;color: #656565;vertical-align: middle; letter-spacing: 2px;}
+.calendar_month_next {
+	float: right;
+		height: 0.373333rem;
+	width: 0.2rem;
+	background: url('../static/catfruit/img/arr_right.png') center center no-repeat;
+	background-size: 100% 100%;
 
 
+}
+.calendar_month_prev {
+	float: left;
+	height: 0.373333rem;
+	width: 0.2rem;
+	background: url('../static/catfruit/img/arr_left.png') center center no-repeat;
+	background-size: 100% 100%;
+}
+.sign_succ_calendar_title {text-align: center;width:100%;background:#fff; margin-bottom: 0.533333rem}
+.sign_main {width: 90%;font-family: "Microsoft YaHei",SimHei;margin: 0 auto;}
 
+
+#calendar{
+	margin-top: 0.666667rem;
+	width: 100%;
+}
+#sign_cal{
+	width: 90%;
+	margin: 0 auto;
+}
