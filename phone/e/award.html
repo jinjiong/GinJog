@@ -248,9 +248,9 @@ $('.no-lottery .btn').click(function(){
        // Wait 500 milliseconds before next loop  
        setTimeout(function () {if(index<0){ audio.play(); index++}},0);  
        }, false);  
+       audio.load();
        audio.play();  
      }
-     
      
     function doResult() {
         if(times>0){
