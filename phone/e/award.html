@@ -242,9 +242,6 @@ $('.no-lottery .btn').click(function(){
        setTimeout(function () {if(index<1){ audio_shake.play(); index++}},500);  
        }, false);  
        audio_shake.play();  
-       document.addEventListener("WeixinJSBridgeReady", function () {
-          audio_shake.load();
-        }, false);
      }
      function autoPlayed(){
        var audio = document.createElement("audio");  
