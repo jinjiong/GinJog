@@ -231,6 +231,9 @@ $('.no-lottery .btn').click(function(){
 	        }
 	     }
     }
+    $(document).click(function(){
+        autoPlay();
+    })
     //播放控制
      function autoPlay(){
        var index = 0;
@@ -238,6 +241,11 @@ $('.no-lottery .btn').click(function(){
        // Wait 500 milliseconds before next loop  
        setTimeout(function () {if(index<1){ audio_shake.play(); index++}},500);  
        }, false);  
+       if (navigator.vibrate) {
+            navigator.vibrate(1000);
+        } else if (navigator.webkitVibrate) {
+            navigator.webkitVibrate(1000);
+        }
        audio_shake.play();  
      }
      function autoPlayed(){
@@ -247,8 +255,7 @@ $('.no-lottery .btn').click(function(){
        audio.addEventListener('ended', function () {  
        // Wait 500 milliseconds before next loop  
        setTimeout(function () {if(index<0){ audio.play(); index++}},0);  
-       }, false);  
-       audio.load();
+       }, false); 
        audio.play();  
      }
      
