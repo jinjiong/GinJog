@@ -241,12 +241,10 @@ $('.no-lottery .btn').click(function(){
        // Wait 500 milliseconds before next loop  
        setTimeout(function () {if(index<1){ audio_shake.play(); index++}},500);  
        }, false);  
-       if (navigator.vibrate) {
-            navigator.vibrate(1000);
-        } else if (navigator.webkitVibrate) {
-            navigator.webkitVibrate(1000);
-        }
-       audio_shake.play();  
+       // audio_shake.play();  
+       document.addEventListener("WeixinJSBridgeReady", function () {
+          audio_shake.load();
+        }, false);
      }
      function autoPlayed(){
        var audio = document.createElement("audio");  
