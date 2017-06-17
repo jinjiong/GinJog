@@ -241,7 +241,7 @@ $('.no-lottery .btn').click(function(){
        // Wait 500 milliseconds before next loop  
        setTimeout(function () {if(index<1){ audio_shake.play(); index++}},500);  
        }, false);  
-       // audio_shake.play();  
+       audio_shake.play();  
        document.addEventListener("WeixinJSBridgeReady", function () {
           audio_shake.load();
         }, false);
