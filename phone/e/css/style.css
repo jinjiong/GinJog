@@ -1044,6 +1044,8 @@ body {
 }
 .detail-wrap .pro-introduce{
 	position: relative;
+	padding-left: 0.4rem;
+	padding-right: 0.4rem;
 }
 .detail-wrap  .pro-item .img-box{
 	width: 100%;
@@ -2801,7 +2803,7 @@ body {
     top: -0.133333rem;
     width: 0.48rem;
     height: 0.48rem;
-    background: url(../static/catfruit/img/close.png);
+    background: url(../static/catfruit/img/icon/icon_close.jpg);
     background-size: 100% 100%;
 }
 
@@ -2892,9 +2894,11 @@ body {
 	margin-top: 0.266667rem;
 	margin-bottom: 0.133333rem;
 
+
 }
 .inte-wrap .pro-box .pro-img img{
 	width: 2.6rem;
+	border-radius: 5px;
 }
 .inte-wrap .pro-box  .iconfont{
 	margin-right: 0.133333rem;
@@ -3000,7 +3004,7 @@ body {
 	top: -0.133333rem;
 	width: 0.48rem;
 	height: 0.48rem;
-	background: url('../static/catfruit/img/close.png');
+	background: url('../static/catfruit/img/icon/icon_close.jpg');
 	background-size: 100% 100%;
 	
 }
@@ -3143,6 +3147,13 @@ body {
 	font-size: 0.426667rem;
 	background: #e4e4e4;
 	color: #999999;
+}
+.layui-layer-msg{
+	display: inline-block;
+	padding: 0!important;
+	border-radius: 15px;
+	padding-bottom: 10px;
+	padding-bottom: 10px;
 }
 .appraise-wrap  .appraise-btn.active{
 	background: #f47596;

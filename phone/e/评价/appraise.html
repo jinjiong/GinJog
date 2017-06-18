@@ -21,8 +21,8 @@
                 <p>购买时间：3小时前</p>
             </div>
             <div class="grade">
-                <span class="grade-txt">10分</span>
-                <p><span class="txt">总体</span><span class="all-star"><i class="iconfont icon-favorfill fcf47596"></i><i class="iconfont icon-favorfill fcf47596"></i><i class="iconfont icon-favorfill fcf47596"></i><i class="iconfont icon-favorfill fcf47596"></i><i class="iconfont icon-favorfill"></i></span></p>
+                <span class="grade-txt"><em>10</em>分</span>
+                <p><span class="txt">总体</span><span class="all-star"><i class="iconfont icon-favorfill fcf47596"></i><i class="iconfont icon-favorfill fcf47596"></i><i class="iconfont icon-favorfill fcf47596"></i><i class="iconfont icon-favorfill fcf47596"></i><i class="iconfont icon-favorfill fcf47596"></i></span></p>
             </div>
             <div class="grade-text">
                 <textarea class="textarea" placeholder="感觉喵果怎么样呢？分享一下你的消费感受吧！您提出的每个建议，我们都会努力改进"></textarea>
@@ -91,5 +91,17 @@ $('.voice-box').click(function(){
         $(this).addClass('active');
     }
 })
+$('.all-star .iconfont').click(function(){
+    if($(this).hasClass('fcf47596')){
+       $(this).removeClass('fcf47596').nextAll().removeClass('fcf47596');
+        var nub = $('.all-star .fcf47596').length;
+         $('.grade-txt em').text(2*nub);
+
+    }else{
+        $(this).addClass('fcf47596').prevAll().addClass('fcf47596');
+         var nub = $('.all-star .fcf47596').length;
+         $('.grade-txt em').text(2*nub);
+    }
+});
 </script>
 </html>
