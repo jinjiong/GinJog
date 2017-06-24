@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>中国风</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<script language="JavaScript">
+var message="^_^欢迎光临本站,http://www.aichengxu.com/!fasdfdsf"; //长一点好看效果
+var position = 0;
+var sta="";
+var x=2*(60/message.length);
+for(i=0;i<x;i++){
+  sta+=message;
+}
+function statusScroll(){
+  window.status=sta.substring(position,position+60);
+  if(position++==60)
+    position=0;
+}
+</script>
+</head>
+<body>
+<script language="JavaScript">
+setInterval("statusScroll()",150);
+// 使用setInterval()按时间间隔调用函数
+</script>
+</body>
+</html>
