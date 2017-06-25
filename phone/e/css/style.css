@@ -2008,6 +2008,7 @@ body {
 .sure-wrap .public-account .all-money .money{
 	color: #f47596;
 	font-size: 0.4rem;
+	margin-top: 0.333333rem;
 }
 .sure-wrap .public-account .all-money .money span{
 	font-size: 0.426667rem;
@@ -3781,4 +3782,20 @@ body {
 #sign_cal{
 	width: 90%;
 	margin: 0 auto;
+}
+.fa-box{
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%,-50%);
+}
+.fa-box img{
+	width: 4.88rem;
+	height: 3.013333rem;
+}
+.fa-box p{
+	color: #666666;
+	font-size: 0.426667rem;
+
 }

@@ -22,7 +22,7 @@
             </div>
             <div class="grade">
                 <span class="grade-txt"><em>10</em>分</span>
-                <p><span class="txt">总体</span><span class="all-star"><i class="iconfont icon-favorfill fcf47596"></i><i class="iconfont icon-favorfill fcf47596"></i><i class="iconfont icon-favorfill fcf47596"></i><i class="iconfont icon-favorfill fcf47596"></i><i class="iconfont icon-favorfill fcf47596"></i></span></p>
+                <p><span class="txt">总体</span><span class="all-star"><i class="iconfont icon-favorfill"></i><i class="iconfont icon-favorfill"></i><i class="iconfont icon-favorfill"></i><i class="iconfont icon-favorfill"></i><i class="iconfont icon-favorfill"></i></span></p>
             </div>
             <div class="grade-text">
                 <textarea class="textarea" placeholder="感觉喵果怎么样呢？分享一下你的消费感受吧！您提出的每个建议，我们都会努力改进"></textarea>
@@ -51,6 +51,10 @@
             </div>
         </div>
         <div class="appraise-btn">提交评价</div>
+    </div>
+    <div class="fa-box">
+      <img src="../static/catfruit/img/fa.png">
+      <p>手指上滑，取消发送</p>
     </div>
 </body>
 <script type="text/javascript" src="../js/jquery-1.12.2.min.js"></script>
@@ -102,6 +106,39 @@ $('.all-star .iconfont').click(function(){
          var nub = $('.all-star .fcf47596').length;
          $('.grade-txt em').text(2*nub);
     }
+    if ($('.grade-txt em').text()!=0) {
+         $('.appraise-btn').addClass('active');
+     }else{
+        $('.appraise-btn').removeClass('active');
+     }
 });
+
+/*长按事件*/
+$(function(){
+  $(".pin-box").on({
+    touchstart: function(e){
+        timeOutEvent = setTimeout("longPress()",500);
+        e.preventDefault();
+    },
+    touchmove: function(){
+        clearTimeout(timeOutEvent); 
+        timeOutEvent = 0; 
+    },
+    touchend: function(){
+        clearTimeout(timeOutEvent);
+        $('.fa-box').hide();
+        if(timeOutEvent!=0){ 
+            // alert("你这是点击，不是长按"); 
+        } 
+        return false; 
+    }
+  })
+});
+
+function longPress(){ 
+    timeOutEvent = 0; 
+    // alert("长按事件触发发"); 
+    $('.fa-box').show();
+} 
 </script>
 </html>
