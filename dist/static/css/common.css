@@ -1,0 +1,273 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #333;
+  font-size: 14px;
+  font-family: PingFang SC, Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  background: #fff!important;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+td,
+th,
+caption {
+  font-size: 14px;
+}
+a {
+  color: #000;
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: none !important;
+}
+a:visited,
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: #333;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+img {
+  border: none;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+input,
+textarea,
+select,
+button {
+  vertical-align: middle;
+  font-size: 14px;
+  font-family: inherit;
+  line-height: normal;
+  outline: none;
+}
+*:focus {
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+}
+video {
+  object-fit: contain;
+}
+.block {
+  width: 1200px;
+  margin: 0 auto;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  *zoom: 1;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+.info .swiper-pagination {
+  position: static;
+  margin-top: 30px;
+}
+.info .swiper-pagination .swiper-pagination-bullet {
+  background: none;
+  opacity: 1;
+  margin: 0 6px !important;
+  width: 9px;
+  height: 9px;
+  position: relative;
+  outline: none;
+  vertical-align: middle;
+}
+.info .swiper-pagination .swiper-pagination-bullet span {
+  width: 3px;
+  height: 3px;
+  background: #CCC;
+  display: block;
+  border-radius: 50%;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+.info .swiper-pagination .swiper-pagination-bullet i {
+  background: #000;
+  height: 1px;
+  width: 20px;
+  position: absolute;
+  top: 4px;
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 3;
+  transition-timing-function: linear;
+}
+.info .swiper-pagination .swiper-pagination-bullet-active span,
+.info .swiper-pagination .swiper-pagination-bullet:hover span {
+  width: 9px;
+  height: 9px;
+  margin-top: 0;
+  margin-left: 0;
+  background: #000;
+  position: relative;
+  z-index: 1;
+}
+.info .swiper-pagination .swiper-pagination-bullet-active i {
+  animation: middle 6s;
+}
+.info .swiper-pagination .swiper-pagination-bullet:first-child.swiper-pagination-bullet-active i {
+  animation: first 6s;
+}
+.info .swiper-pagination .swiper-pagination-bullet:last-child.swiper-pagination-bullet-active i {
+  animation: last 6s;
+}
+@keyframes first {
+  0% {
+    transform: scaleX(0.5);
+    left: 0px;
+  }
+  /*091*/
+  100% {
+    transform: scaleX(1);
+    left: 2px;
+  }
+  /*0915*/
+}
+@keyframes last {
+  0% {
+    transform: scaleX(0.7);
+    left: -10px;
+  }
+  /*1090*/
+  20% {
+    transform: scaleX(0.3);
+    left: 2px;
+  }
+  /*090*/
+  100% {
+    transform: scaleX(0.3);
+    left: 0px;
+  }
+  /*090*/
+}
+@keyframes middle {
+  0% {
+    transform: scaleX(0.7);
+    left: -10px;
+  }
+  /*1091*/
+  20% {
+    transform: scaleX(0.45);
+    left: 2px;
+  }
+  /*092*/
+  100% {
+    transform: scaleX(1);
+    left: 2px;
+  }
+  /*0913*/
+}
+@keyframes meu {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes cloud {
+  0% {
+    transform: translate(0px);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes anime_1 {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@media screen and (max-width: 1600px) {
+  .banner-box {
+    height: 500px!important;
+  }
+  .banner-box .txt-box span {
+    font-size: 38px!important;
+    font-weight: 400;
+  }
+}
+/*# sourceMappingURL=common.css.map */
