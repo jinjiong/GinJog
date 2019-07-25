@@ -181,18 +181,19 @@ img {
 }
 .session_2 .btns-box {
   font-size: 0;
+  text-align: right;
 }
 .session_2 .btns-box span {
   display: inline-block;
+  font-size: 12px;
   height: 0.866667rem;
   line-height: 0.866667rem;
-  font-size: 14px;
   color: #fff;
   border-radius: 0.133333rem;
   padding-left: 0.266667rem;
   padding-right: 0.266667rem;
   background: #00a5f0;
-  margin-right: 0.4rem;
+  margin-left: 0.266667rem;
 }
 .session_2 .btns-box span.del-btn {
   background: #d43f3a;
