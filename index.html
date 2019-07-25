@@ -115,30 +115,32 @@
     <div class="session_2">
         <h3><span>填写被保人信息</span></h3>
         <div class="forms-box">
-            <div class="form-box">
-                <div class="input-box">
-                    <label>姓名：</label>
-                    <input type="" name="" placeholder="请输入姓名">
+            <form>
+                <div class="form-box">
+                    <div class="input-box">
+                        <label>姓名：</label>
+                        <input type="" name="txt_1" placeholder="请输入姓名">
+                    </div>
+                    <div class="input-box">
+                        <label>身份证号：</label>
+                        <input type="number" name="txt_2" placeholder="请输入身份证号">
+                    </div>
+                    <div class="input-box">
+                        <label>出发日期：</label>
+                        <input type="" name="txt_3" class="time" readonly="readonly" placeholder="请输入出发日期">
+                    </div>
+                    <div class="input-box">
+                        <label>目的地：</label>
+                        <input type="" name="txt_4" class="site" readonly="readonly" placeholder="请输入目的地">
+                    </div>
+                    <div class="btns-box">
+                        <span class="add-btn">添加被保人信息</span>
+                    </div>
                 </div>
-                <div class="input-box">
-                    <label>身份证号：</label>
-                    <input type="number" name="" placeholder="请输入身份证号">
-                </div>
-                <div class="input-box">
-                    <label>出发日期：</label>
-                    <input type="" name="" class="time" readonly="readonly" placeholder="请输入出发日期">
-                </div>
-                <div class="input-box">
-                    <label>目的地：</label>
-                    <input type="" name="" class="site" readonly="readonly" placeholder="请输入目的地">
-                </div>
-                <div class="btns-box">
-                    <span class="add-btn">添加被保人信息</span>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
-    <div class="sub-btn">
+    <div class="sub-btn" id="show-btn">
         立即提交投保信息
     </div>
     <script type="text/javascript" src="js/mui.min.js"></script>
@@ -156,56 +158,65 @@
     });
     $('.session_1 .item-box').click(function() {
         var title = $(this).find('em').text();
-        if (title.length >19) {
-            title = title.substring(0,19)+'...';
+        if (title.length > 19) {
+            title = title.substring(0, 19) + '...';
         }
         var info = $(this).find('.info-box').text();
         layer.open({
             title: [
                 title
             ],
-            anim:false,
+            anim: false,
             content: info,
-            className:'pop-box',
-            btn:['确定']
+            className: 'pop-box',
+            btn: ['确定']
         });
     })
 
-    var html_= `<div class="form-box">
+    var html_ = `<div class="form-box">
             <div class="input-box">
                 <label>姓名：</label>
-                <input type="" name="" placeholder="请输入姓名">
+                <input type="" name="txt_1" placeholder="请输入姓名">
             </div>
             <div class="input-box">
                 <label>身份证号：</label>
-                <input type="number" name="" placeholder="请输入身份证号">
+                <input type="number" name="txt_2" placeholder="请输入身份证号">
             </div>
             <div class="input-box">
                 <label>出发日期：</label>
-                <input type="" name="" readonly="readonly" class="time" placeholder="请输入出发日期">
+                <input type="" name="txt_3" readonly="readonly" class="time" placeholder="请输入出发日期">
             </div>
             <div class="input-box">
                 <label>目的地：</label>
-                <input type="" name="" class="site" readonly="readonly" placeholder="请输入目的地">
+                <input type="" name="txt_4" class="site" readonly="readonly" placeholder="请输入目的地">
             </div>
             <div class="btns-box">
                 <span class="add-btn">添加被保人信息</span>
                 <span class="del-btn">删除被保人信息</span>
             </div>
         </div>`
-    $('.session_2').on('click','.add-btn',function(){
+    $('.session_2').on('click', '.add-btn', function() {
         $('.forms-box').append(html_);
         $(this).hide();
     });
-    $('.session_2').on('click','.del-btn',function(){
-        $(this).parents('.form-box').remove();
-        $('.form-box').last().find('.add-btn').show();
+    $('.session_2').on('click', '.del-btn', function() {
+        var _this = this;
+        layer.open({
+            content: '确实删除该增加的投保人信息！',
+            btn: ['确定', '取消'],
+            yes: function(index) {
+                $(_this).parents('.form-box').remove();
+                $('.form-box').last().find('.add-btn').show();
+                layer.close(index);
+            }
+        });
+
     });
 
     // 时间
     (function(m) {
         m.init();
-        $('.session_2').on('click','.time',function(){
+        $('.session_2').on('click', '.time', function() {
             var _self = this;
             picker_time = new m.DtPicker({ "type": "date" });
             picker_time.show(function(rs) {
@@ -214,14 +225,14 @@
                 picker_time = null;
             });
         });
-        $('.session_2').on('click','.site',function(){
+        $('.session_2').on('click', '.site', function() {
             var _self = this;
             var picker = new m.PopPicker();
-                picker.setData([{
-                    value: "泰国",
-                    text: "泰国"
-                }])
-                picker.show(function(items) {
+            picker.setData([{
+                value: "泰国",
+                text: "泰国"
+            }])
+            picker.show(function(items) {
                 $(_self).val(items[0].value);
                 picker.dispose();
                 picker = null;
@@ -229,8 +240,53 @@
         });
 
     })(mui);
-    
-
+     var _valid = true;
+    $('#show-btn').click(function() {
+        var all_list = [];
+        var person = {};
+        _valid = true;
+        for (var i = $('.form-box').length - 1; i >= 0; i--) {
+            if ($('.form-box').eq(i).find('input[name="txt_1"]').val() == '') {
+                _valid = false;
+                mui.toast('用户名不能为空', { duration: '800', type: 'div' });
+                if (!_valid) {
+                    return false;
+                }
+            } else {
+                person.name = $('.form-box').eq(i).find('input[name="txt_1"]').val();
+            }
+            if ($('.form-box').eq(i).find('input[name="txt_2"]').val() == '') {
+                _valid = false;
+                mui.toast('身份证号不能为空', { duration: '800', type: 'div' });
+                if (!_valid) {
+                    return false;
+                }
+            } else {
+                person.id = $('.form-box').eq(i).find('input[name="txt_2"]').val();
+            }
+            if ($('.form-box').eq(i).find('input[name="txt_3"]').val() == '') {
+                _valid = false;
+                mui.toast('出发时间不能为空', { duration: '800', type: 'div' });
+                if (!_valid) {
+                    return false;
+                }
+            } else {
+                person.time = $('.form-box').eq(i).find('input[name="txt_3"]').val();
+            }
+            if ($('.form-box').eq(i).find('input[name="txt_4"]').val() == '') {
+                _valid = false;
+                mui.toast('目的地不能为空', { duration: '800', type: 'div' });
+                if (!_valid) {
+                    return false;
+                }
+            } else {
+                person.site = $('.form-box').eq(i).find('input[name="txt_4"]').val();
+            }
+            all_list.push(person);
+        }
+        //这个到提交的ajax就好了
+        console.log(all_list);
+    });
     </script>
 </body>
 
