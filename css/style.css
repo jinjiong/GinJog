@@ -23,6 +23,9 @@ img {
   color: #fff;
   font-size: 14px;
 }
+.page-top .logo-box {
+  float: right;
+}
 .page-top .logo {
   height: 0.56rem;
   margin-left: 0.106667rem;

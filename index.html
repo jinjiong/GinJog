@@ -13,9 +13,11 @@
 </head>
 
 <body>
-    <div class="page-top">
+    <div class="page-top clearfix">
         <span>玩游天下_境外旅行险</span>
-        <img src="images/logo.png" class="logo">
+        <div class="logo-box">
+            <img src="images/logo.png" class="logo">
+        </div>
     </div>
     <div class="banner-box">
         <img src="images/banner.jpg">
@@ -148,6 +150,7 @@
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="layer_mobile/layer.js"></script>
+    <script type="text/javascript" src="js/json2.js"></script>
     <script type="text/javascript">
     $('.session_1 .more').click(function() {
         if ($('.session_1').hasClass('active')) {
@@ -191,8 +194,8 @@
                 <input type="" name="txt_4" class="site" readonly="readonly" placeholder="请输入目的地">
             </div>
             <div class="btns-box">
-                <span class="add-btn">添加被保人信息</span>
                 <span class="del-btn">删除被保人信息</span>
+                <span class="add-btn">添加被保人信息</span>
             </div>
         </div>`
     $('.session_2').on('click', '.add-btn', function() {
@@ -218,7 +221,10 @@
         m.init();
         $('.session_2').on('click', '.time', function() {
             var _self = this;
-            picker_time = new m.DtPicker({ "type": "date" });
+            picker_time = new m.DtPicker({ 
+                "type": "date" 
+
+            });
             picker_time.show(function(rs) {
                 $(_self).val(rs.text);
                 picker_time.dispose();
@@ -248,7 +254,7 @@
         for (var i = $('.form-box').length - 1; i >= 0; i--) {
             if ($('.form-box').eq(i).find('input[name="txt_1"]').val() == '') {
                 _valid = false;
-                mui.toast('用户名不能为空', { duration: '800', type: 'div' });
+                mui.toast('用户名不能为空', { duration: '600', type: 'div' });
                 if (!_valid) {
                     return false;
                 }
@@ -257,36 +263,59 @@
             }
             if ($('.form-box').eq(i).find('input[name="txt_2"]').val() == '') {
                 _valid = false;
-                mui.toast('身份证号不能为空', { duration: '800', type: 'div' });
+                mui.toast('身份证号不能为空', { duration: '600', type: 'div' });
                 if (!_valid) {
                     return false;
                 }
             } else {
-                person.id = $('.form-box').eq(i).find('input[name="txt_2"]').val();
+                person.idCard = $('.form-box').eq(i).find('input[name="txt_2"]').val();
             }
             if ($('.form-box').eq(i).find('input[name="txt_3"]').val() == '') {
                 _valid = false;
-                mui.toast('出发时间不能为空', { duration: '800', type: 'div' });
+                mui.toast('出发时间不能为空', { duration: '600', type: 'div' });
                 if (!_valid) {
                     return false;
                 }
             } else {
-                person.time = $('.form-box').eq(i).find('input[name="txt_3"]').val();
+                person.leaveDate = $('.form-box').eq(i).find('input[name="txt_3"]').val();
             }
             if ($('.form-box').eq(i).find('input[name="txt_4"]').val() == '') {
                 _valid = false;
-                mui.toast('目的地不能为空', { duration: '800', type: 'div' });
+                mui.toast('目的地不能为空', { duration: '600', type: 'div' });
                 if (!_valid) {
                     return false;
                 }
             } else {
-                person.site = $('.form-box').eq(i).find('input[name="txt_4"]').val();
+                person.destination = $('.form-box').eq(i).find('input[name="txt_4"]').val();
             }
             all_list.push(person);
         }
         //这个到提交的ajax就好了
-        console.log(all_list);
+        submit({'data':all_list});
     });
+
+
+    function submit(all_list){
+        $.ajax({     
+                url:"http://120.79.63.136:8088/travel/app/trParticipants/addTrParticipants",
+                type:"post",
+                contentType:'application/json',
+                dataType : "json",
+                data:JSON.stringify(all_list),
+                success: function(msg){
+                    console.log(msg);
+                    if(msg.resultCode==0){
+                     mui.toast('提交成功！', { duration: '800', type: 'div' });
+                    }else{
+                        mui.toast('服务器忙请稍后再试...', { duration: '600', type: 'div' });
+                    }
+                },
+                error:function(msg){
+                    console.log(msg);
+                    mui.toast('服务器忙请稍后再试...', { duration: '600', type: 'div' });
+                }
+        })
+    }
     </script>
 </body>
 
