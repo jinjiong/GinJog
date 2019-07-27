@@ -310,12 +310,12 @@
                     $('#show-btn').attr("disabled","disabled").addClass('active').html('参保信息已提交成功');     
 
                     }else{
-                        mui.toast('服务器忙请稍后再试...', { duration: '600', type: 'div' });
+                        mui.toast('服务器忙...', { duration: '600', type: 'div' });
                     }
                 },
                 error:function(msg){
                     console.log(msg);
-                    mui.toast('服务器忙请稍后再试...', { duration: '600', type: 'div' });
+                    mui.toast('服务器忙...', { duration: '600', type: 'div' });
                 }
         })
     }
