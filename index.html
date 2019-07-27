@@ -142,9 +142,9 @@
             </form>
         </div>
     </div>
-    <div class="sub-btn" id="show-btn">
+    <button class="sub-btn" id="show-btn">
         立即提交投保信息
-    </div>
+    </button>
     <script type="text/javascript" src="js/mui.min.js"></script>
     <script type="text/javascript" src="js/mui.picker.min.js"></script>
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
@@ -201,6 +201,7 @@
     $('.session_2').on('click', '.add-btn', function() {
         $('.forms-box').append(html_);
         $(this).hide();
+        $('#show-btn').removeAttr("disabled").removeClass('active').html('立即提交投保信息');     
     });
     $('.session_2').on('click', '.del-btn', function() {
         var _this = this;
@@ -306,6 +307,8 @@
                     console.log(msg);
                     if(msg.resultCode==0){
                      mui.toast('提交成功！', { duration: '800', type: 'div' });
+                    $('#show-btn').attr("disabled","disabled").addClass('active').html('参保信息已提交成功');     
+
                     }else{
                         mui.toast('服务器忙请稍后再试...', { duration: '600', type: 'div' });
                     }
