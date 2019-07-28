@@ -58,8 +58,8 @@
                     </div>
                     <div class="input-box note-box">
                         <span class="iconfont icon-icon-mima"></span>
-                        <input type="" name="" placeholder="请输入短信验证码">
-                        <em class="btn">获取验证码</em>
+                        <input type="" name="" placeholder="请输入短信验证码" >
+                        <input class="btn" onclick="sendemail(this)"  value="获取验证码">
                     </div>
                     <div class="sub-box">
                         同意协议注册并登录
@@ -91,6 +91,26 @@ $('.session_1 .tab-box span').click(function() {
     $(this).addClass('active').siblings().removeClass('active');
     $('.session_1 .form-box').eq($(this).index()).addClass('active').siblings('').removeClass('active');
 })
+var countdown = 60;
+function sendemail(obj) {
+    settime($(obj));
+}
+function settime(obj) { //发送验证码倒计时
+    if (countdown == 0) {
+        console.log('ddddd');
+        obj.attr('disabled', false);
+        obj.val("获取验证码");
+        countdown = 60;
+        return;
+    } else {
+        obj.attr('disabled', true);
+        obj.val("重新发送(" + countdown + ")");
+        countdown--;
+    }
+    setTimeout(function() {
+        settime(obj)
+    }, 1000)
+}
 </script>
 
 </html>

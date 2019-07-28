@@ -6,10 +6,14 @@
     <title>唯唐代购免费注册-viatang.com</title>
     <link rel="shortcut icon" href="images/favicon.ico" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/mui.css">
+     <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css">
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/iconfont.css"> -->
-    <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1315740_njvpkonb3fk.css">
+    <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1315740_7nu5ls24xz2.css">
+
+    <script type="text/javascript" src="js/flexible.js"></script>
 </head>
 
 <body>
@@ -30,14 +34,15 @@
                 <span>网银转账</span>
             </div>
             <div class="list-item">
-                <div class="item-box">
+                <div class="item-form active">
                     <div class="info-box">
                         <h3><img src="images/img_5.png"><a href="http://www.paypal.com">(http://www.paypal.com)</a></h3>
                         <p>目前世界最大的第三方支付平台，Ebay旗下公司。支持各种货币，所有币种会自动转换成美元结算。 paypal支持带有下面标识的银行卡</p>
                     </div>
+                    <div class="title">请填选您要充值的金额$:</div>
                     <div class="checkbox-box clearfix">
-                        <div class="item-box">
-                            <label><span class="iconfont icon-radio"></span>$10.00</label>
+                        <div class="item-box active">
+                            <label><span class="iconfont icon-radiobutton"></span>$10.00</label>
                         </div>
                         <div class="item-box">
                             <label><span class="iconfont icon-radio"></span>$20.00</label>
@@ -45,23 +50,201 @@
                         <div class="item-box">
                             <label><span class="iconfont icon-radio"></span>$50.00</label>
                         </div>
-                         <div class="item-box">
+                        <div class="item-box">
                             <label><span class="iconfont icon-radio"></span>$100.00</label>
                         </div>
-                         <div class="item-box">
+                        <div class="item-box">
                             <label><span class="iconfont icon-radio"></span>$200.00</label>
                         </div>
-                         <div class="item-box">
+                        <div class="item-box">
                             <label><span class="iconfont icon-radio"></span>$500.00</label>
                         </div>
-                         <div class="item-box other-item">
-                            <label><span class="iconfont icon-radio"></span>
-                            其他金额:$ <input type="number" name="" class="nub">
+                        <div class="item-box other-item">
+                            <label><span class="iconfont icon-radio"></span> 其他金额:$
+                                <input type="number" name="" class="nub">
                             </label>
                         </div>
                     </div>
                     <div class="msg-box">
-                        <p>实际到账约为:126.47元人民币(手续费为4.4%+0.3$)，当前汇率约为1：6.72</p>
+                        <p>实际到账约为:<span>126.47</span>元人民币(手续费为4.4%+0.3$)，当前汇率约为<em>1：6.72</em></p>
+                    </div>
+                    <div class="sub-btn">
+                        前往充值
+                    </div>
+                </div>
+                <div class="item-form">
+                    <div class="info-box">
+                        <h3><img src="images/img_6.png"><a href="http://www.alipay.com">(http://www.alipay.com)</a></h3>
+                        <p>阿里巴巴集团旗下，支付宝(中国)网络技术有限公司。支持60多种国内银行卡，支付操作简单便利。</p>
+                    </div>
+                    <div class="title">请填选您要充值的金额$:</div>
+                    <div class="checkbox-box clearfix">
+                        <div class="item-box active">
+                            <label><span class="iconfont icon-radiobutton"></span>$10.00</label>
+                        </div>
+                        <div class="item-box">
+                            <label><span class="iconfont icon-radio"></span>$20.00</label>
+                        </div>
+                        <div class="item-box">
+                            <label><span class="iconfont icon-radio"></span>$50.00</label>
+                        </div>
+                        <div class="item-box">
+                            <label><span class="iconfont icon-radio"></span>$100.00</label>
+                        </div>
+                        <div class="item-box">
+                            <label><span class="iconfont icon-radio"></span>$200.00</label>
+                        </div>
+                        <div class="item-box">
+                            <label><span class="iconfont icon-radio"></span>$500.00</label>
+                        </div>
+                        <div class="item-box other-item">
+                            <label><span class="iconfont icon-radio"></span> 其他金额:$
+                                <input type="number" name="" class="nub">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="msg-box">
+                        <p>实际到账约为:<span>49.40</span>元人民币(手续费为1.2%)</p>
+                    </div>
+                    <div class="sub-btn">
+                        前往充值
+                    </div>
+                </div>
+                <div class="item-form">
+                    <div class="info-box">
+                        <h3><img src="images/img_7.png"><a href="http://www.wechat.com">(http://www.wechat.com)</a></h3>
+                        <p>腾讯旗下，支持60多种国内银行卡，支付操作简单便利。</p>
+                    </div>
+                    <div class="title">请填选您要充值的金额$:</div>
+                    <div class="checkbox-box clearfix">
+                        <div class="item-box active">
+                            <label><span class="iconfont icon-radiobutton"></span>$10.00</label>
+                        </div>
+                        <div class="item-box">
+                            <label><span class="iconfont icon-radio"></span>$20.00</label>
+                        </div>
+                        <div class="item-box">
+                            <label><span class="iconfont icon-radio"></span>$50.00</label>
+                        </div>
+                        <div class="item-box">
+                            <label><span class="iconfont icon-radio"></span>$100.00</label>
+                        </div>
+                        <div class="item-box">
+                            <label><span class="iconfont icon-radio"></span>$200.00</label>
+                        </div>
+                        <div class="item-box">
+                            <label><span class="iconfont icon-radio"></span>$500.00</label>
+                        </div>
+                        <div class="item-box other-item">
+                            <label><span class="iconfont icon-radio"></span> 其他金额:$
+                                <input type="number" name="" class="nub">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="msg-box">
+                        <p>实际到账约为:<span>49.40</span>元人民币(手续费为1.2%)</p>
+                    </div>
+                    <div class="sub-btn">
+                        前往充值
+                    </div>
+                </div>
+                <div class="item-form other_item-form">
+                    <div class="info-box">
+                        <h3>温馨提示：</h3>
+                        <p>无论您使用的是何种货币账户，均以人民币折算。</p>
+                        <div class="form-box">
+                            <div class="input-box">
+                                <span class="iconfont icon-youxiang1"></span>
+                                <input type="" name="" placeholder="邮箱地址：">
+                            </div>
+                            <div class="info-input">(请填写您的常用邮箱地址，以便我们把相关结果发送至您的邮箱。)</div>
+                            <div class="input-box">
+                                <span class="iconfont icon-shijian"></span>
+                                <input type="" name="" readonly="readonly" class="time" placeholder="充值日期：">
+                            </div>
+                        </div>
+                        <div class="way-box">
+                            <div class="title-box">
+                                您的充值方式：
+                                <em class="active"><span class="iconfont icon-radiobutton"></span>海外电汇</em>
+                                <em><span class="iconfont icon-radio"></span>西联汇款</em>
+                            </div>
+                            <div class="way-list">
+                                <div class="way-item active">
+                                    <div class="msg-box">
+                                        <p>1. 先通过银行等方式办理电汇。<a href="">汇到哪儿？</a></p>
+                                        <p>2. 汇款后请在此提供以下相关信息，以便我们核实及为您手动充值！</p>
+                                    </div>
+                                    <div class="form-box">
+                                        <div class="input-box">
+                                            <em>汇款金额：</em>
+                                            <input type="" name="" placeholder="">
+                                            <i>(金额)</i>
+                                        </div>
+                                        <div class="input-box">
+                                            <input type="" name="" placeholder="">
+                                            <i>(币种)</i>
+                                        </div>
+                                        <div class="info-input">指您汇款的实际付款金额及币种，而不是扣除手续费后折算的金额哦。</div>
+                                        <div class="input-box">
+                                            <em>汇款银行名称：</em>
+                                            <input type="" name="" placeholder="">
+                                        </div>
+                                        <div class="input-box">
+                                            <em>汇款人姓名：</em>
+                                            <input type="" name="" placeholder="">
+                                            <i>(名字)</i>
+                                        </div>
+                                        <div class="input-box">
+                                            <input type="" name="" placeholder="">
+                                            <i>(姓氏)</i>
+                                        </div>
+                                        <div class="input-box">
+                                            <em>汇入银行名称：</em>
+                                            <input type="" name="" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="way-item">
+                                    <div class="msg-box">
+                                        <p>1. 先到就近的西联汇款代理网点办理汇款。<a href="">汇到哪儿？</a></p>
+                                        <p>2. 汇款后请在此提供以下相关信息，以便我们核实及为您手动充值！</p>
+                                    </div>
+                                    <div class="info-box">
+                                        <p>注：该充值方式适合500美元以上、4000rmb以上较大金额的充值。</p>
+                                    </div>
+                                    <div class="form-box">
+                                        <div class="input-box">
+                                            <em>汇款金额：</em>
+                                            <input type="" name="" placeholder="">
+                                            <i>(金额)</i>
+                                        </div>
+                                        <div class="input-box">
+                                            <input type="" name="" placeholder="">
+                                            <i>(币种)</i>
+                                        </div>
+                                        <div class="info-input">指您汇款的实际付款金额及币种，而不是扣除手续费后折算的金额哦。</div>
+                                        <div class="input-box">
+                                            <em>汇款国家/地区：</em>
+                                            <input type="" name="" placeholder="">
+                                        </div>
+                                        <div class="input-box">
+                                            <em>汇款人姓名：</em>
+                                            <input type="" name="" placeholder="">
+                                            <i>(名字)</i>
+                                        </div>
+                                        <div class="input-box">
+                                            <input type="" name="" placeholder="">
+                                            <i>(姓氏)</i>
+                                        </div>
+                                        <div class="input-box">
+                                            <em>mtcn号码：</em>
+                                            <input type="" name="" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="sub-btn">
                         前往充值
@@ -75,14 +258,41 @@
     </div>
 </body>
 <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
-<script type="text/javascript" src="js/flexible.js"></script>
+
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/mui.picker.min.js"></script>
 <script type="text/javascript">
+    (function(m) {
+        m.init();
+        $('.other_item-form').on('click', '.time', function() {
+            var _self = this;
+            picker_time = new m.DtPicker({ 
+                "type": "date" 
+
+            });
+            picker_time.show(function(rs) {
+                $(_self).val(rs.text);
+                picker_time.dispose();
+                picker_time = null;
+            });
+        });
+    })(mui);
 $('.session_2 .tab-box span').click(function() {
     $(this).addClass('active').siblings().removeClass('active');
+    $('.item-form').eq($(this).index()).addClass('active').siblings().removeClass('active');
 })
-$('.checkbox-box .item-box').click(function(){
-    $(this).addClass('active')find('.iconfont').addClass('').siblings().removeClass('active').find('.iconfont')
+$('.checkbox-box .item-box').click(function() {
+    $(this).parents('.item-form').find('.item-box').removeClass('active').find('.iconfont').removeClass('icon-radiobutton').addClass('icon-radio');
+    $(this).addClass('active').find('.icon-radio').addClass('icon-radiobutton').removeClass('icon-radio');
+    if (!$(this).find('input').hasClass('nub')) {
+        $('.checkbox-box .item-box .nub').val('');
+    }
 })
+$('.way-box .title-box em').click(function(){
+    $('.way-box .title-box em').removeClass('active').find('span').removeClass('icon-radiobutton').addClass('icon-radio');
+    $(this).addClass('active').find('.iconfont').addClass('icon-radiobutton').removeClass('icon-radio');
+    $('.way-list .way-item').eq($(this).index()).addClass('active').siblings().removeClass('active');
+})  
 </script>
 
 </html>

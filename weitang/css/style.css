@@ -134,15 +134,18 @@
 .login-wrap .session_1 .form-box .note-box .btn {
   position: absolute;
   right: 0;
-  padding-left: 0.2rem;
-  padding-right: 0.2rem;
   border: 1px solid #ff4c5c;
   border-radius: 0.4rem;
-  line-height: 2;
-  font-size: 13px;
+  font-size: 14px;
   color: #ff4c5c;
+  width: 2.666667rem;
+  height: 0.733333rem;
+  line-height: 0.733333rem;
   top: 0.08rem;
   cursor: pointer;
+  padding: 0;
+  text-align: center;
+  background: transparent!important;
 }
 .login-wrap .session_1 .form-box .sub-box {
   margin-top: 0.666667rem;
@@ -588,6 +591,8 @@
   padding-left: 0.333333rem;
   padding-right: 0.333333rem;
   margin-top: 0.4rem;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .recharge-wrap .session_2 .tab-box {
   font-size: 0;
@@ -606,22 +611,37 @@
   background: #ff4c5c;
   color: #fff;
 }
-.recharge-wrap .session_2 .list-item .item-box {
+.recharge-wrap .session_2 .list-item .item-form {
+  display: none;
   padding-top: 0.4rem;
 }
-.recharge-wrap .session_2 .list-item .item-box h3 {
+.recharge-wrap .session_2 .list-item .item-form.active {
+  display: block;
+}
+.recharge-wrap .session_2 .list-item .item-form h3 {
   margin-bottom: 0.266667rem;
 }
-.recharge-wrap .session_2 .list-item .item-box h3 img {
+.recharge-wrap .session_2 .list-item .item-form h3 img {
   height: 0.533333rem;
+  vertical-align: bottom;
+  margin-right: 0.066667rem;
 }
-.recharge-wrap .session_2 .list-item .item-box h3 a {
+.recharge-wrap .session_2 .list-item .item-form h3 a {
   font-weight: 400;
-  color: #333;
+  color: #666;
   font-size: 12px;
 }
-.recharge-wrap .session_2 .list-item .item-box p {
+.recharge-wrap .session_2 .list-item .item-form p {
   font-size: 13px;
+}
+.recharge-wrap .session_2 .title {
+  font-size: 14px;
+  color: #ff4c5c;
+  margin-top: 0.333333rem;
+  margin-bottom: 0.133333rem;
+  font-weight: 700;
+  border-top: 1px dashed #e4e4e4;
+  padding-top: 0.266667rem;
 }
 .recharge-wrap .session_2 .checkbox-box .item-box {
   margin-bottom: 0;
@@ -653,11 +673,22 @@
   line-height: 0.666667rem;
   border-radius: 0.133333rem;
   font-size: 14px;
+  margin-bottom: 0;
+}
+.recharge-wrap .session_2 .checkbox-box .item-box.active {
+  color: #ff4c5c;
 }
 .recharge-wrap .session_2 .msg-box {
   font-size: 12px;
   margin-top: 0.266667rem;
   color: #333;
+}
+.recharge-wrap .session_2 .msg-box span,
+.recharge-wrap .session_2 .msg-box em {
+  color: #ff4c5c;
+}
+.recharge-wrap .session_2 .msg-box span {
+  font-weight: 700;
 }
 .recharge-wrap .session_2 .sub-btn {
   margin-top: 0.666667rem;
@@ -669,5 +700,126 @@
   text-align: center;
   border-radius: 0.666667rem;
   cursor: pointer;
+}
+.recharge-wrap .session_2 .other_item-form .info-box h3 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-bottom: 0.066667rem;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .form-box .input-box {
+  position: relative;
+  margin-top: 0.133333rem;
+  height: 1.066667rem;
+  line-height: 1.066667rem;
+  border-bottom: 1px solid #dddddd;
+  box-sizing: border-box;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .form-box .input-box span {
+  position: absolute;
+  left: 0.133333rem;
+  top: 0;
+  bottom: 0;
+  font-size: 0.453333rem;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .form-box .input-box input {
+  width: 100%;
+  padding-left: 0.8rem;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .form-box .info-input {
+  padding-top: 0.133333rem;
+  font-size: 12px;
+  color: #ff4c5c;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box {
+  margin-top: 0.4rem;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box .way-item {
+  display: none;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box .way-item.active {
+  display: block;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box .title-box {
+  font-size: 14px;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box .title-box em {
+  margin-left: 0.133333rem;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box .title-box em span {
+  vertical-align: middle;
+  margin-right: 0.066667rem;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box .title-box em.active {
+  color: #ff4c5c;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box .msg-box {
+  background: #f3f3f3;
+  border: 1px dotted #e6e6e6;
+  padding: 0.133333rem 0.266667rem ;
+  margin-top: 0.266667rem;
+  margin-bottom: 0.266667rem;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box .msg-box p {
+  line-height: 1.8;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box .msg-box p a {
+  color: #ff4c5c;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box .info-box {
+  margin-bottom: 0.266667rem;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box .info-box p {
+  font-size: 14px;
+  color: #ff4c5c;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box .form-box .input-box {
+  position: relative;
+  padding-left: 1.333333rem;
+  border-bottom: 0;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box .form-box .input-box:before {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 3.066667rem;
+  right: 0;
+  background: #dddddd;
+  height: 1px;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box .form-box .input-box em {
+  position: absolute;
+  left: 0;
+  width: 2.8rem;
+  text-align: right;
+  font-size: 14px;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box .form-box .input-box input {
+  padding-left: 1.866667rem;
+  padding-right: 1.2rem;
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 1;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box .form-box .input-box i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-style: normal;
+}
+.recharge-wrap .session_2 .other_item-form .info-box .way-box .form-box .info-input {
+  color: #333;
+  margin-bottom: 0.266667rem;
+  padding-left: 0.266667rem;
+  line-height: 1.6;
+}
+input[type='submit'],
+.mui-btn-primary,
+.mui-btn-blue {
+  background: #ff4c5c;
+  border-color: #ff4c5c;
 }
 /*# sourceMappingURL=style.css.map */
