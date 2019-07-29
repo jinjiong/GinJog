@@ -816,6 +816,60 @@
   padding-left: 0.266667rem;
   line-height: 1.6;
 }
+.pay_succ-wrap .logo-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  height: 1.333333rem;
+  line-height: 1.333333rem;
+  padding-left: 0.333333rem;
+  padding-right: 0.333333rem;
+  box-sizing: border-box;
+}
+.pay_succ-wrap .logo-box img {
+  height: 0.666667rem;
+}
+.pay_succ-wrap .session_1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-60%);
+  text-align: center;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+.pay_succ-wrap .session_1 .iconfont {
+  display: inline-block;
+  font-size: 50px;
+  color: #ff4c5c;
+  margin-bottom: 0.266667rem;
+}
+.pay_succ-wrap .session_1 p {
+  font-size: 16px;
+  color: #ff4c5c;
+  font-weight: 700;
+}
+.pay_succ-wrap .session_1 .img-box {
+  margin-top: 0.4rem;
+}
+.pay_succ-wrap .session_1 .img-box img {
+  width: 5.333333rem;
+}
+.pay_succ-wrap .session_1 .link-btn {
+  display: block;
+  margin-top: 0.666667rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  background: #ff4c5c;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 0.666667rem;
+  cursor: pointer;
+}
 input[type='submit'],
 .mui-btn-primary,
 .mui-btn-blue {
