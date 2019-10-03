@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>修改发货单</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/mui.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/mui.picker.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1407693_54e2u3az2av.css">
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <style type="text/css">
+        body{
+            background: #fff!important;
+        }
+    </style>
+</head>
+<body>
+    <div class="add_express-wrap">
+        <div class="session_1">
+            <div class="del"><span>删除</span></div>
+            <div class="form-box">
+                <div class="input-box">
+                    <label>快递公司:</label>
+                    <select>
+                        <option>EMS</option>
+                        <option>顺丰速运</option>
+                        <option>申通快递</option>
+                        <option>中通快递</option>
+                        <option>韵达快递</option>
+                        <option>中国邮政</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label>运单号码:</label>
+                    <input type="" name="" placeholder="请准确填写运单号，便于处理您的包裹 " value="23432453">
+                </div>
+                <div class="input-box">
+                    <label>商品名称:</label>
+                    <input type="" name="" placeholder="请输入商品名称 " value="优哈秋冬小包包女士">
+                </div>
+                <div class="input-box">
+                    <label>商品数量:</label>
+                    <input type="number" name="" placeholder=" 请输入商品数量" value="1">
+                </div>
+                <div class="input-box">
+                    <label>发货日期:</label>
+                    <input type="" name="" class="time" readonly="readonly" placeholder="请输入发货日期 " value="2019-04-02">
+                </div>
+                 <div class="input-box">
+                    <textarea placeholder="备注：填写商品名称,商品数量,特殊要求等..."></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="session_2">
+            <span class="btn">修改</span>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="dist/js/mui.js"></script>
+<script type="text/javascript" src="dist/js/mui.picker.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript">
+    // 时间
+    (function(m) {
+        m.init();
+        $('.time').click(function() {
+            var _self = this;
+            picker_time = new m.DtPicker({
+                "type": "date"
+
+            });
+            picker_time.show(function(rs) {
+                $(_self).val(rs.text);
+                picker_time.dispose();
+                picker_time = null;
+            });
+        });
+    })(mui);
+    $('.session_2 .btn').click(function(){
+        window.location.href= 'transfer.html'
+    });
+
+    $('.session_1 .del').click(function(){
+         mui.confirm('确定要删除？',['我再想想','确定'],function(el){
+            console.log(el);
+        });
+    });
+</script>
+
+</html>

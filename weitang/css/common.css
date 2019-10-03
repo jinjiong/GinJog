@@ -1,0 +1,248 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+html {
+  padding-bottom: 3.2rem;
+  max-width: 750px;
+  margin: 0 auto;
+}
+body {
+  font-size: 14px;
+  width: 100%;
+  color: #333;
+  font-family: "PingFang SC", "Microsoft Yahei", "Helvetica Neue", STHeiti, Tahoma, Simsun, sans-serif;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+  background-color: #f2f2f2!important;
+}
+td,
+th,
+caption {
+  font-size: 14px;
+}
+a {
+  color: #333;
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: none !important;
+}
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: #1A8EC0;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+img {
+  border: none;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+input,
+textarea,
+select,
+button {
+  vertical-align: middle;
+  font-size: 14px;
+  font-family: inherit;
+  line-height: normal;
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+}
+video {
+  object-fit: contain;
+}
+.block {
+  width: 960px;
+  margin: 0 auto;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  *zoom: 1;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+.public-header {
+  background: #ff4c5c;
+  padding-bottom: 0.4rem;
+}
+.public-header .top-header {
+  position: relative;
+  height: 1.333333rem;
+  line-height: 1.333333rem;
+  width: 100%;
+  padding-left: 1.066667rem;
+  padding-right: 1.066667rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.public-header .top-header .list-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1.066667rem;
+  text-align: center;
+}
+.public-header .top-header .list-icon .iconfont {
+  font-size: 0.666667rem;
+  color: #fff;
+}
+.public-header .top-header .user-icon {
+  position: absolute;
+  right: 0;
+  width: 1.066667rem;
+  top: 0;
+  text-align: center;
+}
+.public-header .top-header .user-icon .iconfont {
+  font-size: 0.6rem;
+  color: #fff;
+}
+.public-header .top-header .icon-box {
+  width: 100%;
+  text-align: center;
+}
+.public-header .top-header .icon-box img {
+  height: 0.8rem;
+}
+.public-header .padding-box {
+  padding-left: 0.333333rem;
+  padding-right: 0.333333rem;
+  box-sizing: border-box;
+}
+.public-header .input-box {
+  position: relative;
+  height: 0.96rem;
+  background: #fff;
+  line-height: 0.96rem;
+  padding-left: 0.8rem;
+  box-sizing: border-box;
+  padding-right: 0.2rem;
+  border-radius: 0.133333rem;
+}
+.public-header .input-box input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 14px;
+  line-height: 0.96rem;
+  vertical-align: top;
+}
+.public-header .input-box i {
+  position: absolute;
+  left: 0.266667rem;
+  color: #666;
+}
+.public-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding-top: 0.133333rem;
+  z-index: 9999;
+  box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.04);
+}
+.public-footer .item-box {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+.public-footer .item-box .icon-box {
+  height: 0.666667rem;
+  line-height: 0.666667rem;
+}
+.public-footer .item-box span {
+  position: relative;
+  top: -0.4rem;
+  width: 1.466667rem;
+  height: 1.466667rem;
+  display: inline-block;
+  background: #fff;
+  border-radius: 100%;
+  line-height: 1.466667rem;
+  text-align: center;
+  box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.06);
+}
+.public-footer .item-box span i {
+  font-size: 0.866667rem;
+  background-image: -webkit-linear-gradient(bottom, #ff0000, #fd8403, #ff4c5c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.public-footer .item-box i {
+  color: #5D656B;
+  font-size: 0.666667rem;
+  vertical-align: bottom;
+}
+.public-footer .item-box p {
+  position: relative;
+  font-size: 12px;
+  color: #5d656b;
+  margin-bottom: 0;
+}
+.public-footer .item-box.active span i {
+  color: #ff4c5c;
+  background-image: none;
+  -webkit-text-fill-color: #ff4c5c;
+}
+.public-footer .item-box.active a i {
+  color: #ff4c5c;
+}
+.public-footer .item-box.active a p {
+  color: #ff4c5c;
+}
+/*# sourceMappingURL=common.css.map */
